@@ -116,14 +116,16 @@ function SectionHeading({
 
 function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-900 bg-slate-950/90 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/85 backdrop-blur-md">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         <a href="#" aria-label="LeadsByStorm home" className="flex items-center">
-          <img
-            src={LOGO_SRC}
-            alt="LeadsByStorm Logo"
-            className="h-11 w-auto max-w-[240px] object-contain sm:h-14 sm:max-w-[320px]"
-          />
+          <div className="bg-[#0b1329] px-3.5 py-1.5 rounded-xl flex items-center justify-center shadow-md">
+            <img
+              src={LOGO_SRC}
+              alt="LeadsByStorm Logo"
+              className="h-8 w-auto max-w-[200px] object-contain sm:h-10 sm:max-w-[260px]"
+            />
+          </div>
         </a>
 
         <ButtonLink href="#calendar">Book a Call</ButtonLink>
@@ -354,26 +356,26 @@ function HeroSection() {
 
 function FeatureCard({ feature, index }: { feature: Feature; index: number }) {
   return (
-    <article className="group rounded-2xl border border-slate-900 bg-slate-900/40 p-8 shadow-xl transition duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-blue-950/10 hover:border-slate-800">
-      <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-xl bg-orange-500/10 text-sm font-black text-orange-400">
+    <article className="group rounded-2xl border border-slate-300 bg-white p-8 shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-slate-400">
+      <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-xl bg-orange-500/10 text-sm font-black text-orange-600">
         0{index + 1}
       </div>
 
-      <h3 className="text-xl font-extrabold text-white">{feature.title}</h3>
+      <h3 className="text-xl font-extrabold text-blue-950">{feature.title}</h3>
 
-      <p className="mt-3 leading-relaxed text-slate-450 text-sm sm:text-base">{feature.description}</p>
+      <p className="mt-3 leading-relaxed text-slate-650 text-sm sm:text-base">{feature.description}</p>
     </article>
   );
 }
 
 function HowItWorksSection() {
   return (
-    <SectionContainer id="how-it-works" className="bg-slate-950 border-t border-slate-900/60">
+    <SectionContainer id="how-it-works" className="bg-[#f8fafc] border-t border-slate-200">
       <SectionHeading
         eyebrow="How It Works"
         title="A cleaner way to fill your roofing sales calendar."
         description="LeadsByStorm is built for contractors who want real inspection opportunities, not bloated spreadsheets, recycled leads, or low-intent form fills."
-        theme="dark"
+        theme="light"
       />
 
       <div className="mt-12 grid gap-6 md:grid-cols-3">
@@ -387,94 +389,96 @@ function HowItWorksSection() {
 
 function PricingSection() {
   return (
-    <SectionContainer className="bg-[#0b1329] border border-slate-800 rounded-[2.5rem] my-10 px-6 sm:px-10 py-16 sm:py-20 max-w-[calc(100%-2rem)] sm:max-w-[calc(100%-3rem)] mx-auto shadow-2xl shadow-blue-950/20">
-      <div className="grid items-center gap-12 lg:grid-cols-[0.95fr_1.05fr]">
-        <div>
-          <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-blue-400">
-            Pricing & ROI
-          </p>
+    <SectionContainer className="bg-white py-16 sm:py-20">
+      <div className="bg-[#f8fafc] border border-slate-300 rounded-[2.5rem] px-6 sm:px-10 py-16 sm:py-20 max-w-7xl mx-auto shadow-xl shadow-slate-100/50">
+        <div className="grid items-center gap-12 lg:grid-cols-[0.95fr_1.05fr]">
+          <div>
+            <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-blue-600">
+              Pricing & ROI
+            </p>
 
-          <h2 className="text-3xl font-black tracking-tight text-white sm:text-4xl lg:text-5xl">
-            Unbeatable Market Value
-          </h2>
+            <h2 className="text-3xl font-black tracking-tight text-blue-950 sm:text-4xl lg:text-5xl">
+              Unbeatable Market Value
+            </h2>
 
-          <p className="mt-5 text-base leading-relaxed text-slate-300 sm:text-lg">
-            High-intent roofing appointments typically sell on the market for{" "}
-            <strong className="font-extrabold text-white">$350 to $450</strong>.
-          </p>
+            <p className="mt-5 text-base leading-relaxed text-slate-655 sm:text-lg">
+              High-intent roofing appointments typically sell on the market for{" "}
+              <strong className="font-extrabold text-blue-950">$350 to $450</strong>.
+            </p>
 
-          <p className="mt-4 text-base leading-relaxed text-slate-300 sm:text-lg">
-            We sell our exclusive appointments at just{" "}
-            <strong className="font-extrabold text-emerald-400">$250</strong>. Plus,
-            we offer flexible volume pricing to ensure it perfectly fits your
-            budget.
-          </p>
+            <p className="mt-4 text-base leading-relaxed text-slate-655 sm:text-lg">
+              We sell our exclusive appointments at just{" "}
+              <strong className="font-extrabold text-emerald-600">$250</strong>. Plus,
+              we offer flexible volume pricing to ensure it perfectly fits your
+              budget.
+            </p>
 
-          <div className="mt-8 rounded-2xl border border-blue-500/20 bg-blue-500/10 p-5 backdrop-blur-sm">
-            <div className="flex items-start gap-3">
-              <svg className="h-5 w-5 text-blue-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-              </svg>
-              <div>
-                <p className="text-xs font-bold uppercase tracking-wider text-blue-300">
-                  Current Market Alert
-                </p>
-                <p className="mt-1 text-sm text-slate-200 leading-relaxed font-medium">
-                  Note: In several cities, we currently have more homeowner
-                  appointments available than contractors to fulfill them.
-                </p>
+            <div className="mt-8 rounded-2xl border border-blue-200 bg-blue-50/70 p-5 shadow-sm">
+              <div className="flex items-start gap-3">
+                <svg className="h-5 w-5 text-blue-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-wider text-blue-800">
+                    Current Market Alert
+                  </p>
+                  <p className="mt-1 text-sm text-slate-700 leading-relaxed font-medium">
+                    Note: In several cities, we currently have more homeowner
+                    appointments available than contractors to fulfill them.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        {/* Pricing Cards */}
-        <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
-          {[
-            {
-              label: "Typical Market Price",
-              value: "$350–$450",
-              description: "What high-intent roofing appointments often sell for.",
-              highlight: false,
-              isGreenValue: false,
-            },
-            {
-              label: "LeadsByStorm Price",
-              value: "$250",
-              description: "Exclusive storm damage appointments at a stronger margin.",
-              highlight: true,
-              isGreenValue: true,
-            },
-            {
-              label: "No-Show Protection",
-              value: "Free Replace",
-              description: "If the homeowner no-shows, we replace the appointment.",
-              highlight: false,
-              isGreenValue: false,
-            },
-          ].map((item) => (
-            <div
-              key={item.label}
-              className={`rounded-2xl p-6 transition-all duration-200 ${
-                item.highlight
-                  ? "border-2 border-blue-600 bg-blue-500/5 shadow-blue-500/5 relative"
-                  : "border border-slate-800 bg-slate-900/30"
-              }`}
-            >
-              {item.highlight && (
-                <span className="absolute right-4 top-4 rounded bg-blue-600 px-2 py-0.5 text-[9px] font-extrabold uppercase tracking-wide text-white">
-                  Best Value
-                </span>
-              )}
-              <p className="text-xs font-bold text-slate-400 uppercase tracking-wider">{item.label}</p>
-              <p className={`mt-2 text-3xl font-black ${item.isGreenValue ? "text-emerald-400" : "text-white"}`}>
-                {item.value}
-              </p>
-              <p className="mt-2 text-sm leading-relaxed text-slate-300">
-                {item.description}
-              </p>
-            </div>
-          ))}
+          {/* Pricing Cards */}
+          <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
+            {[
+              {
+                label: "Typical Market Price",
+                value: "$350–$450",
+                description: "What high-intent roofing appointments often sell for.",
+                highlight: false,
+                isGreenValue: false,
+              },
+              {
+                label: "LeadsByStorm Price",
+                value: "$250",
+                description: "Exclusive storm damage appointments at a stronger margin.",
+                highlight: true,
+                isGreenValue: true,
+              },
+              {
+                label: "No-Show Protection",
+                value: "Free Replace",
+                description: "If the homeowner no-shows, we replace the appointment.",
+                highlight: false,
+                isGreenValue: false,
+              },
+            ].map((item) => (
+              <div
+                key={item.label}
+                className={`rounded-2xl p-6 transition-all duration-200 ${
+                  item.highlight
+                    ? "border-2 border-blue-600 bg-blue-50/45 shadow-md shadow-blue-100 relative"
+                    : "border border-slate-300 bg-white hover:border-slate-400 transition"
+                }`}
+              >
+                {item.highlight && (
+                  <span className="absolute right-4 top-4 rounded bg-blue-600 px-2 py-0.5 text-[9px] font-extrabold uppercase tracking-wide text-white">
+                    Best Value
+                  </span>
+                )}
+                <p className="text-xs font-bold text-slate-500 uppercase tracking-wider">{item.label}</p>
+                <p className={`mt-2 text-3xl font-black ${item.isGreenValue ? "text-emerald-600" : "text-blue-950"}`}>
+                  {item.value}
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-slate-655">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </SectionContainer>
@@ -483,18 +487,18 @@ function PricingSection() {
 
 function CalendarPlaceholder() {
   return (
-    <div className="rounded-2xl border border-slate-900 bg-slate-900/40 p-6 shadow-2xl">
-      <div className="mb-6 border-b border-slate-800/80 pb-5">
-        <p className="text-xs font-bold uppercase tracking-widest text-blue-450">
+    <div className="rounded-2xl border border-slate-300 bg-white p-6 shadow-xl">
+      <div className="mb-6 border-b border-slate-150 pb-5">
+        <p className="text-xs font-bold uppercase tracking-widest text-blue-600">
           Booking Console
         </p>
-        <h3 className="mt-2 text-xl font-black text-white leading-tight">
+        <h3 className="mt-2 text-xl font-black text-blue-950 leading-tight">
           Choose a time on our calendar below for a quick phone call.
         </h3>
       </div>
 
       {/* Calendar Widget Area */}
-      <div className="relative overflow-hidden rounded-xl border border-slate-850 bg-[#0d1527] p-4">
+      <div className="relative overflow-hidden rounded-xl border border-slate-200 bg-slate-50 p-4">
         
         {/* Real-looking calendar grid mockup */}
         <div className="opacity-45 select-none pointer-events-none">
@@ -508,18 +512,18 @@ function CalendarPlaceholder() {
           <div className="grid grid-cols-5 gap-2 text-center text-[10px] sm:text-xs">
             {["Mon", "Tue", "Wed", "Thu", "Fri"].map((day, idx) => (
               <div key={day} className="space-y-2">
-                <div className="font-bold text-slate-400">{day}</div>
-                <div className="rounded bg-blue-950/60 py-1 font-bold text-blue-350 border border-blue-900/40">{8 + idx}</div>
-                <div className="rounded border border-slate-800 bg-slate-900/30 py-1 text-slate-350">9:00 AM</div>
-                <div className="rounded border border-slate-800 bg-slate-900/30 py-1 text-slate-350">11:30 AM</div>
-                <div className="rounded border border-slate-800 bg-slate-900/30 py-1 text-slate-350">2:00 PM</div>
+                <div className="font-bold text-slate-750">{day}</div>
+                <div className="rounded bg-blue-50 py-1 font-bold text-blue-900 border border-blue-100">{8 + idx}</div>
+                <div className="rounded border border-slate-300 bg-white py-1 text-slate-700">9:00 AM</div>
+                <div className="rounded border border-slate-300 bg-white py-1 text-slate-700">11:30 AM</div>
+                <div className="rounded border border-slate-300 bg-white py-1 text-slate-700">2:00 PM</div>
               </div>
             ))}
           </div>
         </div>
 
         {/* Overlay highlighting the embed placeholder */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/85 p-6 text-center backdrop-blur-[2px]">
+        <div className="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/80 p-6 text-center backdrop-blur-[2px]">
           <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-600/35">
             <svg
               aria-hidden="true"
@@ -557,24 +561,24 @@ function EmailContactCard() {
   );
 
   return (
-    <div className="rounded-2xl border border-slate-900 bg-slate-900/40 p-8 flex flex-col justify-between shadow-2xl">
+    <div className="rounded-2xl border border-slate-300 bg-white p-8 flex flex-col justify-between shadow-xl">
       <div>
-        <p className="text-xs font-bold uppercase tracking-widest text-blue-450">
+        <p className="text-xs font-bold uppercase tracking-widest text-blue-650">
           Prefer Email?
         </p>
 
-        <h3 className="mt-3 text-2xl font-black text-white">
+        <h3 className="mt-3 text-2xl font-black text-blue-950">
           Send your availability.
         </h3>
 
-        <p className="mt-4 leading-relaxed text-slate-400 text-sm sm:text-base">
+        <p className="mt-4 leading-relaxed text-slate-650 text-sm sm:text-base">
           Prefer to email? Click below to send us your availability directly, and we will get back to you immediately.
         </p>
       </div>
 
       <a
         href={`mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`}
-        className="mt-8 inline-flex items-center justify-center rounded-xl border border-slate-750 bg-slate-900/50 px-6 py-3 text-sm font-extrabold text-slate-200 shadow-sm transition hover:border-slate-550 hover:bg-slate-850 hover:text-white active:scale-[0.98] transform"
+        className="mt-8 inline-flex items-center justify-center rounded-xl border border-slate-300 bg-slate-50 px-6 py-3 text-sm font-extrabold text-slate-800 shadow-sm transition hover:border-slate-450 hover:bg-slate-100 active:scale-[0.98] transform"
       >
         Email LeadsByStorm
       </a>
@@ -584,13 +588,13 @@ function EmailContactCard() {
 
 function FinalCtaSection() {
   return (
-    <SectionContainer id="calendar" className="bg-slate-950 border-t border-slate-900/60">
+    <SectionContainer id="calendar" className="bg-[#f8fafc] border-t border-slate-200">
       <div className="mb-12">
         <SectionHeading
           eyebrow="Book a Call"
           title="Ready to scale your roofing business? Let's talk."
           description="Tell us your target markets, volume needs, and current sales capacity. We'll walk you through available appointments and pricing."
-          theme="dark"
+          theme="light"
         />
       </div>
 
@@ -604,7 +608,7 @@ function FinalCtaSection() {
 
 function Footer() {
   return (
-    <footer className="border-t border-slate-900 bg-slate-950 px-6 py-8 sm:px-8 lg:px-12 text-slate-400">
+    <footer className="border-t border-slate-200 bg-slate-50 px-6 py-8 sm:px-8 lg:px-12 text-slate-500">
       <div className="mx-auto flex max-w-7xl flex-col gap-4 text-xs sm:text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
         <p>© {new Date().getFullYear()} leadsbystorm.com. All rights reserved.</p>
         <p>Targeted storm-damage roofing appointments.</p>
@@ -615,7 +619,7 @@ function Footer() {
 
 export default function LeadsByStormLandingPage() {
   return (
-    <main className="min-h-screen bg-slate-950 text-slate-200">
+    <main className="min-h-screen bg-white text-slate-900">
       <Header />
       <HeroSection />
       <HowItWorksSection />
