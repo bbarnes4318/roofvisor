@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 const LOGO_SRC = "/logo.png";
-const CONTACT_EMAIL = "sales@leadsbystorm.com";
+const CONTACT_EMAIL = "support@leadsbystorm.com";
 
 function ButtonLink({
   href,
@@ -164,67 +164,85 @@ function HeroVisual() {
           {/* Active Appointment Details Panel (Right) */}
           <div className="flex-1 bg-[#13161b] flex flex-col h-full overflow-hidden">
             {/* Header info */}
-            <div className="px-4 py-2.5 bg-[#0f1115] border-b border-white/5 flex items-center justify-between">
+            <div className="px-4 py-2.5 bg-[#0f1115] border-b border-white/5 flex items-center justify-between shrink-0">
               <div className="text-left">
-                <h4 className="text-[11px] font-extrabold text-white">Marcus K.</h4>
-                <p className="text-[8px] text-slate-500">1420 Pine Creek Dr, Orlando</p>
+                <h4 className="text-[11px] font-extrabold text-white">Inspection Details</h4>
+                <p className="text-[8px] text-slate-500">ID: LBS-407-192</p>
               </div>
               <span className="text-[7px] font-extrabold uppercase tracking-wide bg-emerald-500/10 text-[#00e676] border border-emerald-500/20 px-1.5 py-0.5 rounded">
                 Confirmed
               </span>
             </div>
 
-            {/* Lead Details Grid */}
-            <div className="p-3 bg-[#171a21] border-b border-white/5 grid grid-cols-2 gap-2 text-left">
-              <div>
-                <span className="text-[7px] text-slate-500 uppercase tracking-wider block font-bold">Appt Time</span>
-                <span className="text-[9px] text-white font-extrabold">Thursday, June 11 @ 4:00 PM</span>
-              </div>
-              <div>
-                <span className="text-[7px] text-slate-500 uppercase tracking-wider block font-bold">Storm Loss Date</span>
-                <span className="text-[9px] text-white font-extrabold font-mono">May 24 (1.75&quot; Hail)</span>
-              </div>
-            </div>
-
-            {/* Message Feed / Verification SMS */}
-            <div className="flex-1 p-3 overflow-hidden flex flex-col gap-2 justify-end">
-              <div className="text-center pb-1 border-b border-white/5">
-                <span className="text-[7px] text-slate-500 uppercase tracking-widest font-extrabold">Verification SMS History</span>
-              </div>
-              {/* Outbound 1 */}
-              <div className="max-w-[85%] self-end flex flex-col gap-0.5 text-right">
-                <div className="bg-[#1f242d] border border-white/5 text-[9px] leading-relaxed text-slate-300 p-2 rounded-lg rounded-tr-none text-left">
-                  Hi Marcus, we found hail damage near Pine Creek Dr. Can we inspect your roof for insurance?
+            {/* Scrollable Appointment Content */}
+            <div className="flex-1 p-3 overflow-y-auto space-y-2.5 text-left text-[9px] [scrollbar-width:none]">
+              
+              {/* Scheduled Time Block */}
+              <div className="bg-[#171a21] border border-white/5 rounded-lg p-2 flex flex-col gap-0.5">
+                <span className="text-[7px] text-[#145CFF] uppercase tracking-wider font-extrabold">Scheduled Inspection</span>
+                <div className="flex items-center justify-between">
+                  <span className="text-[9.5px] text-white font-extrabold">Thursday, June 11 @ 4:00 PM</span>
+                  <span className="text-[6.5px] bg-[#145CFF]/15 text-[#145CFF] px-1 py-0.5 rounded font-extrabold">Calendar-Ready</span>
                 </div>
-                <span className="text-[6px] text-slate-500">Jun 8, 10:38 AM</span>
               </div>
 
-              {/* Inbound 1 */}
-              <div className="max-w-[85%] self-start flex flex-col gap-0.5 text-left">
-                <div className="bg-gradient-to-tr from-[#145CFF] to-[#3B82F6] text-white text-[9px] leading-relaxed p-2 rounded-lg rounded-tl-none">
-                  Sure, is Thursday at 4pm okay? I&apos;ll be home.
-                </div>
-                <span className="text-[6px] text-slate-500">Jun 8, 10:42 AM</span>
+              {/* Property Address Block */}
+              <div className="bg-[#171a21] border border-white/5 rounded-lg p-2 flex flex-col gap-0.5">
+                <span className="text-[7px] text-slate-400 uppercase tracking-wider font-extrabold">Property Address</span>
+                <p className="text-white font-bold leading-tight">1420 Pine Creek Dr, Orlando, FL 32801</p>
               </div>
 
-              {/* Outbound 2 */}
-              <div className="max-w-[85%] self-end flex flex-col gap-0.5 text-right">
-                <div className="bg-[#1f242d] border border-white/5 text-[9px] leading-relaxed text-slate-300 p-2 rounded-lg rounded-tr-none text-left">
-                  Excellent. Thursday at 4:00 PM is booked. See you then!
+              {/* Storm Damage Details Block */}
+              <div className="bg-[#171a21] border border-white/5 rounded-lg p-2 flex flex-col gap-1.5">
+                <span className="text-[7px] text-[#00e676] uppercase tracking-wider font-extrabold">Storm &amp; Damage Report</span>
+                <div className="grid grid-cols-2 gap-2 pb-1 border-b border-white/5">
+                  <div>
+                    <span className="text-[6.5px] text-slate-500 block font-bold">Date of Loss</span>
+                    <span className="text-white font-bold">May 24 (Hail)</span>
+                  </div>
+                  <div>
+                    <span className="text-[6.5px] text-slate-500 block font-bold">Hail Size / Wind</span>
+                    <span className="text-white font-bold">1.75&quot; / 52 mph</span>
+                  </div>
                 </div>
-                <span className="text-[6px] text-slate-500">Jun 8, 10:44 AM</span>
+                <div className="space-y-1">
+                  <div>
+                    <span className="text-[6.5px] text-slate-500 block font-bold">Observed Damage Details</span>
+                    <p className="text-slate-300 leading-normal font-medium">Multiple wind-blown shingles, fresh ceiling spots in garage.</p>
+                  </div>
+                  <div>
+                    <span className="text-[6.5px] text-slate-500 block font-bold">Roofing Details</span>
+                    <p className="text-slate-300 leading-normal font-medium">3-Tab Asphalt Shingles (Approx. 12 years old)</p>
+                  </div>
+                </div>
               </div>
+
+              {/* Contact Notes Block */}
+              <div className="bg-[#171a21] border border-white/5 rounded-lg p-2 flex flex-col gap-1">
+                <span className="text-[7px] text-slate-400 uppercase tracking-wider font-extrabold">Homeowner &amp; Access Notes</span>
+                <div className="flex justify-between text-[7.5px] text-slate-300 border-b border-white/5 pb-1">
+                  <span>Name: <strong className="text-white font-bold">Marcus K.</strong></span>
+                  <span>Phone: <strong className="text-white font-bold">(407) 555-0192</strong></span>
+                </div>
+                <p className="text-slate-400 italic text-[7.5px] leading-normal">
+                  Note: Homeowner confirmed attendance. Ladder set up on West side of property recommended.
+                </p>
+              </div>
+
             </div>
 
             {/* Action Bar */}
-            <div className="p-2 bg-[#0f1115] border-t border-white/5 flex gap-2 justify-end">
-              <div className="flex-1 text-left flex items-center">
-                <span className="text-[7px] font-bold text-slate-400">Phone: (407) 555-0192</span>
-              </div>
-              <button className="bg-white/5 hover:bg-white/10 text-white text-[8px] font-extrabold px-2 py-1 rounded border border-white/10 transition">
-                Map View
+            <div className="p-2 bg-[#0f1115] border-t border-white/5 flex gap-2 justify-end shrink-0">
+              <button className="bg-white/5 hover:bg-white/10 text-white text-[8px] font-extrabold px-2.5 py-1.5 rounded border border-white/10 transition flex items-center gap-1">
+                <svg className="w-2.5 h-2.5 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                </svg>
+                Directions
               </button>
-              <button className="bg-[#145CFF] hover:bg-[#2F7DFF] text-white text-[8px] font-extrabold px-2 py-1 rounded transition">
+              <button className="bg-[#145CFF] hover:bg-[#2F7DFF] text-white text-[8px] font-extrabold px-2.5 py-1.5 rounded transition flex items-center gap-1">
+                <svg className="w-2.5 h-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 8H18.5" />
+                </svg>
                 Sync to CRM
               </button>
             </div>
@@ -234,7 +252,7 @@ function HeroVisual() {
         </div>
 
         {/* Bottom Status bar */}
-        <div className="px-4 py-2 border-t border-white/5 bg-[#0f1115] flex items-center justify-between text-[8px] text-slate-500">
+        <div className="px-4 py-2 border-t border-white/5 bg-[#0f1115] flex items-center justify-between text-[8px] text-slate-500 shrink-0">
           <div className="flex items-center gap-1.5 font-bold">
             <span className="w-1.5 h-1.5 rounded-full bg-[#00e676] shadow-[0_0_4px_#00e676]" />
             <span>Calendar Feed Active</span>
@@ -579,23 +597,25 @@ function TerritoryCtaSection() {
 
 function CalendarSection() {
   return (
-    <SectionContainer id="calendar" className="bg-white py-20 border-b border-[#DDE6F2]">
-      <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:gap-12">
+    <SectionContainer id="calendar" className="bg-white py-16 sm:py-20 border-b border-[#DDE6F2]">
+      <div className="max-w-4xl mx-auto text-center space-y-8">
         
-        {/* Left Column: Calendar Embed */}
-        <div className="rounded-2xl border border-[#DDE6F2] bg-white p-6 shadow-xl space-y-4">
-          <div>
-            <p className="text-xs font-bold uppercase tracking-widest text-[#145CFF]">Booking Console</p>
-            <h3 className="mt-2 text-xl font-extrabold text-[#061A2F] leading-tight">
-              Schedule Your Territory Call
-            </h3>
-            <p className="mt-2 text-sm text-[#42526B]">
-              Pick a time that works for you. We will review your service area, current storm activity, appointment volume, pricing, and territory availability.
-            </p>
-          </div>
+        {/* Header Section */}
+        <div className="space-y-3">
+          <p className="text-xs font-bold uppercase tracking-widest text-[#145CFF]">Booking Console</p>
+          <h2 className="text-3xl font-extrabold tracking-tight text-[#061A2F] sm:text-4xl">
+            Schedule Your Territory Call
+          </h2>
+          <p className="text-sm sm:text-base text-[#42526B] max-w-2xl mx-auto">
+            Pick a time below to review your service area, current storm activity, appointment volume, pricing, and territory availability with our team.
+          </p>
+        </div>
 
+        {/* Calendar Card Wrapper */}
+        <div className="rounded-2xl border border-[#DDE6F2] bg-white p-2 sm:p-4 shadow-xl overflow-hidden relative">
+          
           {/* Calendly Embed Container with Fallback/Loading State */}
-          <div className="relative overflow-hidden rounded-xl border border-[#DDE6F2] bg-[#F5F8FC] min-h-[700px] w-full">
+          <div className="relative overflow-hidden rounded-xl bg-[#F5F8FC] min-h-[660px] w-full">
             {/* Loading / Fallback Background Indicator */}
             <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6 bg-slate-50 z-0">
               <svg className="animate-spin h-8 w-8 text-[#145CFF] mb-3" fill="none" viewBox="0 0 24 24">
@@ -603,8 +623,8 @@ function CalendarSection() {
                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
               </svg>
               <p className="text-sm font-bold text-[#061A2F]">Loading schedule...</p>
-              <p className="mt-1 text-xs text-[#42526B] max-w-xs">
-                If the calendar does not load, show a clear fallback button:
+              <p className="mt-1 text-xs text-[#42526B] max-w-xs mx-auto">
+                If the calendar does not load, you can book directly using this link:
               </p>
               <a
                 href="https://calendly.com/leadsbystorm-support/30min?text_color=0b1329&primary_color=2563eb"
@@ -618,78 +638,40 @@ function CalendarSection() {
 
             {/* Live Widget Iframe Container */}
             <div 
-              className="calendly-inline-widget w-full h-[700px] relative z-10" 
+              className="calendly-inline-widget w-full h-[660px] relative z-10" 
               data-url="https://calendly.com/leadsbystorm-support/30min?text_color=0b1329&primary_color=2563eb"
-              style={{ minWidth: "320px", height: "700px" }}
+              style={{ minWidth: "320px", height: "660px" }}
             />
           </div>
         </div>
 
-        {/* Right Column: Email Card & QR Code & Checklist */}
-        <div className="flex flex-col gap-6">
+        {/* Footer/Alternative options in a single row */}
+        <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-[#42526B]">
+          <a
+            href={`mailto:${CONTACT_EMAIL}?subject=LeadsByStorm%20Discovery%20Call%20Availability&body=Hi%20LeadsByStorm%2C%0A%0AI'm%20a%20roofing%20contractor%20interested%20in%20exclusive%20storm%20appointments.%0A%0AMy%20Service%20Area%2FMarket%3A%20%0AMy%20Preferred%20Call%20Time%20Availability%3A%20%0A%0AThanks!`}
+            className="inline-flex items-center gap-2 font-bold text-[#145CFF] hover:underline"
+          >
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2-2v10a2 2 0 002 2z" />
+            </svg>
+            Prefer Email? {CONTACT_EMAIL}
+          </a>
           
-          {/* Email Card */}
-          <div className="rounded-2xl border border-[#DDE6F2] bg-white p-6 flex flex-col justify-between shadow-xl space-y-6">
-            <div className="space-y-4">
-              <p className="text-xs font-bold uppercase tracking-widest text-[#145CFF]">
-                Prefer Email?
-              </p>
-              <h3 className="text-lg font-extrabold text-[#061A2F]">
-                Send your availability.
-              </h3>
-              <p className="text-xs leading-relaxed text-[#42526B]">
-                Send us your availability and the market you serve. We will reply or call you back with current appointment options.
-              </p>
-            </div>
+          <span className="hidden sm:inline text-slate-300">|</span>
 
-            <a
-              href={`mailto:${CONTACT_EMAIL}?subject=LeadsByStorm%20Discovery%20Call%20Availability&body=Hi%20LeadsByStorm%2C%0A%0AI'm%20a%20roofing%20contractor%20interested%20in%20exclusive%20storm%25%20appointments.%0A%0AMy%20Service%20Area%2FMarket%3A%20%0AMy%20Preferred%20Call%20Time%20Availability%3A%20%0A%0AThanks!`}
-              className="inline-flex items-center justify-center rounded-xl bg-[#F5F8FC] border border-[#DDE6F2] px-6 py-3.5 text-sm font-extrabold text-[#42526B] hover:text-[#061A2F] hover:border-[#145CFF] hover:bg-slate-50 transition active:scale-[0.98] transform"
-            >
-              Email LeadsByStorm
-            </a>
-
-            {/* Checklist */}
-            <div className="border-t border-[#DDE6F2] pt-4 space-y-2">
-              <p className="text-[10px] font-bold text-[#061A2F] uppercase tracking-wider">Information to include:</p>
-              {[
-                "Tell us your service area",
-                "Tell us your preferred call time",
-                "Ask about current appointment volume",
-              ].map((item) => (
-                <div key={item} className="flex items-center gap-2 text-xs font-semibold text-[#42526B]">
-                  <svg className="h-4 w-4 text-[#145CFF] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>{item}</span>
-                </div>
-              ))}
-            </div>
+          <div className="flex items-center gap-2 font-bold justify-center">
+            <svg className="w-4 h-4 text-[#145CFF]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" />
+            </svg>
+            <span>Scan to Book on Mobile:</span>
+            <img
+              src="/qrcode.png"
+              alt="QR Code"
+              className="h-8 w-8 inline-block object-contain ml-1 border border-[#DDE6F2] rounded p-0.5 bg-white"
+            />
           </div>
-
-          {/* QR Code Booking Card */}
-          <div className="rounded-2xl border border-[#DDE6F2] bg-white p-5 flex flex-col items-center shadow-lg text-center">
-            <p className="text-[10px] font-bold uppercase tracking-widest text-[#145CFF]">
-              Scan to Book on Mobile
-            </p>
-            <div className="my-3 p-2 rounded-xl border border-[#DDE6F2] bg-[#F5F8FC] flex items-center justify-center">
-              <img
-                src="/qrcode.png"
-                alt="Booking Calendar QR Code"
-                className="h-24 w-24 object-contain"
-              />
-            </div>
-            <a
-              href="https://calendly.com/leadsbystorm-support/30min?text_color=0b1329&primary_color=2563eb"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[10px] font-bold text-[#145CFF] hover:underline"
-            >
-              calendly.com/leadsbystorm-support/30min
-            </a>
-          </div>
-
         </div>
+
       </div>
     </SectionContainer>
   );
