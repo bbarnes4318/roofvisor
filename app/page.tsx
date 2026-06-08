@@ -516,70 +516,39 @@ function PricingSection() {
   );
 }
 
-function CalendarPlaceholder() {
+function CalendarBookingWidget() {
   return (
     <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-xl">
-      <div className="mb-6 border-b border-slate-200 pb-5">
-        <p className="text-xs font-bold uppercase tracking-widest text-blue-600">
-          Booking Console
-        </p>
-        <h3 className="mt-2 text-xl font-extrabold text-blue-950 leading-tight">
-          Choose a time on our calendar below for a quick phone call.
-        </h3>
+      <div className="mb-6 border-b border-slate-200 pb-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+        <div>
+          <p className="text-xs font-bold uppercase tracking-widest text-blue-600">
+            Booking Console
+          </p>
+          <h3 className="mt-2 text-xl font-extrabold text-blue-950 leading-tight">
+            Schedule Your Strategy Call Below
+          </h3>
+        </div>
+        <a
+          href="https://calendar.zoho.com/zc/view/slot-booking/zz08011220927fedd39fab23ad34841fe16c9bfa0d035dd8f628756cc0e6b847ea92788edc"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1.5 text-xs font-extrabold text-blue-600 hover:text-blue-700 bg-blue-50 hover:bg-blue-100/80 px-3 py-1.5 rounded-lg transition"
+        >
+          Open in New Tab
+          <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+        </a>
       </div>
 
-      {/* Calendar Widget Area */}
-      <div className="relative overflow-hidden rounded-xl border border-slate-200 bg-slate-50 p-4">
-        
-        {/* Real-looking calendar grid mockup */}
-        <div className="opacity-45 select-none pointer-events-none">
-          {/* Header Row: Month / Timezone */}
-          <div className="mb-4 flex items-center justify-between text-xs font-bold text-slate-500">
-            <span>June 2026</span>
-            <span>Eastern Time (US & Canada)</span>
-          </div>
-          
-          {/* Grid of Days */}
-          <div className="grid grid-cols-5 gap-2 text-center text-[10px] sm:text-xs">
-            {["Mon", "Tue", "Wed", "Thu", "Fri"].map((day, idx) => (
-              <div key={day} className="space-y-2">
-                <div className="font-bold text-slate-700">{day}</div>
-                <div className="rounded bg-blue-50 py-1 font-bold text-blue-900 border border-blue-100">{8 + idx}</div>
-                <div className="rounded border border-slate-200 bg-white py-1 text-slate-700">9:00 AM</div>
-                <div className="rounded border border-slate-200 bg-white py-1 text-slate-700">11:30 AM</div>
-                <div className="rounded border border-slate-200 bg-white py-1 text-slate-700">2:00 PM</div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Overlay highlighting the embed placeholder */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/80 p-6 text-center backdrop-blur-[2px]">
-          <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-600/35">
-            <svg
-              aria-hidden="true"
-              viewBox="0 0 24 24"
-              className="h-6 w-6"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.5"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-            </svg>
-          </div>
-
-          <p className="text-base font-extrabold text-white">
-            Embed Scheduling Widget Here
-          </p>
-          <p className="mt-2 max-w-xs text-xs leading-relaxed text-slate-400">
-            Replace this container with your Calendly, Cal.com, HubSpot, or GoHighLevel inline iframe.
-          </p>
-          
-          {/* Placeholder developer hint */}
-          <div className="mt-4 rounded border border-slate-800 bg-slate-900/55 px-3 py-1.5 text-[10px] font-mono text-slate-300">
-            &lt;iframe src=&quot;YOUR_CALENDLY_URL&quot; ... /&gt;
-          </div>
-        </div>
+      {/* Zoho Calendar Live Iframe Container */}
+      <div className="relative overflow-hidden rounded-xl border border-slate-200 bg-slate-50 h-[650px] w-full">
+        <iframe
+          src="https://calendar.zoho.com/zc/view/slot-booking/zz08011220927fedd39fab23ad34841fe16c9bfa0d035dd8f628756cc0e6b847ea92788edc"
+          title="Appointment Booking"
+          className="absolute inset-0 w-full h-full border-0"
+          style={{ overflow: "hidden" }}
+        />
       </div>
     </div>
   );
@@ -594,7 +563,7 @@ function EmailContactCard() {
   return (
     <div className="rounded-2xl border border-slate-200 bg-white p-8 flex flex-col justify-between shadow-xl">
       <div>
-        <p className="text-xs font-bold uppercase tracking-widest text-blue-650">
+        <p className="text-xs font-bold uppercase tracking-widest text-blue-600">
           Contact Us Directly
         </p>
 
@@ -630,8 +599,44 @@ function FinalCtaSection() {
       </div>
 
       <div className="grid gap-8 lg:grid-cols-[1.25fr_0.75fr]">
-        <CalendarPlaceholder />
-        <EmailContactCard />
+        <CalendarBookingWidget />
+        
+        {/* Right side container: QR Code Card and Email Card */}
+        <div className="flex flex-col gap-6">
+          {/* QR Code Booking Card */}
+          <div className="rounded-2xl border border-slate-200 bg-white p-6 flex flex-col items-center justify-between shadow-xl text-center">
+            <div className="w-full">
+              <p className="text-xs font-bold uppercase tracking-widest text-blue-600">
+                Book on Mobile
+              </p>
+              <h3 className="mt-3 text-lg font-extrabold text-blue-950">
+                Scan to Schedule Instantly
+              </h3>
+              <p className="mt-2 text-xs text-slate-500 leading-relaxed max-w-[200px] mx-auto">
+                Scan this QR code with your phone camera to book your strategy call directly on mobile.
+              </p>
+            </div>
+            
+            <div className="my-5 p-3 rounded-xl border border-slate-100 bg-slate-50 shadow-inner flex items-center justify-center">
+              <img
+                src="/qrcode.png"
+                alt="Booking Calendar QR Code"
+                className="h-40 w-40 object-contain"
+              />
+            </div>
+
+            <a
+              href="https://calendar.zoho.com/zc/view/slot-booking/zz08011220927fedd39fab23ad34841fe16c9bfa0d035dd8f628756cc0e6b847ea92788edc"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs font-extrabold text-blue-600 hover:underline break-all"
+            >
+              calendar.zoho.com/zc/view/slot-booking/...
+            </a>
+          </div>
+
+          <EmailContactCard />
+        </div>
       </div>
     </SectionContainer>
   );
