@@ -630,7 +630,7 @@ function CalendarSection() {
         </div>
 
         {/* Calendar Card Wrapper */}
-        <div className="rounded-2xl border border-[#DDE6F2] bg-white p-2 sm:p-4 shadow-xl overflow-hidden relative">
+        <div className="rounded-2xl border border-[#DDE6F2] border-t-8 border-t-[#145CFF] bg-white p-2 sm:p-4 shadow-2xl shadow-blue-500/10 overflow-hidden relative">
           
           {/* Calendly Embed Container with Fallback/Loading State */}
           <div className="relative overflow-hidden rounded-xl bg-[#F5F8FC] min-h-[660px] w-full">
