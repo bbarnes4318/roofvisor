@@ -12,3 +12,6 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
+infra/*.key
+infra/*.crt
+infra/*.pem
