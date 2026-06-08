@@ -562,23 +562,51 @@ function PricingSection() {
 
 function TerritoryCtaSection() {
   return (
-    <SectionContainer className="bg-[#F5F8FC] py-20 border-b border-[#DDE6F2]">
-      <div className="text-left max-w-3xl space-y-6">
-        <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#145CFF]">TERRITORY AVAILABILITY</p>
-        <h2 className="text-3xl font-extrabold tracking-tight text-[#061A2F] sm:text-4xl">
-          Claim Your Storm Territory Before It Fills.
-        </h2>
-        <p className="text-base leading-relaxed text-[#42526B] sm:text-lg">
-          We work with a limited number of roofing contractors in each active market to protect appointment quality and prevent oversaturation. Book a quick call to see if we have confirmed appointments available in your service area.
-        </p>
+    <SectionContainer className="bg-[#F5F8FC] py-16 sm:py-20 border-b border-[#DDE6F2]">
+      <div className="grid gap-12 lg:grid-cols-12 lg:items-center">
+        
+        {/* Left Column: Copy Content */}
+        <div className="space-y-6 lg:col-span-7 text-left">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#145CFF]">
+            TERRITORY AVAILABILITY
+          </p>
+          <h2 className="text-3xl font-extrabold tracking-tight text-[#061A2F] sm:text-4xl">
+            Claim Your Storm Territory Before It Fills.
+          </h2>
+          <p className="text-base leading-relaxed text-[#42526B] sm:text-lg">
+            We work with a limited number of roofing contractors in each active market to protect appointment quality and prevent oversaturation. Book a quick call to see if we have confirmed appointments available in your service area.
+          </p>
 
-        <div className="flex flex-col gap-3 sm:flex-row pt-2">
-          <ButtonLink href="#calendar">Book a 10-Minute Territory Call</ButtonLink>
-          <ButtonLink href={`mailto:${CONTACT_EMAIL}`} variant="secondary">
-            Email Us Your Availability
-          </ButtonLink>
+          <div className="flex flex-col gap-3 sm:flex-row pt-2">
+            <ButtonLink href="#calendar">Book a 10-Minute Territory Call</ButtonLink>
+            <ButtonLink href={`mailto:${CONTACT_EMAIL}`} variant="secondary">
+              Email Us Your Availability
+            </ButtonLink>
+          </div>
         </div>
 
+        {/* Right Column: Visual Storm Radar Map */}
+        <div className="lg:col-span-5 relative w-full max-w-md mx-auto">
+          {/* Subtle background glow */}
+          <div className="absolute -inset-3 rounded-2xl bg-gradient-to-tr from-[#145CFF]/10 to-[#145CFF]/5 blur-xl pointer-events-none" />
+          
+          {/* Image Container */}
+          <div className="relative rounded-2xl border border-[#DDE6F2] bg-white p-2 shadow-xl overflow-hidden aspect-[4/3]">
+            <img
+              src="/storm_map.png"
+              alt="Active Storm Damage Territory Map Dashboard"
+              className="w-full h-full object-cover rounded-xl"
+            />
+            {/* Absolute overlay elements for premium dashboard look */}
+            <div className="absolute top-4 left-4 bg-[#061A2F]/90 backdrop-blur-sm border border-white/10 rounded-lg px-2.5 py-1 text-[8px] font-extrabold text-white uppercase tracking-wider flex items-center gap-1.5 shadow-md">
+              <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />
+              Active Radar: 1.75&quot; Hail Zone
+            </div>
+            <div className="absolute bottom-4 right-4 bg-white/95 backdrop-blur-sm border border-[#DDE6F2] rounded-lg px-2.5 py-1 text-[8px] font-extrabold text-[#42526B] shadow-md">
+              Territory: <span className="text-[#145CFF]">Orlando East (Claimed)</span>
+            </div>
+          </div>
+        </div>
 
       </div>
     </SectionContainer>
