@@ -59,7 +59,7 @@ function SectionContainer({
 function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-[#DDE6F2] bg-white/95 backdrop-blur-md">
-      <nav className="mx-auto flex max-w-[1200px] items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+      <nav className="mx-auto flex max-w-[1200px] items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
         <a href="#" aria-label="LeadsByStorm home" className="flex items-center">
           <img
             src={LOGO_SRC}
@@ -86,7 +86,7 @@ function HeroVisual() {
       <div className="relative rounded-2xl border border-white/10 bg-[#090a0f] shadow-2xl overflow-hidden font-sans text-slate-200">
         
         {/* Window OS Header Bar */}
-        <div className="flex items-center justify-between px-4 py-3 border-b border-white/5 bg-[#0f1115]">
+        <div className="flex items-center justify-between px-4 py-2 border-b border-white/5 bg-[#0f1115]">
           <div className="flex items-center gap-1.5">
             <span className="w-3.5 h-3.5 rounded-full bg-[#ff5f56]" />
             <span className="w-3.5 h-3.5 rounded-full bg-[#ffbd2e]" />
@@ -99,22 +99,22 @@ function HeroVisual() {
         </div>
 
         {/* Dashboard Panels Layout */}
-        <div className="flex h-[380px]">
+        <div className="flex h-[320px]">
           
           {/* Sidebar Panel - Calendar Agenda (Left) */}
-          <div className="w-[170px] border-r border-white/5 bg-[#0f1115] p-3 flex flex-col gap-3 shrink-0">
+          <div className="w-[170px] border-r border-white/5 bg-[#0f1115] p-2.5 flex flex-col gap-2 shrink-0">
             {/* Header */}
-            <div className="pb-2 border-b border-white/5 mb-1 text-left">
+            <div className="pb-1.5 border-b border-white/5 mb-0.5 text-left">
               <span className="text-[7px] text-[#60A5FA] uppercase tracking-widest font-extrabold block">Calendar View</span>
               <span className="text-[11px] font-extrabold text-white">Thu, June 11</span>
             </div>
 
             {/* Daily Agenda Slots */}
-            <div className="flex flex-col gap-3 overflow-hidden">
+            <div className="flex flex-col gap-2 overflow-hidden">
               {/* 10:00 AM */}
               <div className="flex gap-2 text-left">
-                <div className="text-[8px] text-slate-500 w-10 pt-1 shrink-0 font-bold">10:00 AM</div>
-                <div className="flex-1 bg-white/5 border border-white/5 rounded p-1.5 opacity-60">
+                <div className="text-[8px] text-slate-500 w-10 pt-0.5 shrink-0 font-bold">10:00 AM</div>
+                <div className="flex-1 bg-white/5 border border-white/5 rounded p-1 opacity-60">
                   <span className="text-[8.5px] font-bold text-slate-300 block truncate">Sarah L.</span>
                   <span className="text-[7px] text-slate-500 block truncate">Winter Park</span>
                 </div>
@@ -123,19 +123,19 @@ function HeroVisual() {
               {/* 12:00 PM */}
               <div className="flex gap-2 text-left items-center">
                 <div className="text-[8px] text-slate-500 w-10 shrink-0 font-bold">12:00 PM</div>
-                <div className="flex-1 border-t border-dashed border-white/5 my-2" />
+                <div className="flex-1 border-t border-dashed border-white/5 my-1" />
               </div>
 
               {/* 2:00 PM */}
               <div className="flex gap-2 text-left items-center">
                 <div className="text-[8px] text-slate-500 w-10 shrink-0 font-bold">2:00 PM</div>
-                <div className="flex-1 border-t border-dashed border-white/5 my-2" />
+                <div className="flex-1 border-t border-dashed border-white/5 my-1" />
               </div>
 
               {/* 4:00 PM (Highlighted Active) */}
               <div className="flex gap-2 text-left">
-                <div className="text-[8px] text-[#60A5FA] w-10 pt-1 shrink-0 font-extrabold">4:00 PM</div>
-                <div className="flex-1 bg-[#145CFF]/10 border-l-2 border-[#145CFF] rounded-r p-1.5 shadow-[0_0_10px_rgba(20,92,255,0.1)]">
+                <div className="text-[8px] text-[#60A5FA] w-10 pt-0.5 shrink-0 font-extrabold">4:00 PM</div>
+                <div className="flex-1 bg-[#145CFF]/10 border-l-2 border-[#145CFF] rounded-r p-1 shadow-[0_0_10px_rgba(20,92,255,0.1)]">
                   <span className="text-[8.5px] font-extrabold text-white block truncate">Marcus K.</span>
                   <span className="text-[7px] text-[#93C5FD] font-bold block truncate">Orlando, FL</span>
                 </div>
@@ -146,12 +146,12 @@ function HeroVisual() {
           {/* Active Appointment Details Panel (Right) */}
           <div className="flex-1 bg-[#13161b] flex flex-col h-full overflow-hidden">
             {/* Header info */}
-            <div className="px-4 py-2.5 bg-[#0f1115] border-b border-white/5 flex items-center justify-between shrink-0">
+            <div className="px-3.5 py-1.5 bg-[#0f1115] border-b border-white/5 flex items-center justify-between shrink-0">
               <div className="flex items-center gap-1.5 text-left">
                 <svg className="w-3.5 h-3.5 text-[#60A5FA]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                 </svg>
-                <h4 className="text-[10.5px] font-extrabold text-white">Event Details</h4>
+                <h4 className="text-[10px] font-extrabold text-white">Event Details</h4>
               </div>
               <span className="text-[7px] font-extrabold uppercase tracking-wide bg-emerald-500/10 text-[#00e676] border border-emerald-500/20 px-1.5 py-0.5 rounded">
                 Confirmed
@@ -159,10 +159,10 @@ function HeroVisual() {
             </div>
 
             {/* Scrollable Appointment Content */}
-            <div className="flex-1 p-3 overflow-y-auto space-y-2.5 text-left text-[9px] [scrollbar-width:none]">
+            <div className="flex-1 p-2.5 overflow-y-auto space-y-2 text-left text-[9px] [scrollbar-width:none]">
               
               {/* Scheduled Time Block */}
-              <div className="bg-[#171a21] border border-white/5 rounded-lg p-2 flex flex-col gap-0.5">
+              <div className="bg-[#171a21] border border-white/5 rounded-lg p-1.5 flex flex-col gap-0.5">
                 <span className="text-[7px] text-[#60A5FA] uppercase tracking-wider font-extrabold">Scheduled Inspection</span>
                 <div className="flex items-center justify-between">
                   <span className="text-[9.5px] text-white font-extrabold">Thursday, June 11 @ 4:00 PM</span>
@@ -171,7 +171,7 @@ function HeroVisual() {
               </div>
 
               {/* Property Address Block */}
-              <div className="bg-[#171a21] border border-white/5 rounded-lg p-2 flex flex-col gap-0.5">
+              <div className="bg-[#171a21] border border-white/5 rounded-lg p-1.5 flex flex-col gap-0.5">
                 <span className="text-[7px] text-slate-400 uppercase tracking-wider font-extrabold">Property Address</span>
                 <div className="flex items-start gap-1.5">
                   <svg className="w-3 h-3 text-slate-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
@@ -183,9 +183,9 @@ function HeroVisual() {
               </div>
 
               {/* Storm Damage Details Block */}
-              <div className="bg-[#171a21] border border-white/5 rounded-lg p-2 flex flex-col gap-1.5">
+              <div className="bg-[#171a21] border border-white/5 rounded-lg p-1.5 flex flex-col gap-1">
                 <span className="text-[7px] text-[#00e676] uppercase tracking-wider font-extrabold">Storm &amp; Damage Report</span>
-                <div className="grid grid-cols-2 gap-2 pb-1 border-b border-white/5">
+                <div className="grid grid-cols-2 gap-2 pb-0.5 border-b border-white/5">
                   <div>
                     <span className="text-[6.5px] text-slate-500 block font-bold">Date of Loss</span>
                     <span className="text-white font-bold">May 24 (Hail)</span>
@@ -208,9 +208,9 @@ function HeroVisual() {
               </div>
 
               {/* Contact Notes Block */}
-              <div className="bg-[#171a21] border border-white/5 rounded-lg p-2 flex flex-col gap-1">
+              <div className="bg-[#171a21] border border-white/5 rounded-lg p-1.5 flex flex-col gap-1">
                 <span className="text-[7px] text-slate-400 uppercase tracking-wider font-extrabold">Homeowner &amp; Access Notes</span>
-                <div className="flex justify-between text-[7.5px] text-slate-300 border-b border-white/5 pb-1">
+                <div className="flex justify-between text-[7.5px] text-slate-300 border-b border-white/5 pb-0.5">
                   <span>Name: <strong className="text-white font-bold">Marcus K.</strong></span>
                   <span>Phone: <strong className="text-white font-bold">(407) 555-0192</strong></span>
                 </div>
@@ -222,14 +222,14 @@ function HeroVisual() {
             </div>
 
             {/* Action Bar */}
-            <div className="p-2 bg-[#0f1115] border-t border-white/5 flex gap-2 justify-end shrink-0">
-              <button className="bg-white/5 hover:bg-white/10 text-white text-[8px] font-extrabold px-2.5 py-1.5 rounded border border-white/10 transition flex items-center gap-1">
+            <div className="p-1.5 bg-[#0f1115] border-t border-white/5 flex gap-2 justify-end shrink-0">
+              <button className="bg-white/5 hover:bg-white/10 text-white text-[8px] font-extrabold px-2 py-1 rounded border border-white/10 transition flex items-center gap-1">
                 <svg className="w-2.5 h-2.5 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
                 </svg>
                 Directions
               </button>
-              <button className="bg-[#145CFF] hover:bg-[#2F7DFF] text-white text-[8px] font-extrabold px-2.5 py-1.5 rounded transition flex items-center gap-1">
+              <button className="bg-[#145CFF] hover:bg-[#2F7DFF] text-white text-[8px] font-extrabold px-2 py-1 rounded transition flex items-center gap-1">
                 <svg className="w-2.5 h-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 8H18.5" />
                 </svg>
@@ -242,7 +242,7 @@ function HeroVisual() {
         </div>
 
         {/* Bottom Status bar */}
-        <div className="px-4 py-2 border-t border-white/5 bg-[#0f1115] flex items-center justify-between text-[8px] text-slate-500 shrink-0">
+        <div className="px-4 py-1.5 border-t border-white/5 bg-[#0f1115] flex items-center justify-between text-[8px] text-slate-500 shrink-0">
           <div className="flex items-center gap-1.5 font-bold">
             <span className="w-1.5 h-1.5 rounded-full bg-[#00e676] shadow-[0_0_4px_#00e676]" />
             <span>Calendar Feed Active</span>
@@ -259,16 +259,16 @@ function HeroVisual() {
 
 function HeroSection() {
   return (
-    <SectionContainer noPadding className="overflow-hidden bg-[#F5F8FC] bg-[radial-gradient(#dde6f2_1px,transparent_1px)] bg-[size:24px_24px] text-[#061A2F] pt-6 pb-10 sm:pt-8 sm:pb-12 lg:pt-10 lg:pb-16 border-b border-[#DDE6F2] relative">
+    <SectionContainer noPadding className="overflow-hidden bg-[#F5F8FC] bg-[radial-gradient(#dde6f2_1px,transparent_1px)] bg-[size:24px_24px] text-[#061A2F] pt-3 pb-8 sm:pt-4 sm:pb-10 lg:pt-3 lg:pb-12 border-b border-[#DDE6F2] relative">
       <div className="grid gap-12 lg:grid-cols-12 lg:gap-16 lg:items-center">
         
         {/* Left Column (Desktop Layout) */}
-        <div className="space-y-4 sm:space-y-5 lg:col-span-7">
+        <div className="space-y-3 lg:col-span-7">
           <p className="text-xs font-extrabold uppercase tracking-[0.2em] text-[#145CFF]">
             FOR ROOFING CONTRACTORS IN ACTIVE STORM MARKETS
           </p>
 
-          <h1 className="text-4xl font-extrabold tracking-tight text-[#061A2F] sm:text-5xl lg:text-6xl lg:leading-[1.08]">
+          <h1 className="text-3xl font-extrabold tracking-tight text-[#061A2F] sm:text-4xl lg:text-5xl lg:leading-[1.1] xl:text-[54px]">
             Exclusive Storm-Damage Roof Inspection Appointments
           </h1>
 
@@ -277,11 +277,11 @@ function HeroSection() {
             <HeroVisual />
           </div>
 
-          <p className="text-base leading-relaxed text-[#42526B] sm:text-lg max-w-xl">
+          <p className="text-sm leading-relaxed text-[#42526B] sm:text-base max-w-lg">
             When hail and wind storms hit, homeowners want to know if their roof was damaged. We identify those homeowners, confirm their interest, and schedule inspection appointments directly on your calendar.
           </p>
 
-          <div className="flex flex-col gap-3 sm:flex-row pt-1">
+          <div className="flex flex-col gap-2 sm:flex-row pt-0.5">
             <ButtonLink href="#calendar">Book a 10-Minute Territory Call</ButtonLink>
             <ButtonLink href={`mailto:${CONTACT_EMAIL}`} variant="secondary">
               Email Us Your Availability
@@ -289,8 +289,8 @@ function HeroSection() {
           </div>
 
           {/* Hero proof points under CTA */}
-          <div className="border-t border-[#DDE6F2] pt-4 space-y-3">
-            <div className="grid grid-cols-2 gap-y-3 gap-x-4 text-xs font-bold text-[#42526B] sm:grid-cols-4">
+          <div className="border-t border-[#DDE6F2] pt-3 space-y-2.5">
+            <div className="grid grid-cols-2 gap-y-2 gap-x-4 text-xs font-bold text-[#42526B] sm:grid-cols-4">
               <span className="flex items-center gap-2">
                 <svg className="h-4.5 w-4.5 text-[#11A36A]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3.5">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
@@ -455,7 +455,7 @@ function GuaranteeSection() {
       <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
         <div className="space-y-6">
           <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl leading-tight">
-            Confirmed Appointments. Protected Delivery.
+            Guaranteed Inspection Appointments. Risk-Free No-Show Protection.
           </h2>
           <p className="text-base leading-relaxed text-slate-300 sm:text-lg">
             You are not buying a cold lead list. You are buying scheduled inspection opportunities with homeowners who have already confirmed interest. If a homeowner no-shows, we replace the appointment.
