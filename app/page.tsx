@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "LeadsByStorm | Guaranteed Storm Damage Appointments",
@@ -529,7 +530,7 @@ function CalendarBookingWidget() {
           </h3>
         </div>
         <a
-          href="https://calendar.zoho.com/zc/view/slot-booking/zz08011220927fedd39fab23ad34841fe16c9bfa0d035dd8f628756cc0e6b847ea92788edc"
+          href="https://calendly.com/leadsbystorm-support/30min?text_color=0b1329&primary_color=2563eb"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-1.5 text-xs font-extrabold text-blue-600 hover:text-blue-700 bg-blue-50 hover:bg-blue-100/80 px-3 py-1.5 rounded-lg transition"
@@ -541,13 +542,12 @@ function CalendarBookingWidget() {
         </a>
       </div>
 
-      {/* Zoho Calendar Live Iframe Container */}
-      <div className="relative overflow-hidden rounded-xl border border-slate-200 bg-slate-50 h-[650px] w-full">
-        <iframe
-          src="https://calendar.zoho.com/zc/view/slot-booking/zz08011220927fedd39fab23ad34841fe16c9bfa0d035dd8f628756cc0e6b847ea92788edc"
-          title="Appointment Booking"
-          className="absolute inset-0 w-full h-full border-0"
-          style={{ overflow: "hidden" }}
+      {/* Calendly Inline Widget Embed Container */}
+      <div className="relative overflow-hidden rounded-xl border border-slate-200 bg-slate-50 min-h-[700px] w-full">
+        <div 
+          className="calendly-inline-widget w-full h-[700px]" 
+          data-url="https://calendly.com/leadsbystorm-support/30min?text_color=0b1329&primary_color=2563eb"
+          style={{ minWidth: "320px", height: "700px" }}
         />
       </div>
     </div>
@@ -626,12 +626,12 @@ function FinalCtaSection() {
             </div>
 
             <a
-              href="https://calendar.zoho.com/zc/view/slot-booking/zz08011220927fedd39fab23ad34841fe16c9bfa0d035dd8f628756cc0e6b847ea92788edc"
+              href="https://calendly.com/leadsbystorm-support/30min?text_color=0b1329&primary_color=2563eb"
               target="_blank"
               rel="noopener noreferrer"
               className="text-xs font-extrabold text-blue-600 hover:underline break-all"
             >
-              calendar.zoho.com/zc/view/slot-booking/...
+              calendly.com/leadsbystorm-support/30min
             </a>
           </div>
 
@@ -656,6 +656,7 @@ function Footer() {
 export default function LeadsByStormLandingPage() {
   return (
     <main className="min-h-screen bg-white text-slate-900">
+      <Script src="https://assets.calendly.com/assets/external/widget.js" strategy="afterInteractive" />
       <Header />
       <HeroSection />
       <HowItWorksSection />
