@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "LeadsByStorm | Guaranteed Storm Damage Appointments",
   description:
-    "LeadsByStorm provides targeted roofing lead generation and confirmed storm damage inspection appointments for roofing contractors.",
+    "LeadsByStorm provides exclusive, pre-qualified storm damage inspection appointments for roofing contractors.",
 };
 
 type Feature = {
@@ -16,19 +16,19 @@ const CONTACT_EMAIL = "sales@leadsbystorm.com";
 
 const features: Feature[] = [
   {
-    title: "Storm-Targeted Prospecting",
+    title: "Radar-Verified Targeting",
     description:
-      "We monitor weather radar and hail maps to identify affected areas, then reach out to homeowners who need a roof assessment.",
+      "We monitor live weather radar and hail swath maps to identify hard-hit residential areas, focusing our outreach only where storm damage is highly probable.",
   },
   {
-    title: "Strict Qualification",
+    title: "Double-Screened Qualification",
     description:
-      "Our team calls each homeowner to confirm storm damage interest, verify property ownership, and schedule the exact inspection time.",
+      "Our dedicated team contacts each homeowner to verify storm damage concern, confirm property ownership, and secure their commitment to a set inspection time.",
   },
   {
-    title: "Double-Confirmed Calendar Sync",
+    title: "Seamless Calendar Sync",
     description:
-      "Appointments are booked directly into your Google Calendar or CRM. If a homeowner no-shows, we replace the lead for free.",
+      "Confirmed appointments are booked directly into your Google Calendar or CRM. If a homeowner is a no-show, we replace the booking at zero cost.",
   },
 ];
 
@@ -49,7 +49,7 @@ function ButtonLink({
       ? "bg-blue-600 text-white shadow-lg shadow-blue-600/20 hover:bg-blue-700 hover:shadow-blue-700/35 hover:-translate-y-[1px]"
       : variant === "secondary-dark"
       ? "border border-slate-700 bg-slate-900/50 text-slate-200 hover:border-slate-500 hover:bg-slate-800/60 hover:text-white hover:-translate-y-[1px]"
-      : "border border-slate-200 bg-white text-slate-800 hover:border-slate-350 hover:bg-slate-50 hover:-translate-y-[1px]";
+      : "border border-slate-200 bg-white text-slate-850 hover:border-slate-300 hover:bg-slate-50 hover:-translate-y-[1px]";
 
   return (
     <a href={href} className={`${baseClasses} ${variantClasses}`}>
@@ -109,7 +109,7 @@ function SectionHeading({
 
       {description ? (
         <p className={`mt-4 text-base leading-relaxed sm:text-lg ${
-          theme === "dark" ? "text-slate-300" : "text-slate-600"
+          theme === "dark" ? "text-slate-350" : "text-slate-600"
         }`}>{description}</p>
       ) : null}
     </div>
@@ -119,13 +119,13 @@ function SectionHeading({
 function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/85 backdrop-blur-md">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2.5 sm:px-6 lg:px-8">
         <a href="#" aria-label="LeadsByStorm home" className="flex items-center">
           <div className="bg-[#0b1329] px-3.5 py-1.5 rounded-xl flex items-center justify-center shadow-md">
             <img
               src={LOGO_SRC}
               alt="LeadsByStorm Logo"
-              className="h-8 w-auto max-w-[200px] object-contain sm:h-10 sm:max-w-[260px]"
+              className="h-8 w-auto max-w-[200px] object-contain sm:h-9 sm:max-w-[260px]"
             />
           </div>
         </a>
@@ -149,7 +149,7 @@ function HeroVisual() {
         <div className="flex items-center justify-between border-b border-slate-800 bg-slate-900/60 px-4 py-2.5">
           <div className="flex items-center gap-2">
             <span className="flex h-2 w-2 relative">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-455 opacity-75"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
             </span>
             <span className="text-[11px] font-semibold tracking-wider text-slate-300 uppercase">
@@ -184,7 +184,7 @@ function HeroVisual() {
             </div>
 
             {/* Weather Radar Graphic (SVG) */}
-            <div className="relative h-40 w-full overflow-hidden rounded-lg bg-[#0d1527] border border-slate-850">
+            <div className="relative h-40 w-full overflow-hidden rounded-lg bg-[#0d1527] border border-slate-800">
               
               {/* Radar Sweeper Grid Lines */}
               <div className="absolute inset-0 bg-[linear-gradient(rgba(51,65,85,0.15)_1px,transparent_1px),linear-gradient(90deg,rgba(51,65,85,0.15)_1px,transparent_1px)] bg-[size:16px_16px]" />
@@ -195,8 +195,8 @@ function HeroVisual() {
               <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-slate-800/40 w-48 h-48" />
               
               {/* Radar Crosshairs */}
-              <div className="absolute inset-x-0 top-1/2 border-t border-slate-850" />
-              <div className="absolute inset-y-0 left-1/2 border-l border-slate-850" />
+              <div className="absolute inset-x-0 top-1/2 border-t border-slate-800" />
+              <div className="absolute inset-y-0 left-1/2 border-l border-slate-800" />
 
               {/* Storm Front Contour (translucent colored overlay) */}
               <svg className="absolute inset-0 h-full w-full opacity-60" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -223,7 +223,7 @@ function HeroVisual() {
               <div className="absolute top-[35%] left-[28%] flex flex-col items-center">
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-550"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
                 </span>
                 <span className="mt-0.5 rounded bg-slate-950/90 px-1 py-0.5 text-[8px] font-bold text-slate-300 border border-slate-800">
                   Zone A: 14 Appts
@@ -232,8 +232,8 @@ function HeroVisual() {
 
               <div className="absolute bottom-[25%] right-[22%] flex flex-col items-center">
                 <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-450 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-550"></span>
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
                 </span>
                 <span className="mt-0.5 rounded bg-slate-950/90 px-1 py-0.5 text-[8px] font-bold text-slate-300 border border-slate-800">
                   Zone B: 28 Appts
@@ -294,7 +294,7 @@ function HeroVisual() {
             ].map((stat) => (
               <div
                 key={stat.label}
-                className="rounded-xl border border-slate-800 bg-slate-900/30 p-2.5 hover:border-slate-700 transition"
+                className="rounded-xl border border-slate-850 bg-slate-900/30 p-2.5 hover:border-slate-700 transition"
               >
                 <div className="flex items-center justify-between gap-1">
                   <p className="text-[9px] font-bold text-slate-400 uppercase tracking-wide truncate">{stat.label}</p>
@@ -314,43 +314,78 @@ function HeroVisual() {
 
 function HeroSection() {
   return (
-    <SectionContainer noPadding className="overflow-hidden bg-[#f8fafc] text-blue-950 pb-10 pt-6 sm:pt-8 lg:pb-12 relative border-b border-slate-150">
-      <div className="grid items-center gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-10">
-        <div>
-          <div className="mb-3 inline-flex rounded-full border border-blue-100 bg-blue-50/70 px-3.5 py-1 text-xs font-extrabold text-blue-600 tracking-wide uppercase">
+    <SectionContainer noPadding className="overflow-hidden bg-[#f8fafc] text-blue-950 py-4 sm:py-6 lg:py-8 relative border-b border-slate-200">
+      <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:gap-10 lg:items-center">
+        
+        {/* Left Column (Desktop Layout) */}
+        <div className="space-y-4 lg:space-y-5">
+          <div className="inline-flex rounded-full border border-blue-100 bg-blue-50/70 px-3.5 py-1 text-[10px] sm:text-xs font-extrabold text-blue-600 tracking-wide uppercase">
             STORM-DAMAGE APPOINTMENT SETTING FOR CONTRACTORS
           </div>
 
-          <h1 className="max-w-3xl text-3xl font-black tracking-tight text-blue-950 sm:text-4xl lg:text-[2.6rem] lg:leading-[1.15]">
-            Guaranteed Storm-Damage Appointments.
+          <h1 className="text-3xl font-black tracking-tight text-blue-950 sm:text-4xl lg:text-[2.2rem] lg:leading-[1.15]">
+            Storm Appointments. Guaranteed.
           </h1>
 
-          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-slate-650 sm:text-base">
-            We map active weather corridors, pre-qualify high-intent homeowners, and book confirmed damage inspection slots directly into your calendar. You show up, perform the assessment, and sign the contract.
+          {/* Mobile/Tablet Mockup Placement (only visible below lg breakpoint) */}
+          <div className="block lg:hidden my-3">
+            <HeroVisual />
+          </div>
+
+          <p className="text-sm leading-relaxed text-slate-600 sm:text-base">
+            We track severe weather corridors, pre-qualify property owners, and book exclusive damage inspection slots directly into your calendar. No door-knocking, no shared lead lists, and zero risk.
           </p>
 
-          <div className="mt-5 flex flex-col gap-3 sm:flex-row">
+          <div className="flex flex-col gap-3 sm:flex-row">
             <ButtonLink href="#calendar">Secure Your Territory</ButtonLink>
             <ButtonLink href="#how-it-works" variant="secondary">
               See Our Process
             </ButtonLink>
           </div>
 
-          <div className="mt-6 grid max-w-xl grid-cols-3 gap-4 border-t border-slate-200 pt-5">
-            {[
-              ["100% Exclusive", "Never shared with competitors"],
-              ["Live Verified", "Set directly on your calendar"],
-              ["Risk-Free", "Free no-show replacements"],
-            ].map(([value, label]) => (
-              <div key={value}>
-                <p className="text-sm font-extrabold text-blue-950 sm:text-base">{value}</p>
-                <p className="mt-0.5 text-[11px] text-slate-500 font-medium leading-tight">{label}</p>
-              </div>
-            ))}
+          {/* Desktop trust checkmarks (hidden on mobile/tablet to save space) */}
+          <div className="hidden lg:flex items-center gap-5 border-t border-slate-200 pt-4 text-xs font-bold text-slate-500">
+            <span className="flex items-center gap-1.5">
+              <svg className="h-4 w-4 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              100% Exclusive
+            </span>
+            <span className="flex items-center gap-1.5">
+              <svg className="h-4 w-4 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              Live Verified Sync
+            </span>
+            <span className="flex items-center gap-1.5">
+              <svg className="h-4 w-4 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              No-Show Protection
+            </span>
+          </div>
+
+          {/* Mobile compact trust indicators (only visible below lg breakpoint) */}
+          <div className="grid grid-cols-3 gap-2 border-t border-slate-200 pt-3 text-[10px] font-bold text-slate-500 text-center lg:hidden">
+            <div className="rounded-lg border border-slate-200 bg-white p-2">
+              <p className="text-blue-950">100% Exclusive</p>
+              <p className="text-[8px] text-slate-400 font-medium mt-0.5">Never Shared</p>
+            </div>
+            <div className="rounded-lg border border-slate-200 bg-white p-2">
+              <p className="text-blue-950">Live Sync</p>
+              <p className="text-[8px] text-slate-400 font-medium mt-0.5">Direct Calendar</p>
+            </div>
+            <div className="rounded-lg border border-slate-200 bg-white p-2">
+              <p className="text-blue-950">Risk-Free</p>
+              <p className="text-[8px] text-slate-400 font-medium mt-0.5">Free Replace</p>
+            </div>
           </div>
         </div>
 
-        <HeroVisual />
+        {/* Right Column (Desktop Mockup Placement - hidden on mobile/tablet) */}
+        <div className="hidden lg:block">
+          <HeroVisual />
+        </div>
       </div>
     </SectionContainer>
   );
@@ -358,14 +393,14 @@ function HeroSection() {
 
 function FeatureCard({ feature, index }: { feature: Feature; index: number }) {
   return (
-    <article className="group rounded-2xl border border-slate-300 bg-white p-8 shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-slate-400">
+    <article className="group rounded-2xl border border-slate-350 bg-white p-8 shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-slate-400">
       <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-xl bg-orange-500/10 text-sm font-black text-orange-600">
         0{index + 1}
       </div>
 
       <h3 className="text-xl font-extrabold text-blue-950">{feature.title}</h3>
 
-      <p className="mt-3 leading-relaxed text-slate-650 text-sm sm:text-base">{feature.description}</p>
+      <p className="mt-3 leading-relaxed text-slate-600 text-sm sm:text-base">{feature.description}</p>
     </article>
   );
 }
@@ -374,9 +409,9 @@ function HowItWorksSection() {
   return (
     <SectionContainer id="how-it-works" className="bg-[#f8fafc] border-t border-slate-200">
       <SectionHeading
-        eyebrow="How It Works"
-        title="A cleaner way to fill your roofing sales calendar."
-        description="LeadsByStorm is built for contractors who want real inspection opportunities, not bloated spreadsheets, recycled leads, or low-intent form fills."
+        eyebrow="OUR PROCESS"
+        title="We do the grinding. You do the inspecting."
+        description="LeadsByStorm replaces cold door-knocking and low-intent shared lists with exclusive, double-confirmed inspection appointments booked directly to your schedule."
         theme="light"
       />
 
@@ -400,15 +435,15 @@ function PricingSection() {
             </p>
 
             <h2 className="text-3xl font-black tracking-tight text-blue-950 sm:text-4xl lg:text-5xl">
-              Transparent, Performance-Based Pricing
+              Built for Positive ROI.
             </h2>
 
-            <p className="mt-5 text-base leading-relaxed text-slate-650 sm:text-lg">
-              Typical storm inspection leads or shared lists sell for <strong className="font-extrabold text-blue-950">$400 to $500</strong>, with no assurance of contact or quality.
+            <p className="mt-5 text-base leading-relaxed text-slate-600 sm:text-lg">
+              Standard lead brokers sell unverified, shared lists for <strong className="font-extrabold text-blue-950">$400 to $500</strong> per lead—leaving you to compete with multiple other contractors just to get a call back.
             </p>
 
-            <p className="mt-4 text-base leading-relaxed text-slate-655 sm:text-lg">
-              LeadsByStorm delivers exclusive, double-confirmed appointments. Our volume rate starts at just <strong className="font-extrabold text-emerald-650">$250</strong> for large-scale contractors covering wide territories, up to <strong className="font-extrabold text-blue-950">$350</strong> for standard local campaigns.
+            <p className="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">
+              We do things differently. LeadsByStorm delivers 100% exclusive, pre-qualified appointments. Our best price is <strong className="font-extrabold text-emerald-600">$250</strong> per appointment for high-volume contractors covering wide territories, with standard local campaigns priced up to <strong className="font-extrabold text-blue-950">$350</strong>.
             </p>
 
             <div className="mt-8 rounded-2xl border border-blue-200 bg-blue-50/70 p-5 shadow-sm">
@@ -434,7 +469,7 @@ function PricingSection() {
               {
                 label: "Typical Lead Broker",
                 value: "$400–$500",
-                description: "Usually shared leads, cold lists, or unverified contact info.",
+                description: "Usually shared leads, cold lists, or unverified contact info sold to multiple contractors.",
                 highlight: false,
                 isGreenValue: false,
               },
@@ -470,7 +505,7 @@ function PricingSection() {
                 <p className={`mt-2 text-3xl font-black ${item.isGreenValue ? "text-emerald-600" : "text-blue-950"}`}>
                   {item.value}
                 </p>
-                <p className="mt-2 text-sm leading-relaxed text-slate-655">
+                <p className="mt-2 text-sm leading-relaxed text-slate-600">
                   {item.description}
                 </p>
               </div>
@@ -485,7 +520,7 @@ function PricingSection() {
 function CalendarPlaceholder() {
   return (
     <div className="rounded-2xl border border-slate-300 bg-white p-6 shadow-xl">
-      <div className="mb-6 border-b border-slate-150 pb-5">
+      <div className="mb-6 border-b border-slate-200 pb-5">
         <p className="text-xs font-bold uppercase tracking-widest text-blue-600">
           Booking Console
         </p>
@@ -509,7 +544,7 @@ function CalendarPlaceholder() {
           <div className="grid grid-cols-5 gap-2 text-center text-[10px] sm:text-xs">
             {["Mon", "Tue", "Wed", "Thu", "Fri"].map((day, idx) => (
               <div key={day} className="space-y-2">
-                <div className="font-bold text-slate-750">{day}</div>
+                <div className="font-bold text-slate-700">{day}</div>
                 <div className="rounded bg-blue-50 py-1 font-bold text-blue-900 border border-blue-100">{8 + idx}</div>
                 <div className="rounded border border-slate-300 bg-white py-1 text-slate-700">9:00 AM</div>
                 <div className="rounded border border-slate-300 bg-white py-1 text-slate-700">11:30 AM</div>
@@ -537,7 +572,7 @@ function CalendarPlaceholder() {
           <p className="text-base font-black text-white">
             Embed Scheduling Widget Here
           </p>
-          <p className="mt-2 max-w-xs text-xs leading-relaxed text-slate-350">
+          <p className="mt-2 max-w-xs text-xs leading-relaxed text-slate-400">
             Replace this container with your Calendly, Cal.com, HubSpot, or GoHighLevel inline iframe.
           </p>
           
@@ -560,22 +595,22 @@ function EmailContactCard() {
   return (
     <div className="rounded-2xl border border-slate-300 bg-white p-8 flex flex-col justify-between shadow-xl">
       <div>
-        <p className="text-xs font-bold uppercase tracking-widest text-blue-650">
-          Prefer Email?
+        <p className="text-xs font-bold uppercase tracking-widest text-blue-600">
+          Contact Us Directly
         </p>
 
         <h3 className="mt-3 text-2xl font-black text-blue-950">
           Send your availability.
         </h3>
 
-        <p className="mt-4 leading-relaxed text-slate-650 text-sm sm:text-base">
-          Prefer to email? Click below to send us your availability directly, and we will get back to you immediately.
+        <p className="mt-4 leading-relaxed text-slate-600 text-sm sm:text-base">
+          Have questions or need custom volume pricing? Send us an email and our territory director will contact you within 15 minutes.
         </p>
       </div>
 
       <a
         href={`mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`}
-        className="mt-8 inline-flex items-center justify-center rounded-xl border border-slate-300 bg-slate-50 px-6 py-3 text-sm font-extrabold text-slate-800 shadow-sm transition hover:border-slate-450 hover:bg-slate-100 active:scale-[0.98] transform"
+        className="mt-8 inline-flex items-center justify-center rounded-xl border border-slate-300 bg-slate-50 px-6 py-3 text-sm font-extrabold text-slate-800 shadow-sm transition hover:border-slate-400 hover:bg-slate-100 active:scale-[0.98] transform"
       >
         Email LeadsByStorm
       </a>
@@ -589,8 +624,8 @@ function FinalCtaSection() {
       <div className="mb-12">
         <SectionHeading
           eyebrow="TERRITORY LOCK"
-          title="Secure Your Storm Territory Today"
-          description="Select a time for a quick 10-minute discovery call. We'll show you active storm zones in your area and share our current appointment inventory."
+          title="Claim Your Storm Territory Today"
+          description="We work with exactly one roofing contractor per territory to prevent lead dilution. Book a 10-minute call to check active storm corridors and view our current appointment inventory in your market."
           theme="light"
         />
       </div>
