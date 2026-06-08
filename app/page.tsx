@@ -49,7 +49,7 @@ function ButtonLink({
       ? "bg-blue-600 text-white shadow-lg shadow-blue-600/20 hover:bg-blue-700 hover:shadow-blue-700/35 hover:-translate-y-[1px]"
       : variant === "secondary-dark"
       ? "border border-slate-700 bg-slate-900/50 text-slate-200 hover:border-slate-500 hover:bg-slate-800/60 hover:text-white hover:-translate-y-[1px]"
-      : "border border-slate-200 bg-white text-slate-850 hover:border-slate-300 hover:bg-slate-50 hover:-translate-y-[1px]";
+      : "border border-slate-200 bg-white text-slate-700 hover:text-slate-900 hover:border-slate-350 hover:bg-slate-50 hover:-translate-y-[1px]";
 
   return (
     <a href={href} className={`${baseClasses} ${variantClasses}`}>
@@ -101,7 +101,7 @@ function SectionHeading({
         </p>
       ) : null}
 
-      <h2 className={`text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl ${
+      <h2 className={`text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl ${
         theme === "dark" ? "text-white" : "text-blue-950"
       }`}>
         {title}
@@ -109,7 +109,7 @@ function SectionHeading({
 
       {description ? (
         <p className={`mt-4 text-base leading-relaxed sm:text-lg ${
-          theme === "dark" ? "text-slate-350" : "text-slate-600"
+          theme === "dark" ? "text-slate-400" : "text-slate-600"
         }`}>{description}</p>
       ) : null}
     </div>
@@ -119,15 +119,13 @@ function SectionHeading({
 function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/85 backdrop-blur-md">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2.5 sm:px-6 lg:px-8">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         <a href="#" aria-label="LeadsByStorm home" className="flex items-center">
-          <div className="bg-[#0b1329] px-3.5 py-1.5 rounded-xl flex items-center justify-center shadow-md">
-            <img
-              src={LOGO_SRC}
-              alt="LeadsByStorm Logo"
-              className="h-8 w-auto max-w-[200px] object-contain sm:h-9 sm:max-w-[260px]"
-            />
-          </div>
+          <img
+            src={LOGO_SRC}
+            alt="LeadsByStorm Logo"
+            className="h-8 w-auto max-w-[180px] object-contain sm:h-9 sm:max-w-[220px]"
+          />
         </a>
 
         <ButtonLink href="#calendar">Book a Call</ButtonLink>
@@ -139,8 +137,8 @@ function Header() {
 function HeroVisual() {
   return (
     <div className="relative w-full max-w-md lg:max-w-lg mx-auto lg:mx-0">
-      {/* Decorative gradient blur background */}
-      <div className="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-orange-500/15 via-blue-500/10 to-orange-400/5 blur-2xl pointer-events-none" />
+      {/* Decorative gradient blue/indigo blur background */}
+      <div className="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-blue-600/10 via-indigo-500/5 to-transparent blur-2xl pointer-events-none" />
 
       {/* Main Dashboard Frame (Vibrant Dark) */}
       <div className="relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-950 text-slate-100 shadow-2xl">
@@ -173,7 +171,7 @@ function HeroVisual() {
                 <p className="text-[9px] font-bold uppercase tracking-wider text-slate-500">
                   Target Zone Monitor
                 </p>
-                <p className="text-xs font-black text-white">Active Storm Zone</p>
+                <p className="text-xs font-extrabold text-white">Active Storm Zone</p>
               </div>
               <div className="flex items-center gap-1.5 rounded-full border border-orange-500/20 bg-orange-500/10 px-2 py-0.5 text-[9px] font-bold text-orange-400">
                 <svg className="h-2.5 w-2.5 animate-pulse" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
@@ -294,13 +292,13 @@ function HeroVisual() {
             ].map((stat) => (
               <div
                 key={stat.label}
-                className="rounded-xl border border-slate-850 bg-slate-900/30 p-2.5 hover:border-slate-700 transition"
+                className="rounded-xl border border-slate-800 bg-slate-900/30 p-2.5 hover:border-slate-700 transition"
               >
                 <div className="flex items-center justify-between gap-1">
                   <p className="text-[9px] font-bold text-slate-400 uppercase tracking-wide truncate">{stat.label}</p>
                   {stat.icon}
                 </div>
-                <p className={`mt-0.5 text-base font-black ${stat.valueColorClass}`}>{stat.value}</p>
+                <p className={`mt-0.5 text-base font-extrabold ${stat.valueColorClass}`}>{stat.value}</p>
                 <p className="text-[8px] text-slate-500 leading-none mt-0.5">{stat.subtext}</p>
               </div>
             ))}
@@ -314,25 +312,25 @@ function HeroVisual() {
 
 function HeroSection() {
   return (
-    <SectionContainer noPadding className="overflow-hidden bg-[#f8fafc] text-blue-950 py-4 sm:py-6 lg:py-8 relative border-b border-slate-200">
-      <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:gap-10 lg:items-center">
+    <SectionContainer noPadding className="overflow-hidden bg-[#f8fafc] text-blue-950 py-8 sm:py-10 lg:py-16 relative border-b border-slate-200">
+      <div className="grid gap-8 lg:grid-cols-12 lg:gap-12 lg:items-center">
         
-        {/* Left Column (Desktop Layout) */}
-        <div className="space-y-4 lg:space-y-5">
-          <div className="inline-flex rounded-full border border-blue-100 bg-blue-50/70 px-3.5 py-1 text-[10px] sm:text-xs font-extrabold text-blue-600 tracking-wide uppercase">
-            STORM-DAMAGE APPOINTMENT SETTING FOR CONTRACTORS
-          </div>
+        {/* Left Column / Text Block */}
+        <div className="space-y-5 lg:col-span-7 lg:space-y-6">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-blue-600">
+            Storm-Damage Appointment Setting
+          </p>
 
-          <h1 className="text-3xl font-black tracking-tight text-blue-950 sm:text-4xl lg:text-[2.2rem] lg:leading-[1.15]">
+          <h1 className="text-3xl font-extrabold tracking-tight text-blue-950 sm:text-4xl lg:text-[2.75rem] lg:leading-[1.1]">
             Storm Appointments. Guaranteed.
           </h1>
 
-          {/* Mobile/Tablet Mockup Placement (only visible below lg breakpoint) */}
-          <div className="block lg:hidden my-3">
+          {/* Mobile/Tablet Mockup Placement (hidden on lg and above) */}
+          <div className="block lg:hidden my-4">
             <HeroVisual />
           </div>
 
-          <p className="text-sm leading-relaxed text-slate-600 sm:text-base">
+          <p className="text-sm leading-relaxed text-slate-600 sm:text-base max-w-xl">
             We track severe weather corridors, pre-qualify property owners, and book exclusive damage inspection slots directly into your calendar. No door-knocking, no shared lead lists, and zero risk.
           </p>
 
@@ -343,8 +341,8 @@ function HeroSection() {
             </ButtonLink>
           </div>
 
-          {/* Desktop trust checkmarks (hidden on mobile/tablet to save space) */}
-          <div className="hidden lg:flex items-center gap-5 border-t border-slate-200 pt-4 text-xs font-bold text-slate-500">
+          {/* Desktop trust row (hidden on mobile/tablet) */}
+          <div className="hidden lg:flex items-center gap-6 border-t border-slate-200 pt-5 text-xs font-semibold text-slate-500">
             <span className="flex items-center gap-1.5">
               <svg className="h-4 w-4 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
@@ -355,7 +353,7 @@ function HeroSection() {
               <svg className="h-4 w-4 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
               </svg>
-              Live Verified Sync
+              Live Calendar Sync
             </span>
             <span className="flex items-center gap-1.5">
               <svg className="h-4 w-4 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
@@ -365,27 +363,28 @@ function HeroSection() {
             </span>
           </div>
 
-          {/* Mobile compact trust indicators (only visible below lg breakpoint) */}
-          <div className="grid grid-cols-3 gap-2 border-t border-slate-200 pt-3 text-[10px] font-bold text-slate-500 text-center lg:hidden">
-            <div className="rounded-lg border border-slate-200 bg-white p-2">
+          {/* Mobile trust indicators */}
+          <div className="grid grid-cols-3 gap-2 border-t border-slate-200 pt-4 text-[10px] font-bold text-slate-500 text-center lg:hidden">
+            <div className="rounded-xl border border-slate-200 bg-white p-2">
               <p className="text-blue-950">100% Exclusive</p>
               <p className="text-[8px] text-slate-400 font-medium mt-0.5">Never Shared</p>
             </div>
-            <div className="rounded-lg border border-slate-200 bg-white p-2">
+            <div className="rounded-xl border border-slate-200 bg-white p-2">
               <p className="text-blue-950">Live Sync</p>
-              <p className="text-[8px] text-slate-400 font-medium mt-0.5">Direct Calendar</p>
+              <p className="text-[8px] text-slate-400 font-medium mt-0.5">Direct CRM</p>
             </div>
-            <div className="rounded-lg border border-slate-200 bg-white p-2">
+            <div className="rounded-xl border border-slate-200 bg-white p-2">
               <p className="text-blue-950">Risk-Free</p>
               <p className="text-[8px] text-slate-400 font-medium mt-0.5">Free Replace</p>
             </div>
           </div>
         </div>
 
-        {/* Right Column (Desktop Mockup Placement - hidden on mobile/tablet) */}
-        <div className="hidden lg:block">
+        {/* Right Column / Mockup Block (hidden on mobile/tablet) */}
+        <div className="hidden lg:block lg:col-span-5">
           <HeroVisual />
         </div>
+
       </div>
     </SectionContainer>
   );
@@ -393,8 +392,8 @@ function HeroSection() {
 
 function FeatureCard({ feature, index }: { feature: Feature; index: number }) {
   return (
-    <article className="group rounded-2xl border border-slate-350 bg-white p-8 shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-slate-400">
-      <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-xl bg-orange-500/10 text-sm font-black text-orange-600">
+    <article className="group rounded-2xl border border-slate-200 bg-white p-8 shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-slate-300">
+      <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-xl bg-orange-500/10 text-sm font-extrabold text-orange-600">
         0{index + 1}
       </div>
 
@@ -427,14 +426,14 @@ function HowItWorksSection() {
 function PricingSection() {
   return (
     <SectionContainer className="bg-white py-16 sm:py-20">
-      <div className="bg-[#f8fafc] border border-slate-300 rounded-[2.5rem] px-6 sm:px-10 py-16 sm:py-20 max-w-7xl mx-auto shadow-xl shadow-slate-100/50">
+      <div className="bg-[#f8fafc] border border-slate-200 rounded-[2.5rem] px-6 sm:px-10 py-16 sm:py-20 max-w-7xl mx-auto shadow-xl shadow-slate-100/50">
         <div className="grid items-center gap-12 lg:grid-cols-[0.95fr_1.05fr]">
           <div>
             <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-blue-600">
               PRICING & ROI
             </p>
 
-            <h2 className="text-3xl font-black tracking-tight text-blue-950 sm:text-4xl lg:text-5xl">
+            <h2 className="text-3xl font-extrabold tracking-tight text-blue-950 sm:text-4xl lg:text-5xl">
               Built for Positive ROI.
             </h2>
 
@@ -493,7 +492,7 @@ function PricingSection() {
                 className={`rounded-2xl p-6 transition-all duration-200 ${
                   item.highlight
                     ? "border-2 border-blue-600 bg-blue-50/45 shadow-md shadow-blue-100 relative"
-                    : "border border-slate-300 bg-white hover:border-slate-400 transition"
+                    : "border border-slate-200 bg-white hover:border-slate-300 transition"
                 }`}
               >
                 {item.highlight && (
@@ -502,7 +501,7 @@ function PricingSection() {
                   </span>
                 )}
                 <p className="text-xs font-bold text-slate-500 uppercase tracking-wider">{item.label}</p>
-                <p className={`mt-2 text-3xl font-black ${item.isGreenValue ? "text-emerald-600" : "text-blue-950"}`}>
+                <p className={`mt-2 text-3xl font-extrabold ${item.isGreenValue ? "text-emerald-600" : "text-blue-950"}`}>
                   {item.value}
                 </p>
                 <p className="mt-2 text-sm leading-relaxed text-slate-600">
@@ -519,12 +518,12 @@ function PricingSection() {
 
 function CalendarPlaceholder() {
   return (
-    <div className="rounded-2xl border border-slate-300 bg-white p-6 shadow-xl">
+    <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-xl">
       <div className="mb-6 border-b border-slate-200 pb-5">
         <p className="text-xs font-bold uppercase tracking-widest text-blue-600">
           Booking Console
         </p>
-        <h3 className="mt-2 text-xl font-black text-blue-950 leading-tight">
+        <h3 className="mt-2 text-xl font-extrabold text-blue-950 leading-tight">
           Choose a time on our calendar below for a quick phone call.
         </h3>
       </div>
@@ -546,9 +545,9 @@ function CalendarPlaceholder() {
               <div key={day} className="space-y-2">
                 <div className="font-bold text-slate-700">{day}</div>
                 <div className="rounded bg-blue-50 py-1 font-bold text-blue-900 border border-blue-100">{8 + idx}</div>
-                <div className="rounded border border-slate-300 bg-white py-1 text-slate-700">9:00 AM</div>
-                <div className="rounded border border-slate-300 bg-white py-1 text-slate-700">11:30 AM</div>
-                <div className="rounded border border-slate-300 bg-white py-1 text-slate-700">2:00 PM</div>
+                <div className="rounded border border-slate-200 bg-white py-1 text-slate-700">9:00 AM</div>
+                <div className="rounded border border-slate-200 bg-white py-1 text-slate-700">11:30 AM</div>
+                <div className="rounded border border-slate-200 bg-white py-1 text-slate-700">2:00 PM</div>
               </div>
             ))}
           </div>
@@ -569,7 +568,7 @@ function CalendarPlaceholder() {
             </svg>
           </div>
 
-          <p className="text-base font-black text-white">
+          <p className="text-base font-extrabold text-white">
             Embed Scheduling Widget Here
           </p>
           <p className="mt-2 max-w-xs text-xs leading-relaxed text-slate-400">
@@ -593,13 +592,13 @@ function EmailContactCard() {
   );
 
   return (
-    <div className="rounded-2xl border border-slate-300 bg-white p-8 flex flex-col justify-between shadow-xl">
+    <div className="rounded-2xl border border-slate-200 bg-white p-8 flex flex-col justify-between shadow-xl">
       <div>
-        <p className="text-xs font-bold uppercase tracking-widest text-blue-600">
+        <p className="text-xs font-bold uppercase tracking-widest text-blue-650">
           Contact Us Directly
         </p>
 
-        <h3 className="mt-3 text-2xl font-black text-blue-950">
+        <h3 className="mt-3 text-2xl font-extrabold text-blue-950">
           Send your availability.
         </h3>
 
@@ -610,7 +609,7 @@ function EmailContactCard() {
 
       <a
         href={`mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`}
-        className="mt-8 inline-flex items-center justify-center rounded-xl border border-slate-300 bg-slate-50 px-6 py-3 text-sm font-extrabold text-slate-800 shadow-sm transition hover:border-slate-400 hover:bg-slate-100 active:scale-[0.98] transform"
+        className="mt-8 inline-flex items-center justify-center rounded-xl border border-slate-200 bg-slate-50 px-6 py-3 text-sm font-extrabold text-slate-800 shadow-sm transition hover:border-slate-300 hover:bg-slate-100 active:scale-[0.98] transform"
       >
         Email LeadsByStorm
       </a>
