@@ -130,23 +130,23 @@ function HeroVisual() {
   return (
     <div className="relative w-full max-w-xl mx-auto lg:mx-0">
       {/* Decorative gradient blur background */}
-      <div className="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-blue-500/10 via-indigo-500/10 to-blue-400/5 blur-2xl pointer-events-none" />
+      <div className="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-blue-500/5 via-indigo-500/5 to-blue-400/5 blur-2xl pointer-events-none" />
 
       {/* Main Dashboard Frame */}
-      <div className="relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-950 text-slate-100 shadow-2xl">
+      <div className="relative overflow-hidden rounded-2xl border border-slate-200 bg-white text-slate-800 shadow-xl shadow-slate-200/50">
         
         {/* Top Control Bar */}
-        <div className="flex items-center justify-between border-b border-slate-800 bg-slate-900/50 px-5 py-3">
+        <div className="flex items-center justify-between border-b border-slate-150 bg-slate-50 px-5 py-3">
           <div className="flex items-center gap-2">
             <span className="flex h-2 w-2 relative">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
             </span>
-            <span className="text-xs font-semibold tracking-wider text-slate-300 uppercase">
+            <span className="text-xs font-bold tracking-wider text-slate-700 uppercase">
               LeadsByStorm Dispatch Console
             </span>
           </div>
-          <div className="rounded bg-slate-800 px-2 py-0.5 text-[10px] font-bold text-slate-400">
+          <div className="rounded bg-slate-200 px-2 py-0.5 text-[10px] font-bold text-slate-600">
             v3.2 // LIVE_MARKETS
           </div>
         </div>
@@ -155,7 +155,7 @@ function HeroVisual() {
         <div className="p-5 space-y-4">
           
           {/* Radar Monitoring Window */}
-          <div className="relative overflow-hidden rounded-xl border border-slate-800 bg-slate-900/40 p-4">
+          <div className="relative overflow-hidden rounded-xl border border-slate-200 bg-slate-50 p-4">
             
             {/* Header info inside widget */}
             <div className="mb-3 flex items-center justify-between">
@@ -163,9 +163,9 @@ function HeroVisual() {
                 <p className="text-[10px] font-bold uppercase tracking-wider text-slate-500">
                   Target Zone Monitor
                 </p>
-                <p className="text-sm font-black text-white">Active Storm Zone</p>
+                <p className="text-sm font-black text-slate-800">Active Storm Zone</p>
               </div>
-              <div className="flex items-center gap-1.5 rounded-full border border-blue-500/20 bg-blue-500/10 px-2.5 py-0.5 text-[10px] font-bold text-blue-400">
+              <div className="flex items-center gap-1.5 rounded-full border border-blue-200 bg-blue-50 px-2.5 py-0.5 text-[10px] font-bold text-blue-600">
                 <svg className="h-3 w-3 animate-pulse" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
@@ -174,22 +174,22 @@ function HeroVisual() {
             </div>
 
             {/* Weather Radar Graphic (SVG) */}
-            <div className="relative h-44 w-full overflow-hidden rounded-lg bg-[#070e1b] border border-slate-850">
+            <div className="relative h-44 w-full overflow-hidden rounded-lg bg-[#f4f7fb] border border-slate-200">
               
               {/* Radar Sweeper Grid Lines */}
-              <div className="absolute inset-0 bg-[linear-gradient(rgba(51,65,85,0.15)_1px,transparent_1px),linear-gradient(90deg,rgba(51,65,85,0.15)_1px,transparent_1px)] bg-[size:16px_16px]" />
+              <div className="absolute inset-0 bg-[linear-gradient(rgba(148,163,184,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.1)_1px,transparent_1px)] bg-[size:16px_16px]" />
               
               {/* Radar Arcs */}
-              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-slate-800/40 w-16 h-16" />
-              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-slate-800/40 w-32 h-32" />
-              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-slate-800/40 w-48 h-48" />
+              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-slate-350/20 w-16 h-16" />
+              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-slate-350/20 w-32 h-32" />
+              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-slate-350/20 w-48 h-48" />
               
               {/* Radar Crosshairs */}
-              <div className="absolute inset-x-0 top-1/2 border-t border-slate-850" />
-              <div className="absolute inset-y-0 left-1/2 border-l border-slate-850" />
+              <div className="absolute inset-x-0 top-1/2 border-t border-slate-200" />
+              <div className="absolute inset-y-0 left-1/2 border-l border-slate-200" />
 
               {/* Storm Front Contour (translucent colored overlay) */}
-              <svg className="absolute inset-0 h-full w-full opacity-60" viewBox="0 0 100 100" preserveAspectRatio="none">
+              <svg className="absolute inset-0 h-full w-full opacity-65" viewBox="0 0 100 100" preserveAspectRatio="none">
                 {/* Active Hail Damage Footprint */}
                 <path
                   d="M20,30 Q45,25 60,40 T90,55 Q80,80 50,75 T15,50 Z"
@@ -198,14 +198,14 @@ function HeroVisual() {
                 />
                 <defs>
                   <radialGradient id="stormGradient" cx="50%" cy="50%" r="50%">
-                    <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.4" />
-                    <stop offset="70%" stopColor="#1e3a8a" stopOpacity="0.2" />
-                    <stop offset="100%" stopColor="#020617" stopOpacity="0" />
+                    <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.25" />
+                    <stop offset="70%" stopColor="#2563eb" stopOpacity="0.1" />
+                    <stop offset="100%" stopColor="#3b82f6" stopOpacity="0" />
                   </radialGradient>
                 </defs>
 
                 {/* Radar Sweep Line */}
-                <line x1="50" y1="50" x2="100" y2="10" stroke="#3b82f6" strokeWidth="0.5" strokeOpacity="0.5" className="origin-[50px_50px] animate-[spin_10s_linear_infinite]" />
+                <line x1="50" y1="50" x2="100" y2="10" stroke="#3b82f6" strokeWidth="0.75" strokeOpacity="0.35" className="origin-[50px_50px] animate-[spin_10s_linear_infinite]" />
               </svg>
 
               {/* Appointment pins */}
@@ -214,7 +214,7 @@ function HeroVisual() {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-600"></span>
                 </span>
-                <span className="mt-0.5 rounded bg-slate-950/90 px-1 py-0.5 text-[8px] font-bold text-slate-300 border border-slate-800">
+                <span className="mt-0.5 rounded bg-white px-1 py-0.5 text-[8px] font-bold text-slate-700 border border-slate-200 shadow-sm">
                   Zone A: 14 Appts
                 </span>
               </div>
@@ -224,20 +224,20 @@ function HeroVisual() {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-450 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-600"></span>
                 </span>
-                <span className="mt-0.5 rounded bg-slate-950/90 px-1 py-0.5 text-[8px] font-bold text-slate-300 border border-slate-800">
+                <span className="mt-0.5 rounded bg-white px-1 py-0.5 text-[8px] font-bold text-slate-700 border border-slate-200 shadow-sm">
                   Zone B: 28 Appts
                 </span>
               </div>
 
               {/* Bottom bar inside radar */}
-              <div className="absolute inset-x-3 bottom-3 flex items-center justify-between rounded-lg border border-white/5 bg-slate-950/80 p-2.5 backdrop-blur-md">
+              <div className="absolute inset-x-3 bottom-3 flex items-center justify-between rounded-lg border border-slate-200 bg-white/95 p-2.5 backdrop-blur-md shadow-sm">
                 <div className="flex items-center gap-2">
                   <div className="h-2 w-2 rounded-full bg-blue-500 animate-pulse" />
-                  <p className="text-[11px] font-bold text-white">
+                  <p className="text-[11px] font-bold text-slate-800">
                     42 homeowner appointments available
                   </p>
                 </div>
-                <span className="text-[9px] font-semibold text-slate-400">
+                <span className="text-[9px] font-semibold text-slate-500">
                   Ready for assignment
                 </span>
               </div>
@@ -251,43 +251,46 @@ function HeroVisual() {
                 label: "Confirmed",
                 value: "118",
                 icon: (
-                  <svg className="h-4 w-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                  <svg className="h-4 w-4 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 ),
                 subtext: "Delivered to date",
+                valueColorClass: "text-emerald-600",
               },
               {
                 label: "No-Show Replaced",
                 value: "100%",
                 icon: (
-                  <svg className="h-4 w-4 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                  <svg className="h-4 w-4 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>
                 ),
                 subtext: "Free replacement",
+                valueColorClass: "text-blue-950",
               },
               {
                 label: "Avg. Price",
                 value: "$250",
                 icon: (
-                  <svg className="h-4 w-4 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                  <svg className="h-4 w-4 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 ),
                 subtext: "Direct B2B rate",
+                valueColorClass: "text-blue-950",
               },
             ].map((stat) => (
               <div
                 key={stat.label}
-                className="rounded-xl border border-slate-800 bg-slate-900/30 p-3 hover:border-slate-700 transition"
+                className="rounded-xl border border-slate-200 bg-white p-3 hover:border-slate-300 transition shadow-sm"
               >
                 <div className="flex items-center justify-between gap-1">
-                  <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wide truncate">{stat.label}</p>
+                  <p className="text-[10px] font-bold text-slate-500 uppercase tracking-wide truncate">{stat.label}</p>
                   {stat.icon}
                 </div>
-                <p className="mt-1 text-lg font-black text-white">{stat.value}</p>
-                <p className="text-[9px] text-slate-500 leading-none mt-0.5">{stat.subtext}</p>
+                <p className={`mt-1 text-lg font-black ${stat.valueColorClass}`}>{stat.value}</p>
+                <p className="text-[9px] text-slate-400 leading-none mt-0.5">{stat.subtext}</p>
               </div>
             ))}
           </div>
@@ -300,37 +303,37 @@ function HeroVisual() {
 
 function HeroSection() {
   return (
-    <SectionContainer className="overflow-hidden bg-gradient-to-b from-[#0a1128] via-[#0b1830] to-[#0a1128] text-white pb-20 pt-10 sm:pt-14 relative">
+    <SectionContainer className="overflow-hidden bg-[#f8fafc] text-blue-950 pb-20 pt-10 sm:pt-14 relative border-b border-slate-150">
       <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-14">
         <div>
-          <div className="mb-5 inline-flex rounded-full border border-blue-500/20 bg-blue-500/10 px-4 py-1.5 text-xs font-extrabold text-blue-300 tracking-wide uppercase">
+          <div className="mb-5 inline-flex rounded-full border border-blue-100 bg-blue-50/70 px-4 py-1.5 text-xs font-extrabold text-blue-600 tracking-wide uppercase">
             Storm damage roofing appointments
           </div>
 
-          <h1 className="max-w-3xl text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-[3.5rem] lg:leading-[1.1]">
+          <h1 className="max-w-3xl text-4xl font-black tracking-tight text-blue-950 sm:text-5xl lg:text-[3.5rem] lg:leading-[1.1]">
             Exclusively Confirmed Storm Damage Inspections. Delivered Straight to Your Calendar.
           </h1>
 
-          <p className="mt-5 max-w-2xl text-base leading-relaxed text-slate-300 sm:text-lg">
+          <p className="mt-5 max-w-2xl text-base leading-relaxed text-slate-650 sm:text-lg">
             LeadsByStorm.com maps severe weather events, pre-qualifies high-intent homeowners seeking inspections, and books confirmed slots directly on your calendar. You show up, perform the assessment, and close the contract. No shared leads, no waste.
           </p>
 
           <div className="mt-8 flex flex-col gap-3.5 sm:flex-row">
             <ButtonLink href="#calendar">Book a Strategy Call</ButtonLink>
-            <ButtonLink href="#how-it-works" variant="secondary-dark">
+            <ButtonLink href="#how-it-works" variant="secondary">
               See How It Works
             </ButtonLink>
           </div>
 
-          <div className="mt-10 grid max-w-xl grid-cols-3 gap-4 border-t border-slate-800 pt-8">
+          <div className="mt-10 grid max-w-xl grid-cols-3 gap-4 border-t border-slate-200 pt-8">
             {[
               ["Exclusive", "Appointments"],
               ["Confirmed", "Before delivery"],
               ["Guaranteed", "No-show replacement"],
             ].map(([value, label]) => (
               <div key={value}>
-                <p className="text-base font-extrabold text-white sm:text-lg">{value}</p>
-                <p className="mt-0.5 text-xs text-slate-400 font-medium leading-tight">{label}</p>
+                <p className="text-base font-extrabold text-blue-950 sm:text-lg">{value}</p>
+                <p className="mt-0.5 text-xs text-slate-500 font-medium leading-tight">{label}</p>
               </div>
             ))}
           </div>
