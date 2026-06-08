@@ -59,7 +59,7 @@ function SectionContainer({
 function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-[#DDE6F2] bg-white/95 backdrop-blur-md">
-      <nav className="mx-auto flex max-w-[1200px] items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+      <nav className="mx-auto flex max-w-[1200px] items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         <a href="#" aria-label="LeadsByStorm home" className="flex items-center">
           <img
             src={LOGO_SRC}
@@ -78,97 +78,172 @@ function Header() {
 
 function HeroVisual() {
   return (
-    <div className="relative w-full max-w-lg mx-auto space-y-4">
+    <div className="relative w-full max-w-lg mx-auto">
       {/* Background shadow glow */}
-      <div className="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-[#145CFF]/10 to-[#2F7DFF]/5 blur-2xl pointer-events-none" />
+      <div className="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-[#145CFF]/15 to-[#145CFF]/5 blur-2xl pointer-events-none" />
 
-      {/* Main Snapshot Card */}
-      <div className="relative rounded-2xl border border-[#DDE6F2] bg-white p-5 sm:p-6 shadow-xl space-y-4">
-        <div className="flex items-center justify-between border-b border-[#DDE6F2] pb-3">
-          <div className="flex items-center gap-2">
-            <span className="h-2.5 w-2.5 rounded-full bg-[#145CFF]" />
-            <h3 className="text-xs font-extrabold uppercase tracking-wider text-[#061A2F]">
-              Live Storm Appointment Snapshot
-            </h3>
+      {/* Main Mockup Window Container */}
+      <div className="relative rounded-2xl border border-white/10 bg-[#090a0f] shadow-2xl overflow-hidden font-sans text-slate-200">
+        
+        {/* Window OS Header Bar */}
+        <div className="flex items-center justify-between px-4 py-3 border-b border-white/5 bg-[#0f1115]">
+          <div className="flex items-center gap-1.5">
+            <span className="w-3.5 h-3.5 rounded-full bg-[#ff5f56]" />
+            <span className="w-3.5 h-3.5 rounded-full bg-[#ffbd2e]" />
+            <span className="w-3.5 h-3.5 rounded-full bg-[#27c93f]" />
           </div>
-          <span className="rounded-full bg-emerald-50 border border-[#11A36A]/20 px-2 py-0.5 text-[9px] font-bold text-[#11A36A] uppercase tracking-wider">
-            Live Feed
-          </span>
+          <div className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">
+            LeadsByStorm Contractor Portal
+          </div>
+          <div className="w-12" /> {/* empty space for alignment balancer */}
         </div>
 
-        {/* Details List */}
-        <div className="grid grid-cols-2 gap-4 text-xs">
-          <div>
-            <p className="text-[10px] font-bold text-[#42526B] uppercase tracking-wide">Market</p>
-            <p className="font-bold text-[#061A2F] mt-0.5">Active Hail/Wind Zone</p>
-          </div>
-          <div>
-            <p className="text-[10px] font-bold text-[#42526B] uppercase tracking-wide">Homeowner Status</p>
-            <p className="font-bold text-[#11A36A] mt-0.5 flex items-center gap-1">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#11A36A]" />
-              Confirmed
-            </p>
-          </div>
-          <div>
-            <p className="text-[10px] font-bold text-[#42526B] uppercase tracking-wide">Appointment Type</p>
-            <p className="font-bold text-[#061A2F] mt-0.5">Roof Damage Assessment</p>
-          </div>
-          <div>
-            <p className="text-[10px] font-bold text-[#42526B] uppercase tracking-wide">Delivery</p>
-            <p className="font-bold text-[#2F7DFF] mt-0.5">Sent to Contractor Calendar</p>
-          </div>
-        </div>
-
-        <div className="rounded-xl bg-emerald-50 border border-[#11A36A]/20 p-2.5 flex items-center gap-2 text-xs">
-          <svg className="h-4 w-4 text-[#11A36A] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-          <span className="font-bold text-[#061A2F]">
-            Guarantee: <span className="text-[#11A36A]">No-show replacement included</span>
-          </span>
-        </div>
-      </div>
-
-      {/* Stacked Preview Cards */}
-      <div className="space-y-3">
-        {[
-          {
-            time: "Tue 10:30 AM",
-            type: "Roof Damage Assessment",
-            status: "Homeowner confirmed",
-            badge: "Exclusive appointment",
-          },
-          {
-            time: "Thu 2:00 PM",
-            type: "Storm Inspection Request",
-            status: "Calendar-ready",
-            badge: "No-show protected",
-          },
-          {
-            time: "Fri 4:15 PM",
-            type: "Hail Damage Review",
-            status: "Confirmed property owner",
-            badge: "Sent to contractor",
-          },
-        ].map((card) => (
-          <div
-            key={card.time}
-            className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 rounded-xl border border-[#DDE6F2] bg-white p-4 shadow-md hover:shadow-lg transition-shadow"
-          >
-            <div className="space-y-0.5">
-              <span className="text-[9px] font-bold text-[#2F7DFF] uppercase tracking-wider">{card.time}</span>
-              <h4 className="text-xs font-bold text-[#061A2F]">{card.type}</h4>
-              <p className="text-[10px] text-[#42526B]">
-                Status: <span className="text-[#11A36A] font-bold">{card.status}</span>
-              </p>
-            </div>
-            <div>
-              <span className="inline-block text-[9px] font-extrabold uppercase tracking-wider bg-[#F5F8FC] text-[#42526B] border border-[#DDE6F2] px-2.5 py-1 rounded">
-                {card.badge}
+        {/* Dashboard Panels Layout */}
+        <div className="flex h-[380px]">
+          
+          {/* Sidebar Panel (Left) */}
+          <div className="w-[170px] border-r border-white/5 bg-[#0f1115] p-3 flex flex-col gap-3 shrink-0">
+            {/* Logo */}
+            <div className="flex items-center gap-1.5 pb-1 border-b border-white/5">
+              <span className="w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-[#145CFF] to-[#3B82F6]" />
+              <span className="text-[10px] font-extrabold uppercase tracking-wide text-white">
+                LEADSBYSTORM
               </span>
             </div>
+
+            {/* View Filters Pills */}
+            <div className="flex bg-[#1b1e24] p-0.5 rounded border border-white/5 text-[9px] font-bold">
+              <span className="flex-1 text-center py-1 rounded bg-[#145CFF] text-white shadow-sm">
+                Booked
+              </span>
+              <span className="flex-1 text-center py-1 text-slate-500">
+                Active
+              </span>
+            </div>
+
+            {/* Conversation Threads / Appointments */}
+            <div className="flex flex-col gap-1.5 overflow-hidden text-left">
+              {/* Marcus K (Active) */}
+              <div className="p-2 rounded bg-white/5 border border-white/5 flex flex-col gap-0.5">
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-bold text-white truncate max-w-[85px] flex items-center gap-1">
+                    Marcus K.
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#00e676] animate-pulse shadow-[0_0_6px_#00e676]" />
+                  </span>
+                  <span className="text-[8px] text-slate-500">4:00 PM</span>
+                </div>
+                <p className="text-[9px] text-slate-400 truncate">
+                  Orlando, FL
+                </p>
+              </div>
+
+              {/* Sarah L */}
+              <div className="p-2 rounded hover:bg-white/5 transition-colors flex flex-col gap-0.5 opacity-60">
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-bold text-slate-300 truncate">Sarah L.</span>
+                  <span className="text-[8px] text-slate-500">1:30 PM</span>
+                </div>
+                <p className="text-[9px] text-slate-500 truncate">
+                  Winter Park, FL
+                </p>
+              </div>
+
+              {/* David R */}
+              <div className="p-2 rounded hover:bg-white/5 transition-colors flex flex-col gap-0.5 opacity-60">
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-bold text-slate-300 truncate">David R.</span>
+                  <span className="text-[8px] text-slate-500">Fri 10 AM</span>
+                </div>
+                <p className="text-[9px] text-slate-500 truncate">
+                  Kissimmee, FL
+                </p>
+              </div>
+            </div>
           </div>
-        ))}
+
+          {/* Active Appointment Details Panel (Right) */}
+          <div className="flex-1 bg-[#13161b] flex flex-col h-full overflow-hidden">
+            {/* Header info */}
+            <div className="px-4 py-2.5 bg-[#0f1115] border-b border-white/5 flex items-center justify-between">
+              <div className="text-left">
+                <h4 className="text-[11px] font-extrabold text-white">Marcus K.</h4>
+                <p className="text-[8px] text-slate-500">1420 Pine Creek Dr, Orlando</p>
+              </div>
+              <span className="text-[7px] font-extrabold uppercase tracking-wide bg-emerald-500/10 text-[#00e676] border border-emerald-500/20 px-1.5 py-0.5 rounded">
+                Confirmed
+              </span>
+            </div>
+
+            {/* Lead Details Grid */}
+            <div className="p-3 bg-[#171a21] border-b border-white/5 grid grid-cols-2 gap-2 text-left">
+              <div>
+                <span className="text-[7px] text-slate-500 uppercase tracking-wider block font-bold">Appt Time</span>
+                <span className="text-[9px] text-white font-extrabold">Thursday, June 11 @ 4:00 PM</span>
+              </div>
+              <div>
+                <span className="text-[7px] text-slate-500 uppercase tracking-wider block font-bold">Storm Loss Date</span>
+                <span className="text-[9px] text-white font-extrabold font-mono">May 24 (1.75&quot; Hail)</span>
+              </div>
+            </div>
+
+            {/* Message Feed / Verification SMS */}
+            <div className="flex-1 p-3 overflow-hidden flex flex-col gap-2 justify-end">
+              <div className="text-center pb-1 border-b border-white/5">
+                <span className="text-[7px] text-slate-500 uppercase tracking-widest font-extrabold">Verification SMS History</span>
+              </div>
+              {/* Outbound 1 */}
+              <div className="max-w-[85%] self-end flex flex-col gap-0.5 text-right">
+                <div className="bg-[#1f242d] border border-white/5 text-[9px] leading-relaxed text-slate-300 p-2 rounded-lg rounded-tr-none text-left">
+                  Hi Marcus, we found hail damage near Pine Creek Dr. Can we inspect your roof for insurance?
+                </div>
+                <span className="text-[6px] text-slate-500">Jun 8, 10:38 AM</span>
+              </div>
+
+              {/* Inbound 1 */}
+              <div className="max-w-[85%] self-start flex flex-col gap-0.5 text-left">
+                <div className="bg-gradient-to-tr from-[#145CFF] to-[#3B82F6] text-white text-[9px] leading-relaxed p-2 rounded-lg rounded-tl-none">
+                  Sure, is Thursday at 4pm okay? I&apos;ll be home.
+                </div>
+                <span className="text-[6px] text-slate-500">Jun 8, 10:42 AM</span>
+              </div>
+
+              {/* Outbound 2 */}
+              <div className="max-w-[85%] self-end flex flex-col gap-0.5 text-right">
+                <div className="bg-[#1f242d] border border-white/5 text-[9px] leading-relaxed text-slate-300 p-2 rounded-lg rounded-tr-none text-left">
+                  Excellent. Thursday at 4:00 PM is booked. See you then!
+                </div>
+                <span className="text-[6px] text-slate-500">Jun 8, 10:44 AM</span>
+              </div>
+            </div>
+
+            {/* Action Bar */}
+            <div className="p-2 bg-[#0f1115] border-t border-white/5 flex gap-2 justify-end">
+              <div className="flex-1 text-left flex items-center">
+                <span className="text-[7px] font-bold text-slate-400">Phone: (407) 555-0192</span>
+              </div>
+              <button className="bg-white/5 hover:bg-white/10 text-white text-[8px] font-extrabold px-2 py-1 rounded border border-white/10 transition">
+                Map View
+              </button>
+              <button className="bg-[#145CFF] hover:bg-[#2F7DFF] text-white text-[8px] font-extrabold px-2 py-1 rounded transition">
+                Sync to CRM
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+
+        {/* Bottom Status bar */}
+        <div className="px-4 py-2 border-t border-white/5 bg-[#0f1115] flex items-center justify-between text-[8px] text-slate-500">
+          <div className="flex items-center gap-1.5 font-bold">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#00e676] shadow-[0_0_4px_#00e676]" />
+            <span>Calendar Feed Active</span>
+          </div>
+          <div>
+            <span>Next Inspection: Thursday 1:30 PM</span>
+          </div>
+        </div>
+
       </div>
     </div>
   );
@@ -176,21 +251,21 @@ function HeroVisual() {
 
 function HeroSection() {
   return (
-    <SectionContainer noPadding className="overflow-hidden bg-[#F5F8FC] bg-[radial-gradient(#dde6f2_1px,transparent_1px)] bg-[size:24px_24px] text-[#061A2F] py-12 sm:py-16 lg:py-24 border-b border-[#DDE6F2] relative">
+    <SectionContainer noPadding className="overflow-hidden bg-[#F5F8FC] bg-[radial-gradient(#dde6f2_1px,transparent_1px)] bg-[size:24px_24px] text-[#061A2F] pt-6 pb-10 sm:pt-8 sm:pb-12 lg:pt-10 lg:pb-16 border-b border-[#DDE6F2] relative">
       <div className="grid gap-12 lg:grid-cols-12 lg:gap-16 lg:items-center">
         
         {/* Left Column (Desktop Layout) */}
-        <div className="space-y-6 lg:col-span-7">
+        <div className="space-y-4 sm:space-y-5 lg:col-span-7">
           <p className="text-xs font-extrabold uppercase tracking-[0.2em] text-[#145CFF]">
             FOR ROOFING CONTRACTORS IN ACTIVE STORM MARKETS
           </p>
 
           <h1 className="text-4xl font-extrabold tracking-tight text-[#061A2F] sm:text-5xl lg:text-6xl lg:leading-[1.08]">
-            Confirmed Storm-Damage Roof Inspection Appointments. Booked for You.
+            Exclusive Storm-Damage Roof Inspection Appointments
           </h1>
 
           {/* Mobile/Tablet Mockup Placement (hidden on lg and above) */}
-          <div className="block lg:hidden my-4">
+          <div className="block lg:hidden my-3">
             <HeroVisual />
           </div>
 
@@ -198,7 +273,7 @@ function HeroSection() {
             When hail and wind storms hit, homeowners want to know if their roof was damaged. We identify those homeowners, confirm their interest, and schedule inspection appointments directly on your calendar.
           </p>
 
-          <div className="flex flex-col gap-3 sm:flex-row pt-2">
+          <div className="flex flex-col gap-3 sm:flex-row pt-1">
             <ButtonLink href="#calendar">Book a 10-Minute Territory Call</ButtonLink>
             <ButtonLink href={`mailto:${CONTACT_EMAIL}`} variant="secondary">
               Email Us Your Availability
@@ -206,7 +281,7 @@ function HeroSection() {
           </div>
 
           {/* Hero proof points under CTA */}
-          <div className="border-t border-[#DDE6F2] pt-6 space-y-4">
+          <div className="border-t border-[#DDE6F2] pt-4 space-y-3">
             <div className="grid grid-cols-2 gap-y-3 gap-x-4 text-xs font-bold text-[#42526B] sm:grid-cols-4">
               <span className="flex items-center gap-2">
                 <svg className="h-4.5 w-4.5 text-[#11A36A]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3.5">
@@ -233,8 +308,6 @@ function HeroSection() {
                 Volume pricing available
               </span>
             </div>
-            
-
           </div>
 
         </div>
