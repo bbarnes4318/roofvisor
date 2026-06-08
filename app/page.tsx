@@ -105,7 +105,7 @@ function HeroVisual() {
           <div className="w-[170px] border-r border-white/5 bg-[#0f1115] p-3 flex flex-col gap-3 shrink-0">
             {/* Header */}
             <div className="pb-2 border-b border-white/5 mb-1 text-left">
-              <span className="text-[7px] text-[#145CFF] uppercase tracking-widest font-extrabold block">Calendar View</span>
+              <span className="text-[7px] text-[#60A5FA] uppercase tracking-widest font-extrabold block">Calendar View</span>
               <span className="text-[11px] font-extrabold text-white">Thu, June 11</span>
             </div>
 
@@ -134,10 +134,10 @@ function HeroVisual() {
 
               {/* 4:00 PM (Highlighted Active) */}
               <div className="flex gap-2 text-left">
-                <div className="text-[8px] text-[#145CFF] w-10 pt-1 shrink-0 font-extrabold">4:00 PM</div>
+                <div className="text-[8px] text-[#60A5FA] w-10 pt-1 shrink-0 font-extrabold">4:00 PM</div>
                 <div className="flex-1 bg-[#145CFF]/10 border-l-2 border-[#145CFF] rounded-r p-1.5 shadow-[0_0_10px_rgba(20,92,255,0.1)]">
                   <span className="text-[8.5px] font-extrabold text-white block truncate">Marcus K.</span>
-                  <span className="text-[7px] text-[#145CFF] font-bold block truncate">Orlando, FL</span>
+                  <span className="text-[7px] text-[#93C5FD] font-bold block truncate">Orlando, FL</span>
                 </div>
               </div>
             </div>
@@ -148,7 +148,7 @@ function HeroVisual() {
             {/* Header info */}
             <div className="px-4 py-2.5 bg-[#0f1115] border-b border-white/5 flex items-center justify-between shrink-0">
               <div className="flex items-center gap-1.5 text-left">
-                <svg className="w-3.5 h-3.5 text-[#145CFF]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                <svg className="w-3.5 h-3.5 text-[#60A5FA]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                 </svg>
                 <h4 className="text-[10.5px] font-extrabold text-white">Event Details</h4>
@@ -163,10 +163,10 @@ function HeroVisual() {
               
               {/* Scheduled Time Block */}
               <div className="bg-[#171a21] border border-white/5 rounded-lg p-2 flex flex-col gap-0.5">
-                <span className="text-[7px] text-[#145CFF] uppercase tracking-wider font-extrabold">Scheduled Inspection</span>
+                <span className="text-[7px] text-[#60A5FA] uppercase tracking-wider font-extrabold">Scheduled Inspection</span>
                 <div className="flex items-center justify-between">
                   <span className="text-[9.5px] text-white font-extrabold">Thursday, June 11 @ 4:00 PM</span>
-                  <span className="text-[6.5px] bg-[#145CFF]/15 text-[#145CFF] px-1 py-0.5 rounded font-extrabold">Calendar-Ready</span>
+                  <span className="text-[6.5px] bg-[#145CFF] text-white px-1 py-0.5 rounded font-extrabold">Calendar-Ready</span>
                 </div>
               </div>
 
