@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "LeadsByStorm | Guaranteed Storm Damage Appointments",
+  title: "LeadsByStorm | Confirmed Storm-Damage Roof Inspection Appointments",
   description:
-    "LeadsByStorm provides exclusive, pre-qualified storm damage inspection appointments for roofing contractors.",
+    "We identify homeowners in recent hail and wind zones, confirm their interest, and book inspection appointments directly on your calendar.",
 };
 
 const LOGO_SRC = "/logo.png";
@@ -22,14 +22,14 @@ function ButtonLink({
   className?: string;
 }) {
   const baseClasses =
-    "inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-extrabold transition-all duration-200 transform active:scale-[0.98] focus:outline-none focus:ring-4 focus:ring-blue-100 select-none cursor-pointer";
+    "inline-flex items-center justify-center rounded-xl px-6 py-3.5 text-base font-extrabold transition-all duration-200 transform active:scale-[0.98] focus:outline-none focus:ring-4 focus:ring-blue-100 select-none cursor-pointer";
 
   const variantClasses =
     variant === "primary"
       ? "bg-[#145CFF] text-white shadow-lg shadow-blue-500/10 hover:bg-[#2F7DFF] hover:-translate-y-[1px]"
       : variant === "secondary-dark"
       ? "border border-white/20 bg-transparent text-white hover:bg-white/5 hover:-translate-y-[1px]"
-      : "border border-[#DDE5F0] bg-white text-[#41516A] hover:text-[#061A2F] hover:border-[#2F7DFF] hover:bg-slate-50 hover:-translate-y-[1px]";
+      : "border border-[#DDE6F2] bg-white text-[#42526B] hover:text-[#061A2F] hover:border-[#145CFF] hover:bg-[#F5F8FC] hover:-translate-y-[1px]";
 
   return (
     <a href={href} className={`${baseClasses} ${variantClasses} ${className}`}>
@@ -50,65 +50,25 @@ function SectionContainer({
   noPadding?: boolean;
 }) {
   return (
-    <section id={id} className={`${noPadding ? "px-4 sm:px-6 lg:px-8" : "px-4 py-16 sm:px-6 lg:px-8"} ${className}`}>
+    <section id={id} className={`${noPadding ? "px-4 sm:px-6 lg:px-8" : "px-4 py-20 sm:px-6 lg:px-8"} ${className}`}>
       <div className="mx-auto max-w-[1200px]">{children}</div>
     </section>
   );
 }
 
-function SectionHeading({
-  eyebrow,
-  title,
-  description,
-  align = "center",
-  theme = "light",
-}: {
-  eyebrow?: string;
-  title: string;
-  description?: string;
-  align?: "left" | "center";
-  theme?: "light" | "dark";
-}) {
-  return (
-    <div
-      className={`max-w-3xl ${
-        align === "center" ? "mx-auto text-center" : "text-left"
-      }`}
-    >
-      {eyebrow ? (
-        <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-[#145CFF]">
-          {eyebrow}
-        </p>
-      ) : null}
-
-      <h2 className={`text-3xl font-extrabold tracking-tight sm:text-4xl ${
-        theme === "dark" ? "text-white" : "text-[#061A2F]"
-      }`}>
-        {title}
-      </h2>
-
-      {description ? (
-        <p className={`mt-4 text-base leading-relaxed ${
-          theme === "dark" ? "text-slate-300" : "text-[#41516A]"
-        }`}>{description}</p>
-      ) : null}
-    </div>
-  );
-}
-
 function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-[#DDE5F0] bg-white/95 backdrop-blur-md">
-      <nav className="mx-auto flex max-w-[1200px] items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+    <header className="sticky top-0 z-50 border-b border-[#DDE6F2] bg-white/95 backdrop-blur-md">
+      <nav className="mx-auto flex max-w-[1200px] items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         <a href="#" aria-label="LeadsByStorm home" className="flex items-center">
           <img
             src={LOGO_SRC}
             alt="LeadsByStorm Logo"
-            className="h-8 w-auto object-contain sm:h-9"
+            className="h-10 sm:h-11 w-auto object-contain"
           />
         </a>
 
-        <ButtonLink href="#calendar" className="px-5 py-2 text-xs font-extrabold sm:text-sm">
+        <ButtonLink href="#calendar" className="px-5 py-2.5 text-xs font-extrabold sm:text-sm">
           Book a Call
         </ButtonLink>
       </nav>
@@ -118,123 +78,97 @@ function Header() {
 
 function HeroVisual() {
   return (
-    <div className="relative w-full max-w-md lg:max-w-full mx-auto">
-      {/* Subtle blue shadow glow behind card */}
-      <div className="absolute -inset-2 rounded-3xl bg-gradient-to-tr from-[#145CFF]/10 to-[#2F7DFF]/5 blur-xl pointer-events-none" />
+    <div className="relative w-full max-w-lg mx-auto space-y-4">
+      {/* Background shadow glow */}
+      <div className="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-[#145CFF]/10 to-[#2F7DFF]/5 blur-2xl pointer-events-none" />
 
-      {/* Main Operations Card */}
-      <div className="relative rounded-2xl border border-[#DDE5F0] bg-white p-5 sm:p-6 shadow-xl space-y-6">
-        
-        {/* Card Header */}
-        <div className="flex items-center justify-between border-b border-[#DDE5F0] pb-4">
+      {/* Main Snapshot Card */}
+      <div className="relative rounded-2xl border border-[#DDE6F2] bg-white p-5 sm:p-6 shadow-xl space-y-4">
+        <div className="flex items-center justify-between border-b border-[#DDE6F2] pb-3">
           <div className="flex items-center gap-2">
             <span className="h-2.5 w-2.5 rounded-full bg-[#145CFF]" />
-            <span className="text-[11px] font-extrabold tracking-wider text-[#061A2F] uppercase">
-              Appointment Pipeline
-            </span>
+            <h3 className="text-xs font-extrabold uppercase tracking-wider text-[#061A2F]">
+              Live Storm Appointment Snapshot
+            </h3>
           </div>
-          <span className="rounded-full bg-[#F6F8FC] px-2.5 py-1 text-[9px] font-bold text-[#145CFF] border border-[#DDE5F0] uppercase tracking-wide">
-            Live Stream
+          <span className="rounded-full bg-emerald-50 border border-[#11A36A]/20 px-2 py-0.5 text-[9px] font-bold text-[#11A36A] uppercase tracking-wider">
+            Live Feed
           </span>
         </div>
 
-        {/* Pipeline Steps Container */}
-        <div className="space-y-4">
-          
-          {/* Step 1: Active Storm Market */}
-          <div className="flex gap-4 items-start">
-            <div className="flex flex-col items-center">
-              <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-blue-50 border border-blue-100 text-[#145CFF]">
-                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
-                </svg>
-              </div>
-              <div className="h-8 w-0.5 bg-[#DDE5F0]" />
-            </div>
-            <div className="flex-1 bg-[#F6F8FC] rounded-xl border border-[#DDE5F0] p-3">
-              <div className="flex justify-between items-start">
-                <span className="text-[9px] font-extrabold text-[#2F7DFF] uppercase tracking-wider">01 // Active Storm Market</span>
-                <span className="text-[8px] font-bold bg-[#E8F1FF] text-[#145CFF] px-1.5 py-0.5 rounded uppercase">Verified</span>
-              </div>
-              <h4 className="text-xs font-bold text-[#061A2F] mt-1">Dallas-Fort Worth Corridor</h4>
-              <p className="text-[10px] text-[#41516A] mt-0.5">Verified NWS weather radar wind & hail swath activity</p>
-            </div>
+        {/* Details List */}
+        <div className="grid grid-cols-2 gap-4 text-xs">
+          <div>
+            <p className="text-[10px] font-bold text-[#42526B] uppercase tracking-wide">Market</p>
+            <p className="font-bold text-[#061A2F] mt-0.5">Active Hail/Wind Zone</p>
           </div>
-
-          {/* Step 2: Homeowner Identified */}
-          <div className="flex gap-4 items-start">
-            <div className="flex flex-col items-center">
-              <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-blue-50 border border-blue-100 text-[#145CFF]">
-                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                </svg>
-              </div>
-              <div className="h-8 w-0.5 bg-[#DDE5F0]" />
-            </div>
-            <div className="flex-1 bg-[#F6F8FC] rounded-xl border border-[#DDE5F0] p-3">
-              <div className="flex justify-between items-start">
-                <span className="text-[9px] font-extrabold text-[#2F7DFF] uppercase tracking-wider">02 // Homeowner Identified</span>
-                <span className="text-[8px] font-bold bg-emerald-50 text-emerald-600 px-1.5 py-0.5 rounded uppercase">Owner Match</span>
-              </div>
-              <h4 className="text-xs font-bold text-[#061A2F] mt-1">McKinney Storm Corridor Neighborhood</h4>
-              <p className="text-[10px] text-[#41516A] mt-0.5">Single-family property owners verified with damage interest</p>
-            </div>
+          <div>
+            <p className="text-[10px] font-bold text-[#42526B] uppercase tracking-wide">Homeowner Status</p>
+            <p className="font-bold text-[#11A36A] mt-0.5 flex items-center gap-1">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#11A36A]" />
+              Confirmed
+            </p>
           </div>
-
-          {/* Step 3: Appointment Confirmed */}
-          <div className="flex gap-4 items-start">
-            <div className="flex flex-col items-center">
-              <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-blue-50 border border-blue-100 text-[#145CFF]">
-                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <div className="h-8 w-0.5 bg-[#DDE5F0]" />
-            </div>
-            <div className="flex-1 bg-[#F6F8FC] rounded-xl border border-[#DDE5F0] p-3">
-              <div className="flex justify-between items-start">
-                <span className="text-[9px] font-extrabold text-[#2F7DFF] uppercase tracking-wider">03 // Appointment Confirmed</span>
-                <span className="text-[8px] font-bold bg-[#E8F1FF] text-[#145CFF] px-1.5 py-0.5 rounded uppercase">Pre-Screened</span>
-              </div>
-              <h4 className="text-xs font-bold text-[#061A2F] mt-1">Confirmed Face-to-Face Booking</h4>
-              <p className="text-[10px] text-[#41516A] mt-0.5">Homeowner scheduled to meet for roof inspection</p>
-            </div>
+          <div>
+            <p className="text-[10px] font-bold text-[#42526B] uppercase tracking-wide">Appointment Type</p>
+            <p className="font-bold text-[#061A2F] mt-0.5">Roof Damage Assessment</p>
           </div>
-
-          {/* Step 4: Sent to Contractor Calendar */}
-          <div className="flex gap-4 items-start">
-            <div className="flex flex-col items-center">
-              <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#145CFF] text-white border border-[#145CFF]">
-                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                </svg>
-              </div>
-            </div>
-            <div className="flex-1 bg-[#E8F1FF]/60 rounded-xl border border-[#145CFF]/30 p-3">
-              <div className="flex justify-between items-start">
-                <span className="text-[9px] font-extrabold text-[#145CFF] uppercase tracking-wider">04 // Sent to Calendar</span>
-                <span className="text-[8px] font-bold bg-blue-600 text-white px-1.5 py-0.5 rounded uppercase">Exclusive Sync</span>
-              </div>
-              <h4 className="text-xs font-bold text-[#061A2F] mt-1">Synced Directly to Your Schedule</h4>
-              <p className="text-[10px] text-[#41516A] mt-0.5">Dispatched to your Google Calendar or CRM in real-time</p>
-            </div>
+          <div>
+            <p className="text-[10px] font-bold text-[#42526B] uppercase tracking-wide">Delivery</p>
+            <p className="font-bold text-[#2F7DFF] mt-0.5">Sent to Contractor Calendar</p>
           </div>
-
         </div>
 
-        {/* Guarantee Badge Banner */}
-        <div className="flex items-center justify-between rounded-xl bg-emerald-50 border border-emerald-100 p-3 mt-2">
-          <div className="flex items-center gap-2">
-            <svg className="h-4.5 w-4.5 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-            </svg>
-            <span className="text-xs font-bold text-[#061A2F]">Territory Guarantee</span>
-          </div>
-          <span className="text-[10px] font-extrabold text-emerald-700 bg-emerald-100 px-2.5 py-0.5 rounded uppercase tracking-wide">
-            No-show? Replaced.
+        <div className="rounded-xl bg-emerald-50 border border-[#11A36A]/20 p-2.5 flex items-center gap-2 text-xs">
+          <svg className="h-4 w-4 text-[#11A36A] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span className="font-bold text-[#061A2F]">
+            Guarantee: <span className="text-[#11A36A]">No-show replacement included</span>
           </span>
         </div>
+      </div>
 
+      {/* Stacked Preview Cards */}
+      <div className="space-y-3">
+        {[
+          {
+            time: "Tue 10:30 AM",
+            type: "Roof Damage Assessment",
+            status: "Homeowner confirmed",
+            badge: "Exclusive appointment",
+          },
+          {
+            time: "Thu 2:00 PM",
+            type: "Storm Inspection Request",
+            status: "Calendar-ready",
+            badge: "No-show protected",
+          },
+          {
+            time: "Fri 4:15 PM",
+            type: "Hail Damage Review",
+            status: "Confirmed property owner",
+            badge: "Sent to contractor",
+          },
+        ].map((card) => (
+          <div
+            key={card.time}
+            className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 rounded-xl border border-[#DDE6F2] bg-white p-4 shadow-md hover:shadow-lg transition-shadow"
+          >
+            <div className="space-y-0.5">
+              <span className="text-[9px] font-bold text-[#2F7DFF] uppercase tracking-wider">{card.time}</span>
+              <h4 className="text-xs font-bold text-[#061A2F]">{card.type}</h4>
+              <p className="text-[10px] text-[#42526B]">
+                Status: <span className="text-[#11A36A] font-bold">{card.status}</span>
+              </p>
+            </div>
+            <div>
+              <span className="inline-block text-[9px] font-extrabold uppercase tracking-wider bg-[#F5F8FC] text-[#42526B] border border-[#DDE6F2] px-2.5 py-1 rounded">
+                {card.badge}
+              </span>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
@@ -242,17 +176,17 @@ function HeroVisual() {
 
 function HeroSection() {
   return (
-    <SectionContainer noPadding className="overflow-hidden bg-[#F6F8FC] text-[#061A2F] py-10 sm:py-12 lg:py-16 relative border-b border-[#DDE5F0]">
-      <div className="grid gap-8 lg:grid-cols-12 lg:gap-12 lg:items-center">
+    <SectionContainer noPadding className="overflow-hidden bg-[#F5F8FC] bg-[radial-gradient(#dde6f2_1px,transparent_1px)] bg-[size:24px_24px] text-[#061A2F] py-12 sm:py-16 lg:py-24 border-b border-[#DDE6F2] relative">
+      <div className="grid gap-12 lg:grid-cols-12 lg:gap-16 lg:items-center">
         
-        {/* Left Column / Text Block */}
-        <div className="space-y-5 lg:col-span-7 lg:space-y-6">
+        {/* Left Column (Desktop Layout) */}
+        <div className="space-y-6 lg:col-span-7">
           <p className="text-xs font-extrabold uppercase tracking-[0.2em] text-[#145CFF]">
             FOR ROOFING CONTRACTORS IN ACTIVE STORM MARKETS
           </p>
 
-          <h1 className="text-3xl font-extrabold tracking-tight text-[#061A2F] sm:text-4xl lg:text-[2.75rem] lg:leading-[1.1]">
-            Confirmed Storm-Damage Roof Inspection Appointments, Booked for You.
+          <h1 className="text-4xl font-extrabold tracking-tight text-[#061A2F] sm:text-5xl lg:text-6xl lg:leading-[1.08]">
+            Confirmed Storm-Damage Roof Inspection Appointments. Booked for You.
           </h1>
 
           {/* Mobile/Tablet Mockup Placement (hidden on lg and above) */}
@@ -260,8 +194,8 @@ function HeroSection() {
             <HeroVisual />
           </div>
 
-          <p className="text-sm leading-relaxed text-[#41516A] sm:text-base max-w-xl">
-            We identify homeowners in recent hail and wind zones, confirm their interest in a roof damage assessment, and book the appointment directly on your calendar. No shared lists. No cold leads. No-show appointments are replaced.
+          <p className="text-base leading-relaxed text-[#42526B] sm:text-lg max-w-xl">
+            When hail and wind storms hit, homeowners want to know if their roof was damaged. We identify those homeowners, confirm their interest, and schedule inspection appointments directly on your calendar.
           </p>
 
           <div className="flex flex-col gap-3 sm:flex-row pt-2">
@@ -272,39 +206,39 @@ function HeroSection() {
           </div>
 
           {/* Hero proof points under CTA */}
-          <div className="border-t border-[#DDE5F0] pt-5 space-y-3">
-            <div className="grid grid-cols-2 gap-y-2 gap-x-4 text-xs font-bold text-[#41516A] sm:grid-cols-4">
-              <span className="flex items-center gap-1.5">
-                <svg className="h-4 w-4 text-[#145CFF]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
+          <div className="border-t border-[#DDE6F2] pt-6 space-y-4">
+            <div className="grid grid-cols-2 gap-y-3 gap-x-4 text-xs font-bold text-[#42526B] sm:grid-cols-4">
+              <span className="flex items-center gap-2">
+                <svg className="h-4.5 w-4.5 text-[#11A36A]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3.5">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
                 Exclusive appointments
               </span>
-              <span className="flex items-center gap-1.5">
-                <svg className="h-4 w-4 text-[#145CFF]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
+              <span className="flex items-center gap-2">
+                <svg className="h-4.5 w-4.5 text-[#11A36A]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3.5">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
                 Confirmed homeowners
               </span>
-              <span className="flex items-center gap-1.5">
-                <svg className="h-4 w-4 text-[#145CFF]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
+              <span className="flex items-center gap-2">
+                <svg className="h-4.5 w-4.5 text-[#11A36A]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3.5">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
                 No-show replacement
               </span>
-              <span className="flex items-center gap-1.5">
-                <svg className="h-4 w-4 text-[#145CFF]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
+              <span className="flex items-center gap-2">
+                <svg className="h-4.5 w-4.5 text-[#11A36A]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3.5">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
                 Volume pricing available
               </span>
             </div>
             
-            <p className="text-[11px] font-bold text-[#2F7DFF] flex items-center gap-1.5">
+            <p className="text-xs font-bold text-[#2F7DFF] flex items-center gap-2">
               <svg className="h-4 w-4 animate-pulse text-[#145CFF]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
               </svg>
-              Some markets currently have more appointments than available contractors.
+              Some cities currently have more appointments than available contractors.
             </p>
           </div>
 
@@ -320,36 +254,76 @@ function HeroSection() {
   );
 }
 
-function TrustStrip() {
+function ProblemSection() {
   return (
-    <SectionContainer noPadding className="bg-white border-b border-[#DDE5F0] py-8">
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        {[
-          {
-            title: "Confirmed Appointments",
-            desc: "Every appointment is verified before it reaches your calendar.",
-          },
-          {
-            title: "Exclusive Delivery",
-            desc: "We connect each appointment to one contractor, not a shared list.",
-          },
-          {
-            title: "Storm-Market Targeting",
-            desc: "We focus on homeowners in recent hail and wind-damage areas.",
-          },
-          {
-            title: "No-Show Protection",
-            desc: "If the homeowner does not show, we replace the appointment.",
-          },
-        ].map((item) => (
-          <div key={item.title} className="space-y-1">
-            <h3 className="text-sm font-extrabold text-[#061A2F] flex items-center gap-2">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#145CFF]" />
-              {item.title}
+    <SectionContainer className="bg-white border-b border-[#DDE6F2] py-20">
+      <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
+        
+        {/* Left Column */}
+        <div className="space-y-5">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#145CFF]">
+            THE PROBLEM WITH ROOFING LEADS
+          </p>
+          <h2 className="text-3xl font-extrabold tracking-tight text-[#061A2F] sm:text-4xl">
+            Most Roofing Leads Are Shared, Cold, or Already Burned.
+          </h2>
+          <p className="text-base leading-relaxed text-[#42526B] sm:text-lg">
+            Roofing contractors do not need another spreadsheet of names. They need real conversations with homeowners in storm-hit areas who are willing to schedule an inspection. That is what LeadsByStorm is built to deliver.
+          </p>
+        </div>
+
+        {/* Right Column (Comparison Cards) */}
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-1">
+          
+          {/* Vendor Card */}
+          <div className="rounded-2xl border border-[#DDE6F2] bg-white p-6 shadow-sm space-y-4">
+            <h3 className="text-sm font-extrabold text-[#061A2F] uppercase tracking-wider border-b border-[#DDE6F2] pb-3">
+              Typical Lead Vendors
             </h3>
-            <p className="text-xs text-[#41516A] leading-relaxed pl-3">{item.desc}</p>
+            <ul className="space-y-2.5">
+              {[
+                "Shared with multiple contractors",
+                "Lightly verified or unverified",
+                "Often cold or recycled",
+                "Expensive with no appointment guarantee",
+              ].map((point) => (
+                <li key={point} className="flex items-start gap-2.5 text-xs font-bold text-[#42526B]">
+                  <svg className="h-4 w-4 text-red-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                  <span>{point}</span>
+                </li>
+              ))}
+            </ul>
           </div>
-        ))}
+
+          {/* LeadsByStorm Card */}
+          <div className="rounded-2xl border-2 border-[#145CFF] bg-[#F5F8FC] p-6 shadow-md space-y-4 relative overflow-hidden">
+            <span className="absolute right-4 top-4 rounded bg-[#145CFF] px-2 py-0.5 text-[8px] font-extrabold uppercase tracking-wide text-white">
+              Guaranteed
+            </span>
+            <h3 className="text-sm font-extrabold text-[#061A2F] uppercase tracking-wider border-b border-[#DDE6F2] pb-3">
+              LeadsByStorm
+            </h3>
+            <ul className="space-y-2.5">
+              {[
+                "Homeowner interest confirmed",
+                "Appointment scheduled",
+                "Exclusive delivery",
+                "No-show replacement included",
+              ].map((point) => (
+                <li key={point} className="flex items-start gap-2.5 text-xs font-bold text-[#061A2F]">
+                  <svg className="h-4 w-4 text-[#11A36A] shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3.5">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>{point}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+        </div>
+
       </div>
     </SectionContainer>
   );
@@ -357,13 +331,13 @@ function TrustStrip() {
 
 function HowItWorksSection() {
   return (
-    <SectionContainer id="how-it-works" className="bg-[#F6F8FC] border-b border-[#DDE5F0] py-16">
-      <div className="text-center max-w-3xl mx-auto mb-12">
+    <SectionContainer id="how-it-works" className="bg-[#F5F8FC] border-b border-[#DDE6F2] py-20">
+      <div className="text-center max-w-3xl mx-auto mb-16">
         <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#145CFF] mb-3">HOW IT WORKS</p>
         <h2 className="text-3xl font-extrabold tracking-tight text-[#061A2F] sm:text-4xl">
-          We find the storm opportunity. You inspect the roof.
+          We Find the Storm Opportunity. You Inspect the Roof.
         </h2>
-        <p className="mt-4 text-sm sm:text-base text-[#41516A] leading-relaxed">
+        <p className="mt-4 text-base leading-relaxed text-[#42526B] sm:text-lg">
           Our team handles targeting, homeowner outreach, qualification, confirmation, and scheduling so your crew can focus on inspections and signed jobs.
         </p>
       </div>
@@ -373,25 +347,25 @@ function HowItWorksSection() {
           {
             num: "01",
             title: "Target Active Storm Areas",
-            desc: "We monitor recent hail and wind activity to identify neighborhoods where homeowners are most likely to need a roof damage assessment.",
+            desc: "We monitor recent hail and wind activity to identify neighborhoods where homeowners are more likely to need a roof damage assessment.",
           },
           {
             num: "02",
             title: "Confirm the Homeowner",
-            desc: "We contact homeowners, verify property ownership and interest, and confirm that they want a contractor to inspect for possible storm damage.",
+            desc: "We contact homeowners, verify interest, and confirm they are open to having a contractor inspect for possible storm damage.",
           },
           {
             num: "03",
             title: "Book the Appointment",
-            desc: "Confirmed appointments are sent directly to your calendar. If a homeowner no-shows, we replace the appointment at no additional cost.",
+            desc: "Once confirmed, the appointment is sent directly to your calendar with the homeowner’s details and scheduled inspection time.",
           },
         ].map((card) => (
-          <article key={card.num} className="bg-white rounded-2xl border border-[#DDE5F0] p-8 shadow-md hover:shadow-xl transition-all duration-350">
+          <article key={card.num} className="bg-white rounded-2xl border border-[#DDE6F2] p-8 shadow-md hover:shadow-xl transition-all duration-300">
             <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50 text-sm font-extrabold text-[#145CFF] border border-blue-100">
               {card.num}
             </div>
             <h3 className="text-lg font-extrabold text-[#061A2F]">{card.title}</h3>
-            <p className="mt-3 text-sm leading-relaxed text-[#41516A]">{card.desc}</p>
+            <p className="mt-3 text-sm leading-relaxed text-[#42526B]">{card.desc}</p>
           </article>
         ))}
       </div>
@@ -401,34 +375,34 @@ function HowItWorksSection() {
 
 function GuaranteeSection() {
   return (
-    <SectionContainer className="bg-[#061A2F] text-white py-16 sm:py-20 border-b border-[#061A2F]">
-      <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+    <SectionContainer className="bg-[#061A2F] text-white py-20 border-b border-[#061A2F]">
+      <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
         <div className="space-y-6">
-          <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-            Appointments Are Confirmed — And Protected.
+          <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl leading-tight">
+            Confirmed Appointments. Protected Delivery.
           </h2>
-          <p className="text-sm sm:text-base leading-relaxed text-slate-350">
-            You are not buying a spreadsheet of names. You are buying scheduled inspection opportunities with homeowners who have already confirmed interest. If an appointment no-shows, we replace it.
+          <p className="text-base leading-relaxed text-slate-300 sm:text-lg">
+            You are not buying a cold lead list. You are buying scheduled inspection opportunities with homeowners who have already confirmed interest. If a homeowner no-shows, we replace the appointment.
           </p>
-          <div>
+          <div className="pt-2">
             <ButtonLink href="#calendar" className="bg-[#145CFF] text-white hover:bg-[#2F7DFF] border-0">
               Check My Territory
             </ButtonLink>
           </div>
         </div>
 
-        <div className="bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4">
+        <div className="bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-8 space-y-5">
           {[
             "Homeowner interest confirmed before delivery",
-            "Appointment details sent to your calendar",
+            "Appointment booked to your calendar",
+            "Exclusive contractor assignment",
             "No-show appointments replaced",
-            "One contractor per territory when available",
           ].map((bullet) => (
             <div key={bullet} className="flex items-start gap-3">
               <svg className="h-5 w-5 text-[#2F7DFF] shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
               </svg>
-              <span className="text-sm font-bold text-slate-100">{bullet}</span>
+              <span className="text-sm sm:text-base font-bold text-slate-100">{bullet}</span>
             </div>
           ))}
         </div>
@@ -439,14 +413,16 @@ function GuaranteeSection() {
 
 function PricingSection() {
   return (
-    <SectionContainer className="bg-white py-16 sm:py-20 border-b border-[#DDE5F0]">
-      <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+    <SectionContainer className="bg-white py-20 border-b border-[#DDE6F2]">
+      <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16 lg:items-center">
+        
+        {/* Left Column */}
         <div className="space-y-6">
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#145CFF]">PRICING & ROI</p>
           <h2 className="text-3xl font-extrabold tracking-tight text-[#061A2F] sm:text-4xl">
             Stop Paying Premium Prices for Shared or Unverified Leads.
           </h2>
-          <p className="text-sm sm:text-base leading-relaxed text-[#41516A]">
+          <p className="text-base leading-relaxed text-[#42526B] sm:text-lg">
             Many storm-damage lead vendors charge <strong className="text-[#061A2F] font-extrabold">$400–$500</strong> for shared, recycled, or lightly verified opportunities. LeadsByStorm delivers exclusive, confirmed inspection appointments starting at <strong className="text-[#061A2F] font-extrabold">$250</strong> per appointment, with volume pricing available for qualified territories.
           </p>
           <p className="text-xs font-bold text-[#2F7DFF] italic">
@@ -454,20 +430,20 @@ function PricingSection() {
           </p>
         </div>
 
-        {/* Pricing Cards Column */}
+        {/* Right Column (Pricing Cards) */}
         <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
           {[
             {
               title: "Typical Market Price",
               value: "$400–$500",
-              desc: "Often shared, resold, or lightly verified.",
+              desc: "Often shared, resold, cold, or lightly verified.",
               highlight: false,
               valueColor: "text-[#061A2F]",
             },
             {
               title: "LeadsByStorm Appointment Rate",
               value: "$250–$350",
-              desc: "Exclusive, confirmed storm-damage appointments. Volume pricing available.",
+              desc: "Exclusive, confirmed storm-damage inspection appointments.",
               highlight: true,
               valueColor: "text-[#145CFF]",
             },
@@ -476,7 +452,7 @@ function PricingSection() {
               value: "Replacement Included",
               desc: "If the homeowner no-shows, we replace the appointment.",
               highlight: false,
-              valueColor: "text-emerald-600",
+              valueColor: "text-[#11A36A]",
             },
           ].map((card) => (
             <div
@@ -484,7 +460,7 @@ function PricingSection() {
               className={`rounded-2xl p-6 transition-all duration-200 border ${
                 card.highlight
                   ? "border-[#145CFF] bg-blue-50/20 shadow-md shadow-blue-150 relative"
-                  : "border-[#DDE5F0] bg-white hover:border-[#2F7DFF] hover:shadow-lg"
+                  : "border-[#DDE6F2] bg-white hover:border-[#145CFF] hover:shadow-lg"
               }`}
             >
               {card.highlight && (
@@ -492,16 +468,17 @@ function PricingSection() {
                   Best Value
                 </span>
               )}
-              <p className="text-xs font-bold text-[#41516A] uppercase tracking-wider">{card.title}</p>
+              <p className="text-xs font-bold text-[#42526B] uppercase tracking-wider">{card.title}</p>
               <p className={`mt-2 text-2xl sm:text-3xl font-extrabold ${card.valueColor}`}>
                 {card.value}
               </p>
-              <p className="mt-2 text-xs leading-relaxed text-[#41516A]">
+              <p className="mt-2 text-xs leading-relaxed text-[#42526B]">
                 {card.desc}
               </p>
             </div>
           ))}
         </div>
+
       </div>
     </SectionContainer>
   );
@@ -509,25 +486,25 @@ function PricingSection() {
 
 function TerritoryCtaSection() {
   return (
-    <SectionContainer className="bg-[#F6F8FC] py-16 border-b border-[#DDE5F0]">
-      <div className="text-center max-w-3xl mx-auto space-y-6">
+    <SectionContainer className="bg-[#F5F8FC] py-20 border-b border-[#DDE6F2]">
+      <div className="text-left max-w-3xl space-y-6">
         <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#145CFF]">TERRITORY AVAILABILITY</p>
         <h2 className="text-3xl font-extrabold tracking-tight text-[#061A2F] sm:text-4xl">
           Claim Your Storm Territory Before It Fills.
         </h2>
-        <p className="text-sm leading-relaxed text-[#41516A] max-w-2xl mx-auto">
-          We work with a limited number of roofing contractors in each active market to protect appointment quality and prevent over-saturation. Book a quick call to see if we have appointments available in your area.
+        <p className="text-base leading-relaxed text-[#42526B] sm:text-lg">
+          We work with a limited number of roofing contractors in each active market to protect appointment quality and prevent oversaturation. Book a quick call to see if we have confirmed appointments available in your service area.
         </p>
 
-        <div className="flex flex-col gap-3 sm:flex-row justify-center pt-2">
+        <div className="flex flex-col gap-3 sm:flex-row pt-2">
           <ButtonLink href="#calendar">Book a 10-Minute Territory Call</ButtonLink>
           <ButtonLink href={`mailto:${CONTACT_EMAIL}`} variant="secondary">
             Email Us Your Availability
           </ButtonLink>
         </div>
 
-        <p className="text-[11px] font-bold text-[#2F7DFF] flex items-center justify-center gap-1.5">
-          <svg className="h-4 w-4 animate-pulse text-[#145CFF]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+        <p className="text-xs font-bold text-[#2F7DFF] flex items-center gap-2">
+          <svg className="h-4.5 w-4.5 animate-pulse text-[#145CFF]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
             <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
           </svg>
           In some cities, appointment volume is currently higher than contractor availability.
@@ -539,32 +516,32 @@ function TerritoryCtaSection() {
 
 function CalendarSection() {
   return (
-    <SectionContainer id="calendar" className="bg-white py-16 sm:py-20 border-b border-[#DDE5F0]">
-      <div className="grid gap-8 lg:grid-cols-[1.25fr_0.75fr]">
+    <SectionContainer id="calendar" className="bg-white py-20 border-b border-[#DDE6F2]">
+      <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:gap-12">
         
         {/* Left Column: Calendar Embed */}
-        <div className="rounded-2xl border border-[#DDE5F0] bg-white p-6 shadow-xl space-y-4">
+        <div className="rounded-2xl border border-[#DDE6F2] bg-white p-6 shadow-xl space-y-4">
           <div>
             <p className="text-xs font-bold uppercase tracking-widest text-[#145CFF]">Booking Console</p>
             <h3 className="mt-2 text-xl font-extrabold text-[#061A2F] leading-tight">
               Schedule Your Territory Call
             </h3>
-            <p className="mt-2 text-xs text-[#41516A]">
-              Pick a time that works for you. We will review your market, current storm activity, appointment volume, pricing, and territory availability.
+            <p className="mt-2 text-sm text-[#42526B]">
+              Pick a time that works for you. We will review your service area, current storm activity, appointment volume, pricing, and territory availability.
             </p>
           </div>
 
           {/* Calendly Embed Container with Fallback/Loading State */}
-          <div className="relative overflow-hidden rounded-xl border border-[#DDE5F0] bg-[#F6F8FC] min-h-[700px] w-full">
+          <div className="relative overflow-hidden rounded-xl border border-[#DDE6F2] bg-[#F5F8FC] min-h-[700px] w-full">
             {/* Loading / Fallback Background Indicator */}
             <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6 bg-slate-50 z-0">
               <svg className="animate-spin h-8 w-8 text-[#145CFF] mb-3" fill="none" viewBox="0 0 24 24">
                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
               </svg>
-              <p className="text-sm font-bold text-[#061A2F]">Loading Scheduler...</p>
-              <p className="mt-1 text-xs text-[#41516A] max-w-xs">
-                If the calendar does not display, click below to open it directly.
+              <p className="text-sm font-bold text-[#061A2F]">Loading schedule...</p>
+              <p className="mt-1 text-xs text-[#42526B] max-w-xs">
+                If the calendar does not load, show a clear fallback button:
               </p>
               <a
                 href="https://calendly.com/leadsbystorm-support/30min?text_color=0b1329&primary_color=2563eb"
@@ -588,40 +565,8 @@ function CalendarSection() {
         {/* Right Column: Email Card & QR Code & Checklist */}
         <div className="flex flex-col gap-6">
           
-          {/* QR Code Booking Card */}
-          <div className="rounded-2xl border border-[#DDE5F0] bg-white p-6 flex flex-col items-center shadow-xl text-center">
-            <div className="w-full">
-              <p className="text-xs font-bold uppercase tracking-widest text-[#145CFF]">
-                Book on Mobile
-              </p>
-              <h3 className="mt-3 text-base font-extrabold text-[#061A2F]">
-                Scan to Schedule Instantly
-              </h3>
-              <p className="mt-1 text-xs text-[#41516A] leading-relaxed max-w-[200px] mx-auto">
-                Scan this QR code with your phone camera to schedule directly on mobile.
-              </p>
-            </div>
-            
-            <div className="my-5 p-3 rounded-xl border border-[#DDE5F0] bg-[#F6F8FC] shadow-inner flex items-center justify-center">
-              <img
-                src="/qrcode.png"
-                alt="Booking Calendar QR Code"
-                className="h-32 w-32 object-contain"
-              />
-            </div>
-
-            <a
-              href="https://calendly.com/leadsbystorm-support/30min?text_color=0b1329&primary_color=2563eb"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[11px] font-extrabold text-[#145CFF] hover:underline break-all"
-            >
-              calendly.com/leadsbystorm-support/30min
-            </a>
-          </div>
-
           {/* Email Card */}
-          <div className="rounded-2xl border border-[#DDE5F0] bg-white p-6 flex flex-col justify-between shadow-xl space-y-6">
+          <div className="rounded-2xl border border-[#DDE6F2] bg-white p-6 flex flex-col justify-between shadow-xl space-y-6">
             <div className="space-y-4">
               <p className="text-xs font-bold uppercase tracking-widest text-[#145CFF]">
                 Prefer Email?
@@ -629,34 +574,56 @@ function CalendarSection() {
               <h3 className="text-lg font-extrabold text-[#061A2F]">
                 Send your availability.
               </h3>
-              <p className="text-xs leading-relaxed text-[#41516A]">
+              <p className="text-xs leading-relaxed text-[#42526B]">
                 Send us your availability and the market you serve. We will reply or call you back with current appointment options.
               </p>
             </div>
 
             <a
-              href={`mailto:${CONTACT_EMAIL}?subject=LeadsByStorm%20Discovery%20Call%20Availability&body=Hi%20LeadsByStorm%2C%0A%0AI'm%20a%20roofing%20contractor%20interested%20in%20exclusive%20storm%20appointments.%0A%0AMy%20Service%20Area%2FMarket%3A%20%0AMy%20Preferred%20Call%20Time%20Availability%3A%20%0A%0AThanks!`}
-              className="inline-flex items-center justify-center rounded-xl bg-[#F6F8FC] border border-[#DDE5F0] px-6 py-3 text-sm font-extrabold text-[#41516A] hover:text-[#061A2F] hover:border-[#145CFF] hover:bg-slate-50 transition active:scale-[0.98] transform"
+              href={`mailto:${CONTACT_EMAIL}?subject=LeadsByStorm%20Discovery%20Call%20Availability&body=Hi%20LeadsByStorm%2C%0A%0AI'm%20a%20roofing%20contractor%20interested%20in%20exclusive%20storm%25%20appointments.%0A%0AMy%20Service%20Area%2FMarket%3A%20%0AMy%20Preferred%20Call%20Time%20Availability%3A%20%0A%0AThanks!`}
+              className="inline-flex items-center justify-center rounded-xl bg-[#F5F8FC] border border-[#DDE6F2] px-6 py-3.5 text-sm font-extrabold text-[#42526B] hover:text-[#061A2F] hover:border-[#145CFF] hover:bg-slate-50 transition active:scale-[0.98] transform"
             >
               Email LeadsByStorm
             </a>
 
             {/* Checklist */}
-            <div className="border-t border-[#DDE5F0] pt-4 space-y-2">
-              <p className="text-[10px] font-bold text-[#061A2F] uppercase tracking-wider">Before you email:</p>
+            <div className="border-t border-[#DDE6F2] pt-4 space-y-2">
+              <p className="text-[10px] font-bold text-[#061A2F] uppercase tracking-wider">Information to include:</p>
               {[
                 "Tell us your service area",
                 "Tell us your preferred call time",
                 "Ask about current appointment volume",
               ].map((item) => (
-                <div key={item} className="flex items-center gap-2 text-xs font-semibold text-[#41516A]">
-                  <svg className="h-3.5 w-3.5 text-[#145CFF] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
+                <div key={item} className="flex items-center gap-2 text-xs font-semibold text-[#42526B]">
+                  <svg className="h-4 w-4 text-[#145CFF] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                   </svg>
                   <span>{item}</span>
                 </div>
               ))}
             </div>
+          </div>
+
+          {/* QR Code Booking Card */}
+          <div className="rounded-2xl border border-[#DDE6F2] bg-white p-5 flex flex-col items-center shadow-lg text-center">
+            <p className="text-[10px] font-bold uppercase tracking-widest text-[#145CFF]">
+              Scan to Book on Mobile
+            </p>
+            <div className="my-3 p-2 rounded-xl border border-[#DDE6F2] bg-[#F5F8FC] flex items-center justify-center">
+              <img
+                src="/qrcode.png"
+                alt="Booking Calendar QR Code"
+                className="h-24 w-24 object-contain"
+              />
+            </div>
+            <a
+              href="https://calendly.com/leadsbystorm-support/30min?text_color=0b1329&primary_color=2563eb"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[10px] font-bold text-[#145CFF] hover:underline"
+            >
+              calendly.com/leadsbystorm-support/30min
+            </a>
           </div>
 
         </div>
@@ -667,22 +634,22 @@ function CalendarSection() {
 
 function FinalCtaSection() {
   return (
-    <SectionContainer noPadding className="bg-[#061A2F] text-white py-12 relative border-b border-[#061A2F]">
-      <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
-        <div className="space-y-2 max-w-xl text-left">
-          <h2 className="text-2xl font-extrabold tracking-tight text-white sm:text-3xl">
+    <SectionContainer noPadding className="bg-[#061A2F] text-white py-16 relative border-b border-[#061A2F]">
+      <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 text-left">
+        <div className="space-y-3 max-w-xl">
+          <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
             Ready for Confirmed Storm-Damage Appointments?
           </h2>
-          <p className="text-xs sm:text-sm text-slate-350 leading-relaxed">
+          <p className="text-sm text-slate-300 leading-relaxed">
             Book a quick call and we will show you current appointment availability in your market.
           </p>
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-3">
-          <ButtonLink href="#calendar" className="bg-[#145CFF] text-white hover:bg-[#2F7DFF] border-0 text-xs py-2.5 px-5">
+        <div className="flex flex-col sm:flex-row gap-3 shrink-0">
+          <ButtonLink href="#calendar" className="bg-[#145CFF] text-white hover:bg-[#2F7DFF] border-0">
             Book a 10-Minute Territory Call
           </ButtonLink>
-          <ButtonLink href={`mailto:${CONTACT_EMAIL}`} variant="secondary-dark" className="text-xs py-2.5 px-5">
+          <ButtonLink href={`mailto:${CONTACT_EMAIL}`} variant="secondary-dark">
             Email Us Your Availability
           </ButtonLink>
         </div>
@@ -693,8 +660,8 @@ function FinalCtaSection() {
 
 function Footer() {
   return (
-    <footer className="border-t border-[#DDE5F0] bg-slate-50 px-6 py-8 sm:px-8 lg:px-12 text-slate-500">
-      <div className="mx-auto flex max-w-[1200px] flex-col gap-4 text-xs sm:text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+    <footer className="border-t border-[#DDE6F2] bg-slate-50 px-6 py-8 sm:px-8 lg:px-12 text-[#42526B]">
+      <div className="mx-auto flex max-w-[1200px] flex-col gap-4 text-xs sm:text-sm text-[#42526B] sm:flex-row sm:items-center sm:justify-between">
         <p>© 2026 LeadsByStorm. All rights reserved.</p>
         <p>Targeted storm-damage roofing appointments.</p>
       </div>
@@ -704,11 +671,11 @@ function Footer() {
 
 export default function LeadsByStormLandingPage() {
   return (
-    <main className="min-h-screen bg-white text-[#41516A]">
+    <main className="min-h-screen bg-white text-[#42526B]">
       <Script src="https://assets.calendly.com/assets/external/widget.js" strategy="afterInteractive" />
       <Header />
       <HeroSection />
-      <TrustStrip />
+      <ProblemSection />
       <HowItWorksSection />
       <GuaranteeSection />
       <PricingSection />
