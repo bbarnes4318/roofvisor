@@ -79,11 +79,13 @@ function SectionHeading({
   title,
   description,
   align = "center",
+  theme = "light",
 }: {
   eyebrow?: string;
   title: string;
   description?: string;
   align?: "left" | "center";
+  theme?: "light" | "dark";
 }) {
   return (
     <div
@@ -97,12 +99,16 @@ function SectionHeading({
         </p>
       ) : null}
 
-      <h2 className="text-3xl font-black tracking-tight text-blue-950 sm:text-4xl lg:text-5xl">
+      <h2 className={`text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl ${
+        theme === "dark" ? "text-white" : "text-blue-950"
+      }`}>
         {title}
       </h2>
 
       {description ? (
-        <p className="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">{description}</p>
+        <p className={`mt-4 text-base leading-relaxed sm:text-lg ${
+          theme === "dark" ? "text-slate-300" : "text-slate-600"
+        }`}>{description}</p>
       ) : null}
     </div>
   );
@@ -110,13 +116,13 @@ function SectionHeading({
 
 function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-100 bg-white/85 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-slate-900 bg-slate-950/90 backdrop-blur-md">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         <a href="#" aria-label="LeadsByStorm home" className="flex items-center">
           <img
             src={LOGO_SRC}
             alt="LeadsByStorm Logo"
-            className="h-10 w-auto max-w-[220px] object-contain sm:h-12 sm:max-w-[280px]"
+            className="h-11 w-auto max-w-[240px] object-contain sm:h-14 sm:max-w-[320px]"
           />
         </a>
 
@@ -130,16 +136,16 @@ function HeroVisual() {
   return (
     <div className="relative w-full max-w-xl mx-auto lg:mx-0">
       {/* Decorative gradient blur background */}
-      <div className="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-blue-500/10 via-indigo-500/10 to-blue-400/5 blur-2xl pointer-events-none" />
+      <div className="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-orange-500/15 via-blue-500/10 to-orange-400/5 blur-2xl pointer-events-none" />
 
       {/* Main Dashboard Frame (Vibrant Dark) */}
-      <div className="relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-950 text-slate-150 shadow-2xl">
+      <div className="relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-950 text-slate-100 shadow-2xl">
         
         {/* Top Control Bar */}
         <div className="flex items-center justify-between border-b border-slate-800 bg-slate-900/60 px-5 py-3">
           <div className="flex items-center gap-2">
             <span className="flex h-2 w-2 relative">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-450 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
             </span>
             <span className="text-xs font-semibold tracking-wider text-slate-300 uppercase">
@@ -155,7 +161,7 @@ function HeroVisual() {
         <div className="p-5 space-y-4">
           
           {/* Radar Monitoring Window */}
-          <div className="relative overflow-hidden rounded-xl border border-slate-850 bg-slate-900/40 p-4">
+          <div className="relative overflow-hidden rounded-xl border border-slate-800 bg-slate-900/40 p-4">
             
             {/* Header info inside widget */}
             <div className="mb-3 flex items-center justify-between">
@@ -165,7 +171,7 @@ function HeroVisual() {
                 </p>
                 <p className="text-sm font-black text-white">Active Storm Zone</p>
               </div>
-              <div className="flex items-center gap-1.5 rounded-full border border-blue-500/20 bg-blue-500/10 px-2.5 py-0.5 text-[10px] font-bold text-blue-400">
+              <div className="flex items-center gap-1.5 rounded-full border border-orange-500/20 bg-orange-500/10 px-2.5 py-0.5 text-[10px] font-bold text-orange-400">
                 <svg className="h-3 w-3 animate-pulse" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
@@ -174,7 +180,7 @@ function HeroVisual() {
             </div>
 
             {/* Weather Radar Graphic (SVG) */}
-            <div className="relative h-44 w-full overflow-hidden rounded-lg bg-[#070e1b] border border-slate-800">
+            <div className="relative h-44 w-full overflow-hidden rounded-lg bg-[#0d1527] border border-slate-850">
               
               {/* Radar Sweeper Grid Lines */}
               <div className="absolute inset-0 bg-[linear-gradient(rgba(51,65,85,0.15)_1px,transparent_1px),linear-gradient(90deg,rgba(51,65,85,0.15)_1px,transparent_1px)] bg-[size:16px_16px]" />
@@ -198,21 +204,22 @@ function HeroVisual() {
                 />
                 <defs>
                   <radialGradient id="stormGradient" cx="50%" cy="50%" r="50%">
-                    <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.4" />
-                    <stop offset="70%" stopColor="#1e3a8a" stopOpacity="0.2" />
-                    <stop offset="100%" stopColor="#020617" stopOpacity="0" />
+                    <stop offset="0%" stopColor="#ef4444" stopOpacity="0.65" />
+                    <stop offset="45%" stopColor="#f97316" stopOpacity="0.5" />
+                    <stop offset="75%" stopColor="#eab308" stopOpacity="0.3" />
+                    <stop offset="100%" stopColor="#3b82f6" stopOpacity="0" />
                   </radialGradient>
                 </defs>
 
                 {/* Radar Sweep Line */}
-                <line x1="50" y1="50" x2="100" y2="10" stroke="#3b82f6" strokeWidth="0.5" strokeOpacity="0.5" className="origin-[50px_50px] animate-[spin_10s_linear_infinite]" />
+                <line x1="50" y1="50" x2="100" y2="10" stroke="#f97316" strokeWidth="0.5" strokeOpacity="0.5" className="origin-[50px_50px] animate-[spin_10s_linear_infinite]" />
               </svg>
 
               {/* Appointment pins */}
               <div className="absolute top-[35%] left-[28%] flex flex-col items-center">
                 <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-600"></span>
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
                 </span>
                 <span className="mt-0.5 rounded bg-slate-950/90 px-1 py-0.5 text-[8px] font-bold text-slate-300 border border-slate-800">
                   Zone A: 14 Appts
@@ -221,8 +228,8 @@ function HeroVisual() {
 
               <div className="absolute bottom-[25%] right-[22%] flex flex-col items-center">
                 <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-450 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-600"></span>
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-450 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
                 </span>
                 <span className="mt-0.5 rounded bg-slate-950/90 px-1 py-0.5 text-[8px] font-bold text-slate-300 border border-slate-800">
                   Zone B: 28 Appts
@@ -232,7 +239,7 @@ function HeroVisual() {
               {/* Bottom bar inside radar */}
               <div className="absolute inset-x-3 bottom-3 flex items-center justify-between rounded-lg border border-white/5 bg-slate-950/80 p-2.5 backdrop-blur-md">
                 <div className="flex items-center gap-2">
-                  <div className="h-2 w-2 rounded-full bg-blue-500 animate-pulse" />
+                  <div className="h-2 w-2 rounded-full bg-orange-500 animate-pulse" />
                   <p className="text-[11px] font-bold text-white">
                     42 homeowner appointments available
                   </p>
@@ -273,7 +280,7 @@ function HeroVisual() {
                 label: "Avg. Price",
                 value: "$250",
                 icon: (
-                  <svg className="h-4 w-4 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                  <svg className="h-4 w-4 text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 ),
@@ -347,25 +354,26 @@ function HeroSection() {
 
 function FeatureCard({ feature, index }: { feature: Feature; index: number }) {
   return (
-    <article className="group rounded-2xl border border-slate-200 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-slate-900/5">
-      <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-xl bg-blue-500/10 text-sm font-black text-blue-600">
+    <article className="group rounded-2xl border border-slate-900 bg-slate-900/40 p-8 shadow-xl transition duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-blue-950/10 hover:border-slate-800">
+      <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-xl bg-orange-500/10 text-sm font-black text-orange-400">
         0{index + 1}
       </div>
 
-      <h3 className="text-xl font-extrabold text-blue-950">{feature.title}</h3>
+      <h3 className="text-xl font-extrabold text-white">{feature.title}</h3>
 
-      <p className="mt-3 leading-relaxed text-slate-700 text-sm sm:text-base">{feature.description}</p>
+      <p className="mt-3 leading-relaxed text-slate-450 text-sm sm:text-base">{feature.description}</p>
     </article>
   );
 }
 
 function HowItWorksSection() {
   return (
-    <SectionContainer id="how-it-works" className="bg-[#f8fafc]">
+    <SectionContainer id="how-it-works" className="bg-slate-950 border-t border-slate-900/60">
       <SectionHeading
         eyebrow="How It Works"
         title="A cleaner way to fill your roofing sales calendar."
         description="LeadsByStorm is built for contractors who want real inspection opportunities, not bloated spreadsheets, recycled leads, or low-intent form fills."
+        theme="dark"
       />
 
       <div className="mt-12 grid gap-6 md:grid-cols-3">
@@ -475,18 +483,18 @@ function PricingSection() {
 
 function CalendarPlaceholder() {
   return (
-    <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-xl shadow-slate-900/5">
-      <div className="mb-6 border-b border-slate-100 pb-5">
-        <p className="text-xs font-bold uppercase tracking-widest text-blue-600">
+    <div className="rounded-2xl border border-slate-900 bg-slate-900/40 p-6 shadow-2xl">
+      <div className="mb-6 border-b border-slate-800/80 pb-5">
+        <p className="text-xs font-bold uppercase tracking-widest text-blue-450">
           Booking Console
         </p>
-        <h3 className="mt-2 text-xl font-black text-blue-950 leading-tight">
+        <h3 className="mt-2 text-xl font-black text-white leading-tight">
           Choose a time on our calendar below for a quick phone call.
         </h3>
       </div>
 
       {/* Calendar Widget Area */}
-      <div className="relative overflow-hidden rounded-xl border border-slate-200 bg-slate-50 p-4">
+      <div className="relative overflow-hidden rounded-xl border border-slate-850 bg-[#0d1527] p-4">
         
         {/* Real-looking calendar grid mockup */}
         <div className="opacity-45 select-none pointer-events-none">
@@ -500,18 +508,18 @@ function CalendarPlaceholder() {
           <div className="grid grid-cols-5 gap-2 text-center text-[10px] sm:text-xs">
             {["Mon", "Tue", "Wed", "Thu", "Fri"].map((day, idx) => (
               <div key={day} className="space-y-2">
-                <div className="font-bold text-slate-800">{day}</div>
-                <div className="rounded bg-blue-50 py-1 font-bold text-blue-900">{8 + idx}</div>
-                <div className="rounded border border-slate-300 bg-white py-1 text-slate-700">9:00 AM</div>
-                <div className="rounded border border-slate-300 bg-white py-1 text-slate-700">11:30 AM</div>
-                <div className="rounded border border-slate-300 bg-white py-1 text-slate-700">2:00 PM</div>
+                <div className="font-bold text-slate-400">{day}</div>
+                <div className="rounded bg-blue-950/60 py-1 font-bold text-blue-350 border border-blue-900/40">{8 + idx}</div>
+                <div className="rounded border border-slate-800 bg-slate-900/30 py-1 text-slate-350">9:00 AM</div>
+                <div className="rounded border border-slate-800 bg-slate-900/30 py-1 text-slate-350">11:30 AM</div>
+                <div className="rounded border border-slate-800 bg-slate-900/30 py-1 text-slate-350">2:00 PM</div>
               </div>
             ))}
           </div>
         </div>
 
         {/* Overlay highlighting the embed placeholder */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/75 p-6 text-center backdrop-blur-[2px]">
+        <div className="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/85 p-6 text-center backdrop-blur-[2px]">
           <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-600/35">
             <svg
               aria-hidden="true"
@@ -528,28 +536,15 @@ function CalendarPlaceholder() {
           <p className="text-base font-black text-white">
             Embed Scheduling Widget Here
           </p>
-          <p className="mt-2 max-w-xs text-xs leading-relaxed text-slate-300">
+          <p className="mt-2 max-w-xs text-xs leading-relaxed text-slate-350">
             Replace this container with your Calendly, Cal.com, HubSpot, or GoHighLevel inline iframe.
           </p>
           
           {/* Placeholder developer hint */}
-          <div className="mt-4 rounded border border-white/10 bg-white/5 px-3 py-1.5 text-[10px] font-mono text-slate-300">
+          <div className="mt-4 rounded border border-slate-800 bg-slate-900/55 px-3 py-1.5 text-[10px] font-mono text-slate-300">
             &lt;iframe src=&quot;YOUR_CALENDLY_URL&quot; ... /&gt;
           </div>
         </div>
-
-        {/* DEVELOPER INSTRUCTIONS: 
-            To replace this placeholder with a real Calendly / Cal.com / HubSpot embed:
-            1. Delete the entire absolute overlay <div> and the grid placeholder <div> above.
-            2. Paste your inline iframe code here. Example:
-               <iframe 
-                 src="https://calendly.com/your-username/30min" 
-                 width="100%" 
-                 height="500" 
-                 frameBorder="0"
-                 className="w-full h-[500px] rounded-xl"
-               ></iframe>
-        */}
       </div>
     </div>
   );
@@ -562,24 +557,24 @@ function EmailContactCard() {
   );
 
   return (
-    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-8 flex flex-col justify-between">
+    <div className="rounded-2xl border border-slate-900 bg-slate-900/40 p-8 flex flex-col justify-between shadow-2xl">
       <div>
-        <p className="text-xs font-bold uppercase tracking-widest text-blue-600">
+        <p className="text-xs font-bold uppercase tracking-widest text-blue-450">
           Prefer Email?
         </p>
 
-        <h3 className="mt-3 text-2xl font-black text-blue-950">
+        <h3 className="mt-3 text-2xl font-black text-white">
           Send your availability.
         </h3>
 
-        <p className="mt-4 leading-relaxed text-slate-700 text-sm sm:text-base">
+        <p className="mt-4 leading-relaxed text-slate-400 text-sm sm:text-base">
           Prefer to email? Click below to send us your availability directly, and we will get back to you immediately.
         </p>
       </div>
 
       <a
         href={`mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`}
-        className="mt-8 inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-6 py-3 text-sm font-extrabold text-slate-800 shadow-sm transition hover:border-slate-450 hover:bg-slate-100 active:scale-[0.98] transform"
+        className="mt-8 inline-flex items-center justify-center rounded-xl border border-slate-750 bg-slate-900/50 px-6 py-3 text-sm font-extrabold text-slate-200 shadow-sm transition hover:border-slate-550 hover:bg-slate-850 hover:text-white active:scale-[0.98] transform"
       >
         Email LeadsByStorm
       </a>
@@ -589,12 +584,13 @@ function EmailContactCard() {
 
 function FinalCtaSection() {
   return (
-    <SectionContainer id="calendar" className="bg-[#f8fafc]">
+    <SectionContainer id="calendar" className="bg-slate-950 border-t border-slate-900/60">
       <div className="mb-12">
         <SectionHeading
           eyebrow="Book a Call"
           title="Ready to scale your roofing business? Let's talk."
           description="Tell us your target markets, volume needs, and current sales capacity. We'll walk you through available appointments and pricing."
+          theme="dark"
         />
       </div>
 
@@ -608,7 +604,7 @@ function FinalCtaSection() {
 
 function Footer() {
   return (
-    <footer className="border-t border-slate-200 bg-slate-50 px-6 py-8 sm:px-8 lg:px-12">
+    <footer className="border-t border-slate-900 bg-slate-950 px-6 py-8 sm:px-8 lg:px-12 text-slate-400">
       <div className="mx-auto flex max-w-7xl flex-col gap-4 text-xs sm:text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
         <p>© {new Date().getFullYear()} leadsbystorm.com. All rights reserved.</p>
         <p>Targeted storm-damage roofing appointments.</p>
@@ -619,7 +615,7 @@ function Footer() {
 
 export default function LeadsByStormLandingPage() {
   return (
-    <main className="min-h-screen bg-white text-blue-950">
+    <main className="min-h-screen bg-slate-950 text-slate-200">
       <Header />
       <HeroSection />
       <HowItWorksSection />
