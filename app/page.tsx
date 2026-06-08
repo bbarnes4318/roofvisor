@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "RoofVisor | Guaranteed Storm Damage Appointments",
+  title: "LeadsByStorm | Guaranteed Storm Damage Appointments",
   description:
-    "RoofVisor provides targeted roofing lead generation and confirmed storm damage inspection appointments for roofing contractors.",
+    "LeadsByStorm provides targeted roofing lead generation and confirmed storm damage inspection appointments for roofing contractors.",
 };
 
 type Feature = {
@@ -11,8 +11,8 @@ type Feature = {
   description: string;
 };
 
-const LOGO_SRC = "https://i.ibb.co/677sP94r/Chat-GPT-Image-Jun-7-2026-11-14-35-PM.png";
-const CONTACT_EMAIL = "sales@roofvisor.com";
+const LOGO_SRC = "/logo.png";
+const CONTACT_EMAIL = "sales@leadsbystorm.com";
 
 const features: Feature[] = [
   {
@@ -23,7 +23,7 @@ const features: Feature[] = [
   {
     title: "100% Confirmed Appointments",
     description:
-      "We don't just hand you a list of names. RoofVisor sets and confirms the appointments for your sales team.",
+      "We don't just hand you a list of names. LeadsByStorm sets and confirms the appointments for your sales team.",
   },
   {
     title: "The No-Show Guarantee",
@@ -39,14 +39,16 @@ function ButtonLink({
 }: {
   href: string;
   children: React.ReactNode;
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "secondary-dark";
 }) {
   const baseClasses =
-    "inline-flex items-center justify-center rounded-xl px-6 py-3 text-sm font-extrabold transition-all duration-200 transform active:scale-[0.98] focus:outline-none focus:ring-4 focus:ring-orange-200/50 select-none cursor-pointer";
+    "inline-flex items-center justify-center rounded-xl px-6 py-3 text-sm font-extrabold transition-all duration-200 transform active:scale-[0.98] focus:outline-none focus:ring-4 focus:ring-blue-200/50 select-none cursor-pointer";
 
   const variantClasses =
     variant === "primary"
-      ? "bg-orange-500 text-white shadow-lg shadow-orange-500/20 hover:bg-orange-600 hover:shadow-orange-500/35 hover:-translate-y-[1px]"
+      ? "bg-blue-600 text-white shadow-lg shadow-blue-600/20 hover:bg-blue-700 hover:shadow-blue-700/35 hover:-translate-y-[1px]"
+      : variant === "secondary-dark"
+      ? "border border-slate-700 bg-slate-900/50 text-slate-200 hover:border-slate-500 hover:bg-slate-800/60 hover:text-white hover:-translate-y-[1px]"
       : "border border-slate-200 bg-white text-slate-800 hover:border-slate-350 hover:bg-slate-50 hover:-translate-y-[1px]";
 
   return (
@@ -90,12 +92,12 @@ function SectionHeading({
       }`}
     >
       {eyebrow ? (
-        <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-orange-500">
+        <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-blue-600">
           {eyebrow}
         </p>
       ) : null}
 
-      <h2 className="text-3xl font-black tracking-tight text-slate-950 sm:text-4xl lg:text-5xl">
+      <h2 className="text-3xl font-black tracking-tight text-blue-950 sm:text-4xl lg:text-5xl">
         {title}
       </h2>
 
@@ -110,11 +112,11 @@ function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-100 bg-white/85 backdrop-blur-md">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        <a href="#" aria-label="RoofVisor home" className="flex items-center">
+        <a href="#" aria-label="LeadsByStorm home" className="flex items-center">
           <img
             src={LOGO_SRC}
-            alt="RoofVisor Logo"
-            className="h-8 w-auto max-w-[160px] object-contain sm:h-10 sm:max-w-[200px]"
+            alt="LeadsByStorm Logo"
+            className="h-10 w-auto max-w-[220px] object-contain sm:h-12 sm:max-w-[280px]"
           />
         </a>
 
@@ -128,7 +130,7 @@ function HeroVisual() {
   return (
     <div className="relative w-full max-w-xl mx-auto lg:mx-0">
       {/* Decorative gradient blur background */}
-      <div className="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-orange-500/10 via-blue-500/10 to-orange-400/5 blur-2xl pointer-events-none" />
+      <div className="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-blue-500/10 via-indigo-500/10 to-blue-400/5 blur-2xl pointer-events-none" />
 
       {/* Main Dashboard Frame */}
       <div className="relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-950 text-slate-100 shadow-2xl">
@@ -141,7 +143,7 @@ function HeroVisual() {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
             </span>
             <span className="text-xs font-semibold tracking-wider text-slate-300 uppercase">
-              RoofVisor Dispatch Console
+              LeadsByStorm Dispatch Console
             </span>
           </div>
           <div className="rounded bg-slate-800 px-2 py-0.5 text-[10px] font-bold text-slate-400">
@@ -163,7 +165,7 @@ function HeroVisual() {
                 </p>
                 <p className="text-sm font-black text-white">Active Storm Zone</p>
               </div>
-              <div className="flex items-center gap-1.5 rounded-full border border-orange-500/20 bg-orange-500/10 px-2.5 py-0.5 text-[10px] font-bold text-orange-400">
+              <div className="flex items-center gap-1.5 rounded-full border border-blue-500/20 bg-blue-500/10 px-2.5 py-0.5 text-[10px] font-bold text-blue-400">
                 <svg className="h-3 w-3 animate-pulse" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
@@ -172,7 +174,7 @@ function HeroVisual() {
             </div>
 
             {/* Weather Radar Graphic (SVG) */}
-            <div className="relative h-44 w-full overflow-hidden rounded-lg bg-[#0d1527] border border-slate-850">
+            <div className="relative h-44 w-full overflow-hidden rounded-lg bg-[#070e1b] border border-slate-850">
               
               {/* Radar Sweeper Grid Lines */}
               <div className="absolute inset-0 bg-[linear-gradient(rgba(51,65,85,0.15)_1px,transparent_1px),linear-gradient(90deg,rgba(51,65,85,0.15)_1px,transparent_1px)] bg-[size:16px_16px]" />
@@ -196,21 +198,21 @@ function HeroVisual() {
                 />
                 <defs>
                   <radialGradient id="stormGradient" cx="50%" cy="50%" r="50%">
-                    <stop offset="0%" stopColor="#f97316" stopOpacity="0.4" />
-                    <stop offset="70%" stopColor="#ef4444" stopOpacity="0.2" />
-                    <stop offset="100%" stopColor="#3b82f6" stopOpacity="0" />
+                    <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.4" />
+                    <stop offset="70%" stopColor="#1e3a8a" stopOpacity="0.2" />
+                    <stop offset="100%" stopColor="#020617" stopOpacity="0" />
                   </radialGradient>
                 </defs>
 
                 {/* Radar Sweep Line */}
-                <line x1="50" y1="50" x2="100" y2="10" stroke="#f97316" strokeWidth="0.5" strokeOpacity="0.5" className="origin-[50px_50px] animate-[spin_10s_linear_infinite]" />
+                <line x1="50" y1="50" x2="100" y2="10" stroke="#3b82f6" strokeWidth="0.5" strokeOpacity="0.5" className="origin-[50px_50px] animate-[spin_10s_linear_infinite]" />
               </svg>
 
               {/* Appointment pins */}
               <div className="absolute top-[35%] left-[28%] flex flex-col items-center">
                 <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-600"></span>
                 </span>
                 <span className="mt-0.5 rounded bg-slate-950/90 px-1 py-0.5 text-[8px] font-bold text-slate-300 border border-slate-800">
                   Zone A: 14 Appts
@@ -219,8 +221,8 @@ function HeroVisual() {
 
               <div className="absolute bottom-[25%] right-[22%] flex flex-col items-center">
                 <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-450 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-450 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-600"></span>
                 </span>
                 <span className="mt-0.5 rounded bg-slate-950/90 px-1 py-0.5 text-[8px] font-bold text-slate-300 border border-slate-800">
                   Zone B: 28 Appts
@@ -230,7 +232,7 @@ function HeroVisual() {
               {/* Bottom bar inside radar */}
               <div className="absolute inset-x-3 bottom-3 flex items-center justify-between rounded-lg border border-white/5 bg-slate-950/80 p-2.5 backdrop-blur-md">
                 <div className="flex items-center gap-2">
-                  <div className="h-2 w-2 rounded-full bg-orange-500 animate-pulse" />
+                  <div className="h-2 w-2 rounded-full bg-blue-500 animate-pulse" />
                   <p className="text-[11px] font-bold text-white">
                     42 homeowner appointments available
                   </p>
@@ -269,7 +271,7 @@ function HeroVisual() {
                 label: "Avg. Price",
                 value: "$250",
                 icon: (
-                  <svg className="h-4 w-4 text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                  <svg className="h-4 w-4 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 ),
@@ -298,39 +300,37 @@ function HeroVisual() {
 
 function HeroSection() {
   return (
-    <SectionContainer className="overflow-hidden bg-gradient-to-b from-white via-slate-50/50 to-white pb-20 pt-10 sm:pt-14">
+    <SectionContainer className="overflow-hidden bg-gradient-to-b from-[#0a1128] via-[#0b1830] to-[#0a1128] text-white pb-20 pt-10 sm:pt-14 relative">
       <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-14">
         <div>
-          <div className="mb-5 inline-flex rounded-full border border-blue-100 bg-blue-50/70 px-4 py-1.5 text-xs font-extrabold text-blue-900 tracking-wide uppercase">
+          <div className="mb-5 inline-flex rounded-full border border-blue-500/20 bg-blue-500/10 px-4 py-1.5 text-xs font-extrabold text-blue-300 tracking-wide uppercase">
             Storm damage roofing appointments
           </div>
 
-          <h1 className="max-w-3xl text-4xl font-black tracking-tight text-slate-950 sm:text-5xl lg:text-[3.5rem] lg:leading-[1.1]">
-            Stop Chasing Leads. Get Guaranteed Storm Damage Appointments.
+          <h1 className="max-w-3xl text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-[3.5rem] lg:leading-[1.1]">
+            Exclusively Confirmed Storm Damage Inspections. Delivered Straight to Your Calendar.
           </h1>
 
-          <p className="mt-5 max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg">
-            When hail storms strike, homeowners want to know if their roof is
-            damaged. RoofVisor identifies those homeowners and sets up direct
-            appointments for your team to perform the damage assessments.
+          <p className="mt-5 max-w-2xl text-base leading-relaxed text-slate-300 sm:text-lg">
+            LeadsByStorm.com maps severe weather events, pre-qualifies high-intent homeowners seeking inspections, and books confirmed slots directly on your calendar. You show up, perform the assessment, and close the contract. No shared leads, no waste.
           </p>
 
           <div className="mt-8 flex flex-col gap-3.5 sm:flex-row">
             <ButtonLink href="#calendar">Book a Strategy Call</ButtonLink>
-            <ButtonLink href="#how-it-works" variant="secondary">
+            <ButtonLink href="#how-it-works" variant="secondary-dark">
               See How It Works
             </ButtonLink>
           </div>
 
-          <div className="mt-10 grid max-w-xl grid-cols-3 gap-4 border-t border-slate-200/80 pt-8">
+          <div className="mt-10 grid max-w-xl grid-cols-3 gap-4 border-t border-slate-800 pt-8">
             {[
               ["Exclusive", "Appointments"],
               ["Confirmed", "Before delivery"],
               ["Guaranteed", "No-show replacement"],
             ].map(([value, label]) => (
               <div key={value}>
-                <p className="text-base font-extrabold text-slate-950 sm:text-lg">{value}</p>
-                <p className="mt-0.5 text-xs text-slate-500 font-medium leading-tight">{label}</p>
+                <p className="text-base font-extrabold text-white sm:text-lg">{value}</p>
+                <p className="mt-0.5 text-xs text-slate-400 font-medium leading-tight">{label}</p>
               </div>
             ))}
           </div>
@@ -345,24 +345,24 @@ function HeroSection() {
 function FeatureCard({ feature, index }: { feature: Feature; index: number }) {
   return (
     <article className="group rounded-2xl border border-slate-200 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-slate-900/5">
-      <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-xl bg-orange-500/10 text-sm font-black text-orange-500">
+      <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-xl bg-blue-500/10 text-sm font-black text-blue-600">
         0{index + 1}
       </div>
 
-      <h3 className="text-xl font-extrabold text-slate-950">{feature.title}</h3>
+      <h3 className="text-xl font-extrabold text-blue-950">{feature.title}</h3>
 
-      <p className="mt-3 leading-relaxed text-slate-600 text-sm sm:text-base">{feature.description}</p>
+      <p className="mt-3 leading-relaxed text-slate-700 text-sm sm:text-base">{feature.description}</p>
     </article>
   );
 }
 
 function HowItWorksSection() {
   return (
-    <SectionContainer id="how-it-works" className="bg-white">
+    <SectionContainer id="how-it-works" className="bg-[#f8fafc]">
       <SectionHeading
         eyebrow="How It Works"
         title="A cleaner way to fill your roofing sales calendar."
-        description="RoofVisor is built for contractors who want real inspection opportunities, not bloated spreadsheets, recycled leads, or low-intent form fills."
+        description="LeadsByStorm is built for contractors who want real inspection opportunities, not bloated spreadsheets, recycled leads, or low-intent form fills."
       />
 
       <div className="mt-12 grid gap-6 md:grid-cols-3">
@@ -376,39 +376,39 @@ function HowItWorksSection() {
 
 function PricingSection() {
   return (
-    <SectionContainer className="bg-slate-950 rounded-[2.5rem] my-10 px-6 sm:px-10 py-16 sm:py-20 max-w-[calc(100%-2rem)] sm:max-w-[calc(100%-3rem)] mx-auto">
+    <SectionContainer className="bg-white border border-slate-200/85 rounded-[2.5rem] my-10 px-6 sm:px-10 py-16 sm:py-20 max-w-[calc(100%-2rem)] sm:max-w-[calc(100%-3rem)] mx-auto shadow-sm">
       <div className="grid items-center gap-12 lg:grid-cols-[0.95fr_1.05fr]">
         <div>
-          <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-orange-400">
+          <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-blue-600">
             Pricing & ROI
           </p>
 
-          <h2 className="text-3xl font-black tracking-tight text-white sm:text-4xl lg:text-5xl">
+          <h2 className="text-3xl font-black tracking-tight text-blue-950 sm:text-4xl lg:text-5xl">
             Unbeatable Market Value
           </h2>
 
-          <p className="mt-5 text-base leading-relaxed text-slate-300 sm:text-lg">
+          <p className="mt-5 text-base leading-relaxed text-slate-700 sm:text-lg">
             High-intent roofing appointments typically sell on the market for{" "}
-            <strong className="font-extrabold text-white">$350 to $450</strong>.
+            <strong className="font-extrabold text-blue-950">$350 to $450</strong>.
           </p>
 
-          <p className="mt-4 text-base leading-relaxed text-slate-300 sm:text-lg">
+          <p className="mt-4 text-base leading-relaxed text-slate-700 sm:text-lg">
             We sell our exclusive appointments at just{" "}
-            <strong className="font-extrabold text-orange-400">$250</strong>. Plus,
+            <strong className="font-extrabold text-emerald-600">$250</strong>. Plus,
             we offer flexible volume pricing to ensure it perfectly fits your
             budget.
           </p>
 
-          <div className="mt-8 rounded-2xl border border-orange-400/20 bg-orange-500/10 p-5 backdrop-blur-sm">
+          <div className="mt-8 rounded-2xl border border-blue-100 bg-blue-50/70 p-5">
             <div className="flex items-start gap-3">
-              <svg className="h-5 w-5 text-orange-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+              <svg className="h-5 w-5 text-blue-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
               </svg>
               <div>
-                <p className="text-xs font-bold uppercase tracking-wider text-orange-300">
+                <p className="text-xs font-bold uppercase tracking-wider text-blue-800">
                   Current Market Alert
                 </p>
-                <p className="mt-1 text-sm text-white/95 leading-relaxed font-medium">
+                <p className="mt-1 text-sm text-blue-950 leading-relaxed font-medium">
                   Note: In several cities, we currently have more homeowner
                   appointments available than contractors to fulfill them.
                 </p>
@@ -425,36 +425,41 @@ function PricingSection() {
               value: "$350–$450",
               description: "What high-intent roofing appointments often sell for.",
               highlight: false,
+              isGreenValue: false,
             },
             {
-              label: "RoofVisor Price",
+              label: "LeadsByStorm Price",
               value: "$250",
               description: "Exclusive storm damage appointments at a stronger margin.",
               highlight: true,
+              isGreenValue: true,
             },
             {
               label: "No-Show Protection",
               value: "Free Replace",
               description: "If the homeowner no-shows, we replace the appointment.",
               highlight: false,
+              isGreenValue: false,
             },
           ].map((item) => (
             <div
               key={item.label}
-              className={`rounded-2xl p-6 shadow-xl transition-all duration-200 ${
+              className={`rounded-2xl p-6 transition-all duration-200 ${
                 item.highlight
-                  ? "border-2 border-orange-500 bg-orange-500/5 shadow-orange-500/5 relative"
-                  : "border border-white/10 bg-white/[0.04]"
+                  ? "border-2 border-blue-600 bg-blue-50/45 shadow-sm shadow-blue-100 relative"
+                  : "border border-slate-200 bg-white"
               }`}
             >
               {item.highlight && (
-                <span className="absolute right-4 top-4 rounded bg-orange-500 px-2 py-0.5 text-[9px] font-extrabold uppercase tracking-wide text-white">
+                <span className="absolute right-4 top-4 rounded bg-blue-600 px-2 py-0.5 text-[9px] font-extrabold uppercase tracking-wide text-white">
                   Best Value
                 </span>
               )}
-              <p className="text-xs font-bold text-slate-400 uppercase tracking-wider">{item.label}</p>
-              <p className="mt-2 text-3xl font-black text-white">{item.value}</p>
-              <p className="mt-2 text-sm leading-relaxed text-slate-300">
+              <p className="text-xs font-bold text-slate-500 uppercase tracking-wider">{item.label}</p>
+              <p className={`mt-2 text-3xl font-black ${item.isGreenValue ? "text-emerald-600" : "text-blue-950"}`}>
+                {item.value}
+              </p>
+              <p className="mt-2 text-sm leading-relaxed text-slate-650">
                 {item.description}
               </p>
             </div>
@@ -469,10 +474,10 @@ function CalendarPlaceholder() {
   return (
     <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-xl shadow-slate-900/5">
       <div className="mb-6 border-b border-slate-100 pb-5">
-        <p className="text-xs font-bold uppercase tracking-widest text-orange-500">
+        <p className="text-xs font-bold uppercase tracking-widest text-blue-600">
           Booking Console
         </p>
-        <h3 className="mt-2 text-xl font-black text-slate-950 leading-tight">
+        <h3 className="mt-2 text-xl font-black text-blue-950 leading-tight">
           Choose a time on our calendar below for a quick phone call.
         </h3>
       </div>
@@ -493,7 +498,7 @@ function CalendarPlaceholder() {
             {["Mon", "Tue", "Wed", "Thu", "Fri"].map((day, idx) => (
               <div key={day} className="space-y-2">
                 <div className="font-bold text-slate-800">{day}</div>
-                <div className="rounded bg-slate-200 py-1 font-bold text-slate-900">{8 + idx}</div>
+                <div className="rounded bg-blue-50 py-1 font-bold text-blue-900">{8 + idx}</div>
                 <div className="rounded border border-slate-300 bg-white py-1 text-slate-700">9:00 AM</div>
                 <div className="rounded border border-slate-300 bg-white py-1 text-slate-700">11:30 AM</div>
                 <div className="rounded border border-slate-300 bg-white py-1 text-slate-700">2:00 PM</div>
@@ -504,7 +509,7 @@ function CalendarPlaceholder() {
 
         {/* Overlay highlighting the embed placeholder */}
         <div className="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/75 p-6 text-center backdrop-blur-[2px]">
-          <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-orange-500 text-white shadow-lg shadow-orange-500/35">
+          <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-600/35">
             <svg
               aria-hidden="true"
               viewBox="0 0 24 24"
@@ -548,23 +553,23 @@ function CalendarPlaceholder() {
 }
 
 function EmailContactCard() {
-  const subject = encodeURIComponent("RoofVisor Strategy Call Availability");
+  const subject = encodeURIComponent("LeadsByStorm Strategy Call Availability");
   const body = encodeURIComponent(
-    "Hi RoofVisor,\n\nI am interested in roofing appointments. Here is my availability:\n\n"
+    "Hi LeadsByStorm,\n\nI am interested in storm damage appointments. Here is my availability:\n\n"
   );
 
   return (
     <div className="rounded-2xl border border-slate-200 bg-slate-50 p-8 flex flex-col justify-between">
       <div>
-        <p className="text-xs font-bold uppercase tracking-widest text-blue-900">
+        <p className="text-xs font-bold uppercase tracking-widest text-blue-600">
           Prefer Email?
         </p>
 
-        <h3 className="mt-3 text-2xl font-black text-slate-950">
+        <h3 className="mt-3 text-2xl font-black text-blue-950">
           Send your availability.
         </h3>
 
-        <p className="mt-4 leading-relaxed text-slate-600 text-sm sm:text-base">
+        <p className="mt-4 leading-relaxed text-slate-700 text-sm sm:text-base">
           Prefer to email? Click below to send us your availability directly, and we will get back to you immediately.
         </p>
       </div>
@@ -573,7 +578,7 @@ function EmailContactCard() {
         href={`mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`}
         className="mt-8 inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-6 py-3 text-sm font-extrabold text-slate-800 shadow-sm transition hover:border-slate-450 hover:bg-slate-100 active:scale-[0.98] transform"
       >
-        Email RoofVisor
+        Email LeadsByStorm
       </a>
     </div>
   );
@@ -581,7 +586,7 @@ function EmailContactCard() {
 
 function FinalCtaSection() {
   return (
-    <SectionContainer id="calendar" className="bg-white">
+    <SectionContainer id="calendar" className="bg-[#f8fafc]">
       <div className="mb-12">
         <SectionHeading
           eyebrow="Book a Call"
@@ -602,16 +607,16 @@ function Footer() {
   return (
     <footer className="border-t border-slate-200 bg-slate-50 px-6 py-8 sm:px-8 lg:px-12">
       <div className="mx-auto flex max-w-7xl flex-col gap-4 text-xs sm:text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
-        <p>© {new Date().getFullYear()} RoofVisor. All rights reserved.</p>
-        <p>Targeted roofing appointments for storm damage assessments.</p>
+        <p>© {new Date().getFullYear()} leadsbystorm.com. All rights reserved.</p>
+        <p>Targeted storm-damage roofing appointments.</p>
       </div>
     </footer>
   );
 }
 
-export default function RoofVisorLandingPage() {
+export default function LeadsByStormLandingPage() {
   return (
-    <main className="min-h-screen bg-white text-slate-950">
+    <main className="min-h-screen bg-white text-blue-950">
       <Header />
       <HeroSection />
       <HowItWorksSection />
