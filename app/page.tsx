@@ -259,11 +259,11 @@ function HeroVisual() {
 
 function HeroSection() {
   return (
-    <SectionContainer noPadding className="overflow-hidden bg-[#F5F8FC] bg-[radial-gradient(#dde6f2_1px,transparent_1px)] bg-[size:24px_24px] text-[#061A2F] pt-3 pb-8 sm:pt-4 sm:pb-10 lg:pt-3 lg:pb-12 border-b border-[#DDE6F2] relative">
+    <SectionContainer noPadding className="overflow-hidden bg-[#F5F8FC] bg-[radial-gradient(#dde6f2_1px,transparent_1px)] bg-[size:24px_24px] text-[#061A2F] pt-8 pb-12 sm:pt-12 sm:pb-16 lg:pt-16 lg:pb-20 border-b border-[#DDE6F2] relative">
       <div className="grid gap-12 lg:grid-cols-12 lg:gap-16 lg:items-center">
         
         {/* Left Column (Desktop Layout) */}
-        <div className="space-y-3 lg:col-span-7">
+        <div className="space-y-3 lg:col-span-7 lg:pt-6">
           <p className="text-xs font-extrabold uppercase tracking-[0.2em] text-[#145CFF]">
             FOR ROOFING CONTRACTORS IN ACTIVE STORM MARKETS
           </p>
