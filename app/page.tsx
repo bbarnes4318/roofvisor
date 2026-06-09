@@ -726,7 +726,13 @@ function Footer() {
     <footer className="border-t border-[#DDE6F2] bg-slate-50 px-6 py-8 sm:px-8 lg:px-12 text-[#42526B]">
       <div className="mx-auto flex max-w-[1200px] flex-col gap-4 text-xs sm:text-sm text-[#42526B] sm:flex-row sm:items-center sm:justify-between">
         <p>© 2026 LeadsByStorm. All rights reserved.</p>
-        <p>Targeted storm-damage roofing appointments.</p>
+        <div className="flex gap-4">
+          <a href="/terms" className="hover:text-[#145CFF] transition-colors font-bold">Terms &amp; Conditions</a>
+          <span className="text-slate-300">|</span>
+          <a href="/privacy" className="hover:text-[#145CFF] transition-colors font-bold">Privacy Policy</a>
+          <span className="text-slate-300">|</span>
+          <p>Targeted storm-damage roofing appointments.</p>
+        </div>
       </div>
     </footer>
   );

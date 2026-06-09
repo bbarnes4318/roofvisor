@@ -15,3 +15,7 @@ lerna-debug.log*
 infra/*.key
 infra/*.crt
 infra/*.pem
+*.cer
+*.pfx
+*_ssl_certificate_INTERMEDIATE/
+scratch/
