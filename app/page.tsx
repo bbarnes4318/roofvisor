@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import StormMapTeaser from "../components/landing/StormMapTeaser";
 
 export const metadata: Metadata = {
   title: "LeadsByStorm | Confirmed Storm-Damage Roof Inspection Appointments",
@@ -746,6 +747,7 @@ export default function LeadsByStormLandingPage() {
       <HeroSection />
       <ProblemSection />
       <HowItWorksSection />
+      <StormMapTeaser />
       <GuaranteeSection />
       <PricingSection />
       <TerritoryCtaSection />
