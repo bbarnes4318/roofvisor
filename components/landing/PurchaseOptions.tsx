@@ -71,31 +71,20 @@ export default function PurchaseOptions() {
 
           {/* RIGHT COLUMN: Staggered Stack of Exactly 3 Diagonal Panels */}
           <div className="lg:col-span-7 w-full relative z-10">
-            
-            {/* Visual Floating Labels */}
-            <div className="absolute top-[-30px] left-4 bg-slate-900/90 border border-white/10 px-2.5 py-1 rounded text-[8px] font-extrabold text-[#60A5FA] uppercase tracking-wider z-50 flex items-center gap-1.5 shadow-md">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#145CFF] animate-pulse" />
-              Live Storm Map
-            </div>
-            <div className="absolute bottom-[35%] right-2 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded text-[8px] font-extrabold text-emerald-400 uppercase tracking-wider z-50 flex items-center gap-1.5 shadow-md">
-              Property-Level Targeting
-            </div>
-            <div className="absolute bottom-[-20px] left-10 bg-slate-900/90 border border-white/10 px-2.5 py-1 rounded text-[8px] font-extrabold text-slate-300 uppercase tracking-wider z-50 flex items-center gap-1.5 shadow-md">
-              Click Into The Map
-            </div>
 
             {/* Desktop diagonal view container (height bounded) */}
-            <div className="relative w-full min-h-[500px] md:min-h-[520px] lg:min-h-[500px] xl:min-h-[530px] [perspective:1000px] py-4">
+            <div className="relative w-full md:h-[460px] lg:h-[460px] xl:h-[460px] [perspective:1000px] py-4">
               <div className="grid grid-cols-1 gap-6 md:block md:relative md:w-full md:h-full">
 
                 {/* PANEL 1: Live Storm Map (Upper-Left) */}
-                <div className="group bg-[#0c1220]/95 border border-white/10 rounded-2xl p-4.5 shadow-xl text-left transition-all duration-500 md:absolute md:top-0 md:left-0 md:w-[310px] md:h-[200px] z-10 md:[transform:rotate(-3deg)] md:hover:[transform:rotate(0deg)_translateY(-6px)] md:hover:z-50 md:hover:shadow-2xl md:hover:shadow-[#145CFF]/15">
-                  <div className="space-y-3.5">
+                <div className="group bg-[#0b0f19]/95 border border-slate-700/40 rounded-[18px] p-5 shadow-2xl text-left transition-all duration-500 w-full max-w-[340px] mx-auto md:max-w-none md:absolute md:top-0 md:left-0 md:w-[330px] md:h-[230px] z-10 md:[transform:rotate(-3deg)] md:hover:[transform:rotate(0deg)_translateY(-6px)] md:hover:z-50 md:hover:shadow-2xl md:hover:shadow-blue-500/15">
+                  <div className="flex flex-col h-full justify-between">
                     
                     {/* Header */}
-                    <div className="flex justify-between items-center text-[8.5px] font-extrabold uppercase tracking-wider text-slate-500 border-b border-white/5 pb-2">
-                      <span>Radar + Storm Reports</span>
-                      <span className="text-[#145CFF]">Panel 01</span>
+                    <div className="flex justify-between items-center border-b border-white/5 pb-2.5">
+                      <span className="text-[10px] font-extrabold uppercase tracking-wider text-[#60A5FA]/80">
+                        Radar + Storm Reports
+                      </span>
                     </div>
 
                     {/* Visual Mockup - Map Screenshot */}
@@ -103,14 +92,14 @@ export default function PurchaseOptions() {
                       href={MAP_URL}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="block relative rounded-xl border border-white/5 h-[100px] bg-[#06090f] overflow-hidden cursor-pointer"
+                      className="block relative rounded-xl border border-white/5 h-[95px] bg-[#06090f] overflow-hidden cursor-pointer"
                     >
                       <img 
                         src={RADAR_IMAGE} 
                         alt="Radar map overview" 
                         className="w-full h-full object-cover filter brightness-[0.85] group-hover:brightness-100 transition duration-300"
                       />
-                      <div className="absolute top-1.5 left-1.5 bg-[#ef4444]/20 border border-[#ef4444]/30 px-1 py-0.25 rounded text-[6px] font-black text-[#f87171] uppercase tracking-wider">
+                      <div className="absolute top-2 left-2 bg-[#ef4444]/20 border border-[#ef4444]/30 px-1.5 py-0.5 rounded text-[7px] font-black text-[#f87171] uppercase tracking-wider">
                         LIVE RADAR
                       </div>
                     </a>
@@ -124,40 +113,45 @@ export default function PurchaseOptions() {
                 </div>
 
                 {/* PANEL 2: Storm Report + Homeowner Contact Information (Center-Right, Slightly Lower) */}
-                <div className="group bg-[#0c1220]/95 border border-white/10 rounded-2xl p-4.5 shadow-xl text-left transition-all duration-500 md:absolute md:top-[100px] md:right-[2%] md:w-[330px] md:h-[210px] z-20 md:[transform:rotate(2deg)] md:hover:[transform:rotate(0deg)_translateY(-6px)] md:hover:z-50 md:hover:shadow-2xl md:hover:shadow-emerald-500/15">
-                  <div className="space-y-3.5">
+                <div className="group bg-[#0b0f19]/95 border border-slate-700/40 rounded-[18px] p-5 shadow-2xl text-left transition-all duration-500 w-full max-w-[340px] mx-auto md:max-w-none md:absolute md:top-[105px] md:right-0 md:w-[330px] md:h-[230px] z-20 md:[transform:rotate(2deg)] md:hover:[transform:rotate(0deg)_translateY(-6px)] md:hover:z-50 md:hover:shadow-2xl md:hover:shadow-emerald-500/15">
+                  <div className="flex flex-col h-full justify-between">
                     
                     {/* Header */}
-                    <div className="flex justify-between items-center text-[8.5px] font-extrabold uppercase tracking-wider text-slate-500 border-b border-white/5 pb-2">
-                      <span>Storm + Contact Intelligence</span>
-                      <span className="text-emerald-400">Panel 02</span>
+                    <div className="flex justify-between items-center border-b border-white/5 pb-2.5">
+                      <span className="text-[10px] font-extrabold uppercase tracking-wider text-[#60A5FA]/80">
+                        Storm + Contact Intelligence
+                      </span>
+                      <span className="text-[8px] bg-slate-800/80 border border-slate-700/40 text-slate-400 px-1.5 py-0.5 rounded font-extrabold tracking-wider uppercase">
+                        Preview
+                      </span>
                     </div>
 
                     {/* Custom Split Visual Card */}
-                    <div className="rounded-xl border border-white/5 p-2 bg-[#06090f] h-[110px] flex items-center justify-between text-[7px] sm:text-[8px] relative">
-                      <span className="absolute top-1.5 right-1.5 bg-slate-800 border border-slate-700/50 text-slate-400 font-extrabold px-1 py-0.25 rounded text-[6px] uppercase tracking-wider">
-                        Illustrative Preview
-                      </span>
+                    <div className="rounded-xl border border-white/5 p-2.5 bg-[#06090f] h-[95px] flex items-stretch text-[8px] relative">
                       
                       {/* Left: Storm Report */}
-                      <div className="flex-1 space-y-1 border-r border-white/5 pr-1.5">
-                        <span className="text-[7.5px] text-[#60A5FA] font-extrabold uppercase tracking-wider block">Storm Report</span>
-                        <div className="space-y-0.5 text-slate-400 leading-tight">
+                      <div className="flex-1 flex flex-col justify-between border-r border-white/5 pr-2">
+                        <div className="space-y-0.5 text-slate-400">
+                          <span className="text-[7.5px] text-[#60A5FA] font-extrabold uppercase tracking-wider block mb-1">Storm Report</span>
                           <div>Hail Area: <strong className="text-white font-bold block text-[8px]">Dearborn, MI</strong></div>
-                          <div>Report Count: <strong className="text-white font-bold">48</strong></div>
-                          <div>Max Magnitude: <strong className="text-white font-bold">1.75 in</strong></div>
-                          <div>Storm Score: <strong className="text-white font-bold text-emerald-400">190</strong></div>
+                          <div>Reports: <strong className="text-white font-bold">48</strong></div>
+                          <div>Max Mag: <strong className="text-white font-bold">1.75 in</strong></div>
+                        </div>
+                        <div className="text-[8px] font-bold text-[#60A5FA]">
+                          Score: <strong className="text-emerald-400">190</strong>
                         </div>
                       </div>
 
                       {/* Right: Masked Contact Info */}
-                      <div className="flex-1 space-y-1 pl-1.5">
-                        <span className="text-[7.5px] text-emerald-400 font-extrabold uppercase tracking-wider block">Contact Info</span>
-                        <div className="space-y-0.5 text-slate-400 leading-tight">
-                          <div className="truncate">Owner: <strong className="text-white font-bold block text-[8px]">J*** D****</strong></div>
-                          <div>Mobile: <strong className="text-white font-bold block">(***) ***-4821</strong></div>
-                          <div className="truncate">Email: <strong className="text-white font-bold block text-[8.5px]">j***@g****.com</strong></div>
-                          <div className="text-[6.5px] text-emerald-400 font-extrabold uppercase mt-0.5">Available</div>
+                      <div className="flex-1 flex flex-col justify-between pl-2">
+                        <div className="space-y-0.5 text-slate-400">
+                          <span className="text-[7.5px] text-emerald-400 font-extrabold uppercase tracking-wider block mb-1">Contact Info</span>
+                          <div>Owner: <strong className="text-white font-bold block text-[8px]">J*** D****</strong></div>
+                          <div>Mobile: <strong className="text-white font-mono text-[7px] block">(***) ***-4821</strong></div>
+                          <div className="truncate">Email: <strong className="text-white text-[7.5px] block">j***@g****.com</strong></div>
+                        </div>
+                        <div className="text-[7.5px] text-emerald-400 font-black uppercase text-right leading-none">
+                          Available w/ package
                         </div>
                       </div>
                     </div>
@@ -171,31 +165,35 @@ export default function PurchaseOptions() {
                 </div>
 
                 {/* PANEL 3: Rooftop Inspection Appointment (Lower-Left/Center) */}
-                <div className="group bg-[#0c1325]/98 border-2 border-[#145CFF] rounded-2xl p-4.5 shadow-xl text-left transition-all duration-500 md:absolute md:top-[230px] md:left-[8%] md:w-[320px] md:h-[210px] z-30 md:[transform:rotate(-2deg)] md:hover:[transform:rotate(0deg)_translateY(-6px)] md:hover:z-50 md:hover:shadow-2xl md:hover:shadow-[#145CFF]/30">
-                  <div className="space-y-3.5">
+                <div className="group bg-[#0b0f19]/95 border-2 border-[#145CFF] rounded-[18px] p-5 shadow-2xl text-left transition-all duration-500 w-full max-w-[340px] mx-auto md:max-w-none md:absolute md:top-[210px] md:left-[30px] md:w-[330px] md:h-[230px] z-30 md:[transform:rotate(-2deg)] md:hover:[transform:rotate(0deg)_translateY(-6px)] md:hover:z-50 md:hover:shadow-2xl md:hover:shadow-blue-500/30">
+                  <div className="flex flex-col h-full justify-between">
                     
                     {/* Header */}
-                    <div className="flex justify-between items-center text-[8.5px] font-extrabold uppercase tracking-wider text-slate-400 border-b border-white/10 pb-2">
-                      <span>Confirmed Appointment</span>
-                      <span className="text-white bg-[#145CFF] px-1.5 py-0.25 rounded text-[7px] font-black tracking-wider uppercase">Highest Value</span>
+                    <div className="flex justify-between items-center border-b border-white/10 pb-2.5">
+                      <span className="text-[10px] font-extrabold uppercase tracking-wider text-[#60A5FA]/80">
+                        Confirmed Appointment
+                      </span>
+                      <span className="text-[#60A5FA] bg-[#145CFF]/15 border border-[#145CFF]/30 px-1.5 py-0.5 rounded text-[8px] font-black tracking-wider uppercase">
+                        Highest Value
+                      </span>
                     </div>
 
                     {/* Custom Calendar Card Mockup */}
-                    <div className="rounded-xl border border-white/10 p-2 bg-[#06090f] h-[110px] flex flex-col justify-center text-[7.5px] space-y-1">
+                    <div className="rounded-xl border border-white/10 p-2.5 bg-[#06090f] h-[95px] flex flex-col justify-between text-[8px]">
                       <div className="flex justify-between items-center border-b border-white/5 pb-1">
-                        <span className="text-white font-extrabold text-[8.5px] block">Confirmed Roof Inspection</span>
-                        <span className="text-[#00e676] bg-[#00e676]/10 px-1 py-0.25 rounded text-[7px] font-black tracking-wide uppercase border border-[#00e676]/20">Confirmed</span>
+                        <span className="text-white font-extrabold text-[8.5px]">Confirmed Roof Inspection</span>
+                        <span className="text-[#00e676] bg-[#00e676]/10 px-1.5 py-0.5 rounded text-[7px] font-black tracking-wide uppercase border border-[#00e676]/20">Confirmed</span>
                       </div>
                       
-                      <div className="space-y-0.5 text-slate-400 leading-snug">
-                        <div>Homeowner: <strong className="text-white font-extrabold">Marcus K.</strong></div>
-                        <div>Phone: <strong className="text-white font-bold">(***) ***-4821</strong></div>
-                        <div>Status: <span className="text-[#00e676] font-bold">Confirmed</span>  ·  <span className="text-[#60A5FA] font-bold">Thu @ 4:00 PM</span></div>
+                      <div className="space-y-0.5 text-slate-400">
+                        <div className="flex justify-between"><span>Homeowner:</span> <strong className="text-white">Marcus K.</strong></div>
+                        <div className="flex justify-between"><span>Phone:</span> <strong className="text-white font-mono text-[7.5px]">(***) ***-4821</strong></div>
+                        <div className="flex justify-between"><span>Time:</span> <strong className="text-[#60A5FA]">Thu @ 4:00 PM</strong></div>
                       </div>
 
-                      <div className="flex gap-1.5 justify-end text-[7px] font-extrabold pt-0.5">
-                        <span className="bg-white/5 border border-white/10 text-white rounded px-1.5 py-0.5">Directions</span>
-                        <span className="bg-[#145CFF] text-white rounded px-1.5 py-0.5">Send to CRM</span>
+                      <div className="flex gap-1.5 justify-end text-[7.5px] font-extrabold pt-0.5">
+                        <button className="bg-white/5 border border-white/10 text-white rounded px-2 py-0.5 hover:bg-white/10 transition">Directions</button>
+                        <button className="bg-[#145CFF] text-white rounded px-2 py-0.5 hover:bg-[#2F7DFF] transition">Send to CRM</button>
                       </div>
                     </div>
 
