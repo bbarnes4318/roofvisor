@@ -2,7 +2,6 @@ import React from "react";
 
 export default function PurchaseOptions() {
   const MAP_URL = "https://sms.leadzer.io/storm-map";
-  const RADAR_IMAGE = "/landing/storm-map-teaser/radar-map-overview.png";
 
   return (
     <section id="products" className="bg-[#070b13] py-20 px-4 sm:px-6 lg:px-8 border-b border-white/5 text-slate-200 overflow-hidden relative">
@@ -14,7 +13,7 @@ export default function PurchaseOptions() {
       <div className="mx-auto max-w-[1200px] relative z-10 text-center">
         
         {/* TOP HEADER & COPY BLOCK */}
-        <div className="max-w-4xl mx-auto space-y-6 mb-12">
+        <div className="max-w-4xl mx-auto space-y-5 mb-12">
           
           <span className="inline-flex items-center gap-2 rounded-full border border-[#145CFF]/30 bg-[#145CFF]/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-[#60A5FA]">
             <span className="relative flex h-2 w-2">
@@ -29,7 +28,7 @@ export default function PurchaseOptions() {
           </h2>
 
           <p className="text-sm sm:text-base text-slate-400 max-w-2xl mx-auto leading-relaxed">
-            Click into the live storm map, review detailed storm reports, access homeowner contact information, and request guaranteed in-person inspection appointments.
+            Click into the live storm map, review detailed storm reports, access homeowner contact information, and request in-person roof inspection appointments.
           </p>
 
           {/* Primary & Secondary CTAs */}
@@ -50,20 +49,20 @@ export default function PurchaseOptions() {
             </a>
           </div>
 
-          <span className="block text-[11px] text-[#60A5FA] font-bold tracking-wide animate-pulse">
-            👉 Click into the live map to start targeting storm-hit properties.
+          <span className="block text-[11px] text-[#60A5FA] font-bold tracking-wide">
+            Start targeting storm-hit properties from the live map.
           </span>
 
         </div>
 
         {/* PROCESS TIMELINE STRIP */}
-        <div className="mx-auto max-w-4xl bg-slate-900/50 border border-white/5 rounded-2xl p-4 sm:p-5 mb-16">
+        <div className="mx-auto max-w-3xl bg-slate-900/50 border border-white/5 rounded-2xl p-4 sm:p-5 mb-16">
           <div className="grid grid-cols-2 gap-4 md:grid-cols-4 text-left text-xs">
             {[
-              { step: "1", title: "Open Live Storm Map", desc: "Access the targeting console" },
+              { step: "1", title: "Open Live Map", desc: "Access the targeting console" },
               { step: "2", title: "Review Storm Report", desc: "Check hail & wind severity" },
-              { step: "3", title: "Access Homeowner Contact Information", desc: "Retrieve verified cell/email lists" },
-              { step: "4", title: "Request Inspection Appointment", desc: "Confirm dates on your calendar" },
+              { step: "3", title: "Access Contact Info", desc: "Retrieve verified cell/email lists" },
+              { step: "4", title: "Request Appointment", desc: "Confirm dates on your calendar" },
             ].map((item) => (
               <div key={item.step} className="space-y-1.5 border-l border-white/10 pl-3.5 first:border-l-0">
                 <span className="flex h-5 w-5 items-center justify-center rounded bg-[#145CFF]/15 text-[9px] font-black text-[#60A5FA] border border-[#145CFF]/20">
@@ -94,21 +93,47 @@ export default function PurchaseOptions() {
               {/* Title */}
               <h3 className="text-base font-extrabold text-white">Live Storm Map</h3>
 
-              {/* Visual Panel Mockup */}
+              {/* Visual Panel Mockup (Custom CSS/SVG Radar Map) */}
               <a 
                 href={MAP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block relative rounded-xl border border-white/5 aspect-[4/3] bg-[#06090f] overflow-hidden shadow-inner cursor-pointer"
               >
-                <img 
-                  src={RADAR_IMAGE} 
-                  alt="Live Storm Map Radar Preview" 
-                  className="w-full h-full object-cover filter brightness-90 group-hover:brightness-100 transition duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/50 to-transparent" />
-                <div className="absolute top-2 left-2 bg-[#145CFF]/15 border border-[#145CFF]/20 px-1.5 py-0.5 rounded text-[7px] font-black text-[#60A5FA] uppercase tracking-wider">
-                  RADAR ACTIVE
+                {/* SVG Dark Grid Map Backdrop */}
+                <svg className="absolute inset-0 w-full h-full opacity-25 stroke-slate-700" strokeWidth="0.5" fill="none">
+                  <path d="M 0,20 L 500,20 M 0,60 L 500,60 M 0,100 L 500,100 M 0,140 L 500,140 M 0,180 L 500,180 M 0,220 L 500,220" />
+                  <path d="M 40,0 L 40,300 M 80,0 L 80,300 M 120,0 L 120,300 M 160,0 L 160,300 M 200,0 L 200,300 M 240,0 L 240,300 M 280,0 L 280,300" />
+                </svg>
+
+                {/* SVG Radar Precipitation Bands */}
+                <svg className="absolute inset-0 w-full h-full opacity-60" fill="none">
+                  <path d="M 50,220 Q 120,130 240,80" stroke="#10b981" strokeWidth="12" strokeLinecap="round" className="opacity-40" />
+                  <path d="M 80,210 Q 140,140 220,100" stroke="#eab308" strokeWidth="6" strokeLinecap="round" className="opacity-60" />
+                  <path d="M 110,200 Q 150,150 200,120" stroke="#ef4444" strokeWidth="3" strokeLinecap="round" className="opacity-80 animate-pulse" />
+                </svg>
+
+                {/* Numbered Storm Markers & Pulsing Dots */}
+                <div className="absolute top-[40%] left-[55%] flex items-center justify-center">
+                  <span className="absolute inline-flex h-6 w-6 rounded-full bg-[#ef4444] opacity-40 animate-ping" />
+                  <span className="relative flex h-4 w-4 rounded-full bg-[#ef4444] border-2 border-white items-center justify-center text-[7px] font-black text-white">1</span>
+                </div>
+                <div className="absolute top-[60%] left-[35%] flex items-center justify-center">
+                  <span className="absolute inline-flex h-4 w-4 rounded-full bg-[#145CFF] opacity-35 animate-ping" />
+                  <span className="relative flex h-3.5 w-3.5 rounded-full bg-[#145CFF] border-2 border-white items-center justify-center text-[6.5px] font-black text-white">2</span>
+                </div>
+                <div className="absolute top-[30%] left-[25%] flex items-center justify-center">
+                  <span className="relative flex h-3 w-3 rounded-full bg-[#145CFF] border border-white" />
+                </div>
+
+                {/* Concentric grid labels */}
+                <div className="absolute bottom-2.5 right-3 text-[7.5px] font-bold text-slate-500 uppercase tracking-widest">
+                  Grid Zone 4A
+                </div>
+
+                <div className="absolute top-2.5 left-2.5 bg-[#ef4444]/15 border border-[#ef4444]/30 px-2 py-0.5 rounded text-[7px] font-black text-[#f87171] uppercase tracking-wider flex items-center gap-1 shadow-md">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#ef4444] animate-pulse" />
+                  LIVE RADAR
                 </div>
               </a>
 
@@ -131,32 +156,35 @@ export default function PurchaseOptions() {
               </div>
 
               {/* Title */}
-              <h3 className="text-base font-extrabold text-white">Report + Contact Information</h3>
+              <h3 className="text-base font-extrabold text-white">Storm Report + Contact</h3>
 
               {/* Visual Panel Mockup */}
-              <div className="rounded-xl border border-white/5 p-3.5 bg-[#06090f] shadow-inner space-y-2.5 relative aspect-[4/3] flex flex-col justify-center text-[9px]">
+              <div className="rounded-xl border border-white/5 p-3.5 bg-[#06090f] shadow-inner gap-3 relative aspect-[4/3] flex items-center justify-between text-[8px] sm:text-[9.5px]">
                 
-                <span className="absolute top-2.5 right-2.5 bg-slate-800 border border-slate-700/50 text-slate-400 font-extrabold px-1.5 py-0.25 rounded text-[7px] uppercase tracking-wider">
+                <span className="absolute top-2 right-2 bg-slate-800 border border-slate-700/50 text-slate-400 font-extrabold px-1.5 py-0.25 rounded text-[7px] uppercase tracking-wider">
                   Illustrative Preview
                 </span>
 
-                {/* Storm Metrics */}
-                <div className="border-b border-white/5 pb-2">
-                  <span className="text-[7px] text-[#60A5FA] font-extrabold uppercase tracking-wider block mb-0.5">Storm Report Summary</span>
-                  <div className="flex justify-between items-center text-slate-300 font-bold">
-                    <span>Hail Max: <strong className="text-white">1.75&quot;</strong></span>
-                    <span>Proximity: <strong className="text-white">Active Corridor</strong></span>
+                {/* Left Side: Storm Report */}
+                <div className="flex-1 space-y-1.5 border-r border-white/5 pr-2">
+                  <span className="text-[7.5px] text-[#60A5FA] font-extrabold uppercase tracking-wider block">Storm Report</span>
+                  <div className="space-y-1 text-slate-400 leading-tight">
+                    <div>Hail Area: <strong className="text-white font-bold block text-[9px]">Dearborn, MI</strong></div>
+                    <div>Report Count: <strong className="text-white font-bold">48</strong></div>
+                    <div>Max Magnitude: <strong className="text-white font-bold">1.75 in</strong></div>
+                    <div>Target Radius: <strong className="text-white font-bold">10 mi</strong></div>
+                    <div>Storm Score: <strong className="text-white font-bold text-emerald-400">190</strong></div>
                   </div>
                 </div>
 
-                {/* Contact details */}
-                <div className="bg-emerald-500/5 border border-emerald-500/15 rounded-lg p-2.5 space-y-1 text-slate-300">
-                  <span className="text-[7.5px] text-emerald-400 font-extrabold uppercase tracking-wider block">Homeowner details</span>
-                  <div className="text-white font-extrabold text-[10.5px]">Owner: J*** D****</div>
-                  <div>Mobile: (***) ***-4821</div>
-                  <div>Email: j***@g****.com</div>
-                  <div className="text-[7px] text-slate-500 font-medium italic block mt-0.5">
-                    Available with Homeowner Contact Information
+                {/* Right Side: Contact Info */}
+                <div className="flex-1 space-y-1.5 pl-1.5">
+                  <span className="text-[7.5px] text-emerald-400 font-extrabold uppercase tracking-wider block">Contact Info</span>
+                  <div className="space-y-1 text-slate-400 leading-tight">
+                    <div className="truncate">Owner: <strong className="text-white font-bold block text-[9.5px]">J*** D****</strong></div>
+                    <div>Mobile: <strong className="text-white font-bold block">(***) ***-4821</strong></div>
+                    <div className="truncate">Email: <strong className="text-white font-bold block">j***@g****.com</strong></div>
+                    <div className="text-[7.5px] bg-emerald-500/10 text-emerald-400 px-1 py-0.25 rounded inline-block font-extrabold uppercase mt-1">Available</div>
                   </div>
                 </div>
 
@@ -184,25 +212,28 @@ export default function PurchaseOptions() {
               <h3 className="text-base font-extrabold text-white">Rooftop Inspection Appointment</h3>
 
               {/* Visual Panel Mockup */}
-              <div className="rounded-xl border border-white/10 p-3 bg-[#06090f] shadow-inner space-y-2 relative aspect-[4/3] flex flex-col justify-center text-[9px]">
+              <div className="rounded-xl border border-white/10 p-3 bg-[#06090f] shadow-inner space-y-2.5 relative aspect-[4/3] flex flex-col justify-center text-[9px]">
                 
                 <div className="flex justify-between items-center border-b border-white/5 pb-1">
                   <span className="text-white font-extrabold text-[10px] tracking-wide block">Confirmed Roof Inspection</span>
-                  <span className="text-[#00e676] bg-[#00e676]/10 px-1 py-0.25 rounded text-[7.5px] font-black tracking-wide uppercase border border-[#00e676]/20">Confirmed</span>
+                  <span className="text-[#00e676] bg-[#00e676]/10 px-1 py-0.25 rounded text-[7.5px] font-black tracking-wide uppercase border border-[#00e676]/20 flex items-center gap-1">
+                    <span className="w-1 h-1 rounded-full bg-[#00e676] animate-ping" />
+                    Confirmed
+                  </span>
                 </div>
 
-                <div className="space-y-0.5 text-slate-300">
+                <div className="space-y-1 text-slate-400 text-[9.5px]">
                   <div>Homeowner: <strong className="text-white font-extrabold">Marcus K.</strong></div>
-                  <div>Phone: (***) ***-4821</div>
+                  <div>Phone: <strong className="text-white font-extrabold">(***) ***-4821</strong></div>
                   <div>Date/Time: <span className="text-[#60A5FA] font-bold">Thursday @ 4:00 PM</span></div>
-                  <div className="truncate text-slate-400">1420 Pine Creek Dr, Orlando FL</div>
+                  <div className="truncate text-slate-400 text-[8.5px]">1420 Pine Creek Dr, Orlando FL</div>
                 </div>
 
                 <div className="flex gap-2 justify-end text-[7.5px] font-extrabold pt-1">
-                  <button className="bg-white/5 border border-white/10 text-white rounded px-2 py-0.75 cursor-default">
+                  <button className="bg-white/5 border border-white/10 text-white rounded px-2.5 py-1 cursor-default">
                     Directions
                   </button>
-                  <button className="bg-[#145CFF] text-white rounded px-2 py-0.75 cursor-default shadow-md shadow-blue-500/10">
+                  <button className="bg-[#145CFF] text-white rounded px-2.5 py-1 cursor-default shadow-md shadow-blue-500/10">
                     Send to CRM
                   </button>
                 </div>
@@ -217,11 +248,6 @@ export default function PurchaseOptions() {
             </div>
           </div>
 
-        </div>
-
-        {/* Global Compliance & Disclaimer notice */}
-        <div className="mt-16 text-center max-w-4xl mx-auto rounded-xl border border-white/5 bg-[#090e18]/80 p-4 text-[11px] sm:text-xs text-slate-500 leading-normal relative z-20">
-          <strong>Compliance Disclaimer:</strong> Sample previews are illustrative. Storm, property, contact, and roof data availability varies by location, provider coverage, and source. Appointment guarantees apply to qualified program terms and eligible no-shows only. We do not guarantee roof damage, insurance approval, claim outcome, or closed jobs.
         </div>
 
       </div>
