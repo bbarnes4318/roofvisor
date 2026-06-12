@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import PurchaseOptions from "@/components/landing/PurchaseOptions";
 
 export const metadata: Metadata = {
   title: "LeadsByStorm | Confirmed Storm-Damage Roof Inspection Appointments",
@@ -487,78 +488,6 @@ function GuaranteeSection() {
   );
 }
 
-function PricingSection() {
-  return (
-    <SectionContainer className="bg-white py-20 border-b border-[#DDE6F2]">
-      <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16 lg:items-center">
-        
-        {/* Left Column */}
-        <div className="space-y-6">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#145CFF]">PRICING & ROI</p>
-          <h2 className="text-3xl font-extrabold tracking-tight text-[#061A2F] sm:text-4xl">
-            Stop Paying Premium Prices for Shared or Unverified Leads.
-          </h2>
-          <p className="text-base leading-relaxed text-[#42526B] sm:text-lg">
-            Many storm-damage lead vendors charge <strong className="text-[#061A2F] font-extrabold">$400–$500</strong> for shared, recycled, or lightly verified opportunities. LeadsByStorm delivers exclusive, confirmed inspection appointments starting at <strong className="text-[#061A2F] font-extrabold">$250</strong> per appointment, with volume pricing available for qualified territories.
-          </p>
-          <p className="text-xs font-bold text-[#2F7DFF] italic">
-            * Final pricing depends on market, appointment volume, and territory availability.
-          </p>
-        </div>
-
-        {/* Right Column (Pricing Cards) */}
-        <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
-          {[
-            {
-              title: "Typical Market Price",
-              value: "$400–$500",
-              desc: "Often shared, resold, cold, or lightly verified.",
-              highlight: false,
-              valueColor: "text-[#061A2F]",
-            },
-            {
-              title: "LeadsByStorm Appointment Rate",
-              value: "$250–$350",
-              desc: "Exclusive, confirmed storm-damage inspection appointments.",
-              highlight: true,
-              valueColor: "text-[#145CFF]",
-            },
-            {
-              title: "No-Show Protection",
-              value: "Replacement Included",
-              desc: "If the homeowner no-shows, we replace the appointment.",
-              highlight: false,
-              valueColor: "text-[#11A36A]",
-            },
-          ].map((card) => (
-            <div
-              key={card.title}
-              className={`rounded-2xl p-6 transition-all duration-200 border ${
-                card.highlight
-                  ? "border-[#145CFF] bg-blue-50/20 shadow-md shadow-blue-150 relative"
-                  : "border-[#DDE6F2] bg-white hover:border-[#145CFF] hover:shadow-lg"
-              }`}
-            >
-              {card.highlight && (
-                <span className="absolute right-4 top-4 rounded bg-[#145CFF] px-2 py-0.5 text-[9px] font-extrabold uppercase tracking-wide text-white">
-                  Best Value
-                </span>
-              )}
-              <p className="text-xs font-bold text-[#42526B] uppercase tracking-wider">{card.title}</p>
-              <p className={`mt-2 text-2xl sm:text-3xl font-extrabold ${card.valueColor}`}>
-                {card.value}
-              </p>
-              <p className="mt-2 text-xs leading-relaxed text-[#42526B]">
-                {card.desc}
-              </p>
-            </div>
-          ))}
-        </div>
-
-      </div>
-    </SectionContainer>
-  );
-}
 
 function TerritoryCtaSection() {
   return (
@@ -747,7 +676,7 @@ export default function LeadsByStormLandingPage() {
       <ProblemSection />
       <HowItWorksSection />
       <GuaranteeSection />
-      <PricingSection />
+      <PurchaseOptions />
       <TerritoryCtaSection />
       <CalendarSection />
       <FinalCtaSection />
