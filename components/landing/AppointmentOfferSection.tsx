@@ -79,13 +79,13 @@ export default function AppointmentOfferSection() {
                 <div className="flex gap-2.5 items-start">
                   <span className="rounded bg-[#145CFF]/15 px-2 py-0.5 text-[9px] font-extrabold text-[#60A5FA] shrink-0">AGENT</span>
                   <p className="text-slate-300 leading-normal bg-white/5 p-2 rounded-lg">
-                    "Hi Joseph, we noticed your neighborhood was hit by last week's hail storm. We are scheduling free damage assessments with licensed local contractors. Would you like a qualified inspector to check your roof this Thursday?"
+                    &quot;Hi Joseph, we noticed your neighborhood was hit by last week&apos;s hail storm. We are scheduling free damage assessments with licensed local contractors. Would you like a qualified inspector to check your roof this Thursday?&quot;
                   </p>
                 </div>
                 <div className="flex gap-2.5 items-start">
                   <span className="rounded bg-[#11A36A]/15 px-2 py-0.5 text-[9px] font-extrabold text-[#11A36A] shrink-0">OWNER</span>
                   <p className="text-slate-300 leading-normal bg-white/5 p-2 rounded-lg">
-                    "Yes, a few neighbors are getting inspections. Thursday at 4:00 PM works for me."
+                    &quot;Yes, a few neighbors are getting inspections. Thursday at 4:00 PM works for me.&quot;
                   </p>
                 </div>
               </div>
