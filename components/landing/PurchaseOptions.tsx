@@ -33,7 +33,7 @@ export default function PurchaseOptions() {
             
             {/* Image (Left) */}
             <div className="md:col-span-7 relative group">
-              <div className="bg-[#0E1B2D] border border-white/[0.08] rounded-[20px] p-3.5 shadow-2xl transition-all duration-500 md:[transform:rotate(-2.5deg)] md:group-hover:[transform:rotate(0deg)] md:group-hover:scale-[1.01]">
+              <div className="bg-[#0E1B2D] border border-white/[0.08] rounded-[20px] p-3.5 shadow-2xl transition-all duration-500 md:group-hover:scale-[1.01]">
                 <a 
                   href={MAP_URL}
                   target="_blank"
@@ -122,7 +122,7 @@ export default function PurchaseOptions() {
             
             {/* Image (Left) */}
             <div className="md:col-span-7 relative group">
-              <div className="bg-[#0E1B2D] border border-white/[0.08] rounded-[20px] p-3.5 shadow-2xl transition-all duration-500 md:[transform:rotate(-1.5deg)] md:group-hover:[transform:rotate(0deg)] md:group-hover:scale-[1.01]">
+              <div className="bg-[#0E1B2D] border border-white/[0.08] rounded-[20px] p-3.5 shadow-2xl transition-all duration-500 md:group-hover:scale-[1.01]">
                 <a 
                   href={MAP_URL}
                   target="_blank"
