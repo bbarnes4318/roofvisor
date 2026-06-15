@@ -55,21 +55,18 @@ export default function PurchaseOptions() {
             {/* Content (Right) */}
             <div className="md:col-span-5 space-y-4 text-left">
               <div className="text-[#60A5FA] font-extrabold text-[11px] uppercase tracking-widest">
-                STEP 01 — STORM RADAR INTELLIGENCE
+                STEP 01 — STORM RADAR
               </div>
               <h3 className="text-2xl font-extrabold text-white leading-tight">
-                Go From Storm Radar to Homeowner-Level Leads
+                Live Storm Tracking With Damage Target Markers
               </h3>
               <p className="text-sm text-slate-350 leading-relaxed">
-                Track recent hail, wind, tornado, and severe storm activity on a visual map built for roofing contractors. Circular storm markers highlight the residential zones most likely impacted by severe weather, helping you quickly see where roof damage may be concentrated.
-              </p>
-              <p className="text-sm text-slate-350 leading-relaxed">
-                Then drill into those areas to uncover specific homeowner addresses, available contact information, property records, and roof details — giving your team the data needed to target the right homes after the storm.
+                Track active and recent storm activity, including severe hail, high-velocity wind, tornado activity, and other major weather events. Clear circular target markers highlight the residential zones most likely impacted, giving you an immediate visual of where storm damage may be concentrated.
               </p>
               <div className="bg-[#10243A] border border-white/[0.08] p-4 rounded-2xl text-xs text-[#60A5FA] leading-normal font-medium space-y-2">
-                <p className="font-bold uppercase tracking-wider text-[10px] text-[#60A5FA]">Refine Your Target Area</p>
+                <p className="font-bold uppercase tracking-wider text-[10px] text-[#60A5FA]">Location Filter</p>
                 <p className="text-slate-300">
-                  Choose your State, select a County, and adjust the mile radius to narrow your search around the neighborhoods and homes that matter most.
+                  Select your target State and County, then set a custom mile radius around the area you want to analyze. This creates a focused storm map view before moving into property-level homeowner data.
                 </p>
               </div>
             </div>
@@ -82,17 +79,17 @@ export default function PurchaseOptions() {
             {/* Content (Left) - Order 2 on mobile, 1 on desktop */}
             <div className="md:col-span-5 space-y-4 text-left order-2 md:order-1">
               <div className="text-emerald-400 font-extrabold text-[11px] uppercase tracking-widest">
-                STEP 02 — DYNAMIC FOCUS
+                STEP 02 — TARGET AREA FOCUS
               </div>
               <h3 className="text-2xl font-extrabold text-white leading-tight">
-                Dynamic County Radius Zoom-In
+                Zoom Into the Exact County and Radius
               </h3>
               <p className="text-sm text-slate-350 leading-relaxed">
-                As soon as you select your target county and desired miles radius, the map dynamically zooms in. The viewport centers exactly on the chosen area, rendering the precise path and boundary overlays of the storm.
+                Once you choose a county and mile radius, the map automatically zooms into your selected territory. The viewport centers on the area you want to target and displays the storm path, impact zones, and boundary overlays with greater precision.
               </p>
               <div className="bg-[#10243A] border border-white/[0.08] p-4 rounded-2xl text-xs text-emerald-400 leading-normal font-medium">
                 <p className="text-slate-300">
-                  This radius-bounded zoom view makes it easy to isolate high-probability neighborhoods, saving time and keeping your sales outreach highly focused.
+                  This focused view helps narrow broad storm activity down to the neighborhoods most likely to contain roof damage, so your team can focus on the areas with the strongest opportunity.
                 </p>
               </div>
             </div>
