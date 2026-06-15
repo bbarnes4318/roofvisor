@@ -451,26 +451,21 @@ function HowItWorksSection() {
 
 function GuaranteeSection() {
   return (
-    <SectionContainer className="bg-[#F5F8FC] text-[#061A2F] pt-10 pb-10">
-      <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
-        <div className="space-y-6">
+    <SectionContainer className="bg-[#F5F8FC] text-[#061A2F] pt-16 pb-8">
+      <div className="grid gap-12 lg:grid-cols-12 lg:gap-16 lg:items-center">
+        <div className="space-y-6 lg:col-span-7 text-left">
           <h2 className="text-3xl font-extrabold tracking-tight text-[#061A2F] sm:text-4xl leading-tight">
             Guaranteed Inspection Appointments. No-Show Protection.
           </h2>
           <p className="text-base leading-relaxed text-[#42526B] sm:text-lg">
-            You are not buying a cold lead list. You are buying scheduled inspection opportunities with homeowners who have already confirmed interest. If a homeowner no-shows, we replace the appointment.
+            You are not buying a cold lead list. You are getting scheduled roof inspection opportunities with homeowners who have already confirmed interest after recent storm activity.
           </p>
-          <div className="pt-2">
-            <ButtonLink href={`mailto:${CONTACT_EMAIL}?subject=Check%20Territory%20Availability`} className="bg-[#145CFF] text-white hover:bg-[#2F7DFF] border-0">
-              Check My Territory
-            </ButtonLink>
-          </div>
         </div>
 
-        <div className="bg-white border border-[#DDE6F2] rounded-2xl p-6 sm:p-8 space-y-5 shadow-md">
+        <div className="lg:col-span-5 bg-white border border-[#DDE6F2] rounded-2xl p-6 sm:p-8 space-y-5 shadow-md">
           {[
             "Homeowner interest confirmed before delivery",
-            "Roof Inspection added to your calendar",
+            "Roof inspection added to your calendar",
             "Exclusive contractor assignment",
             "No-show appointments replaced",
           ].map((bullet) => (
@@ -490,8 +485,8 @@ function GuaranteeSection() {
 
 function TerritoryCtaSection() {
   return (
-    <SectionContainer className="bg-[#F5F8FC] pt-10 pb-20">
-      <div className="grid gap-12 lg:grid-cols-12 lg:items-center">
+    <SectionContainer className="bg-[#F5F8FC] pt-8 pb-20">
+      <div className="grid gap-12 lg:grid-cols-12 lg:gap-16 lg:items-center">
         
         {/* Left Column: Copy Content */}
         <div className="space-y-6 lg:col-span-7 text-left">
@@ -503,16 +498,16 @@ function TerritoryCtaSection() {
           </h2>
           <div className="space-y-4 text-base leading-relaxed text-[#42526B] sm:text-lg">
             <p>
-              We limit contractor access by market so each area stays focused, protected, and valuable. That means once appointment capacity is filled in a storm-affected territory, we stop adding new roofing contractors there.
+              We limit contractor access in each active market to protect appointment quality and prevent oversaturation.
             </p>
             <p>
-              Schedule a quick call to see if your service area is currently available.
+              If your territory is still available, you can claim access before appointment capacity fills.
             </p>
           </div>
 
           <div className="pt-2">
             <ButtonLink href={`mailto:${CONTACT_EMAIL}?subject=Check%20Territory%20Availability`}>
-              Check Territory Availability
+              Check My Territory
             </ButtonLink>
           </div>
         </div>
