@@ -408,7 +408,7 @@ function ProblemSection() {
 
 function HowItWorksSection() {
   return (
-    <SectionContainer id="how-it-works" className="bg-[#F5F8FC] border-b border-[#DDE6F2] py-20">
+    <SectionContainer id="how-it-works" className="bg-[#F5F8FC] pt-20 pb-10">
       <div className="text-center max-w-3xl mx-auto mb-16">
         <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#145CFF] mb-3">HOW IT WORKS</p>
         <h2 className="text-3xl font-extrabold tracking-tight text-[#061A2F] sm:text-4xl">
@@ -452,13 +452,13 @@ function HowItWorksSection() {
 
 function GuaranteeSection() {
   return (
-    <SectionContainer className="bg-[#081421] text-white pt-20 pb-10">
+    <SectionContainer className="bg-[#F5F8FC] text-[#061A2F] pt-10 pb-20">
       <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
         <div className="space-y-6">
-          <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl leading-tight">
+          <h2 className="text-3xl font-extrabold tracking-tight text-[#061A2F] sm:text-4xl leading-tight">
             Guaranteed Inspection Appointments. Risk-Free No-Show Protection.
           </h2>
-          <p className="text-base leading-relaxed text-slate-400 sm:text-lg">
+          <p className="text-base leading-relaxed text-[#42526B] sm:text-lg">
             You are not buying a cold lead list. You are buying scheduled inspection opportunities with homeowners who have already confirmed interest. If a homeowner no-shows, we replace the appointment.
           </p>
           <div className="pt-2">
@@ -468,7 +468,7 @@ function GuaranteeSection() {
           </div>
         </div>
 
-        <div className="bg-[#0E1B2D] border border-white/[0.08] rounded-2xl p-6 sm:p-8 space-y-5">
+        <div className="bg-white border border-[#DDE6F2] rounded-2xl p-6 sm:p-8 space-y-5 shadow-md">
           {[
             "Homeowner interest confirmed before delivery",
             "Appointment booked to your calendar",
@@ -476,10 +476,10 @@ function GuaranteeSection() {
             "No-show appointments replaced",
           ].map((bullet) => (
             <div key={bullet} className="flex items-start gap-3">
-              <svg className="h-5 w-5 text-emerald-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
+              <svg className="h-5 w-5 text-[#11A36A] shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3.5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
               </svg>
-              <span className="text-sm sm:text-base font-bold text-slate-200">{bullet}</span>
+              <span className="text-sm sm:text-base font-bold text-[#42526B]">{bullet}</span>
             </div>
           ))}
         </div>
