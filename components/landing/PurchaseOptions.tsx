@@ -55,18 +55,21 @@ export default function PurchaseOptions() {
             {/* Content (Right) */}
             <div className="md:col-span-5 space-y-4 text-left">
               <div className="text-[#60A5FA] font-extrabold text-[11px] uppercase tracking-widest">
-                STEP 01 — RADAR TRACKING
+                STEP 01 — STORM RADAR INTELLIGENCE
               </div>
               <h3 className="text-2xl font-extrabold text-white leading-tight">
-                Live Storm Radar & Circular Target Dots
+                Go From Storm Radar to Homeowner-Level Leads
               </h3>
               <p className="text-sm text-slate-350 leading-relaxed">
-                Track active and recent storm activity—including high-velocity wind, severe hail, and tornadoes. High-visibility circular storm dots indicate the exact affected residential zones, so you can immediately see where property damage is concentrated.
+                Track recent hail, wind, tornado, and severe storm activity on a visual map built for roofing contractors. Circular storm markers highlight the residential zones most likely impacted by severe weather, helping you quickly see where roof damage may be concentrated.
+              </p>
+              <p className="text-sm text-slate-350 leading-relaxed">
+                Then drill into those areas to uncover specific homeowner addresses, available contact information, property records, and roof details — giving your team the data needed to target the right homes after the storm.
               </p>
               <div className="bg-[#10243A] border border-white/[0.08] p-4 rounded-2xl text-xs text-[#60A5FA] leading-normal font-medium space-y-2">
-                <p className="font-bold uppercase tracking-wider text-[10px] text-[#60A5FA]">Location Filter:</p>
+                <p className="font-bold uppercase tracking-wider text-[10px] text-[#60A5FA]">Refine Your Target Area</p>
                 <p className="text-slate-300">
-                  Select your target **State** and **County**, then specify a custom **miles radius** around the county seat to narrow down your targeting.
+                  Choose your State, select a County, and adjust the mile radius to narrow your search around the neighborhoods and homes that matter most.
                 </p>
               </div>
             </div>
