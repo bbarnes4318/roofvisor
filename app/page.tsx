@@ -284,7 +284,7 @@ function HeroSection() {
 
           <div className="pt-0.5">
             <ButtonLink href={`mailto:${CONTACT_EMAIL}?subject=LeadsByStorm%20Discovery%20Call`}>
-              Email Us to Check Availability
+              Check Appointment Availability
             </ButtonLink>
           </div>
 
