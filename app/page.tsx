@@ -265,7 +265,7 @@ function HeroSection() {
         
         {/* Left Column (Desktop Layout) */}
         <div className="space-y-3 lg:col-span-7 lg:pt-6">
-          <p className="text-xs font-extrabold uppercase tracking-[0.2em] text-[#145CFF]">
+          <p className="text-sm sm:text-base font-extrabold uppercase tracking-[0.2em] text-[#145CFF]">
             FOR ROOFING CONTRACTORS IN ACTIVE STORM MARKETS
           </p>
 
