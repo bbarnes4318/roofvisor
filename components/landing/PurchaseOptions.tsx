@@ -18,10 +18,10 @@ export default function PurchaseOptions() {
             STORM INTELLIGENCE PLATFORM
           </h2>
           <h3 className="text-xl font-bold tracking-tight text-[#60A5FA] sm:text-2xl">
-            See the Storm. Find the Homes. Book the Inspections.
+            Generate Your Own Storm Leads
           </h3>
           <p className="text-sm sm:text-base text-slate-300 leading-relaxed max-w-2xl">
-            Target storm-hit properties, identify roofing opportunities, and access homeowner data directly from the live map.
+            Use the Storm Intelligence System to identify storm-affected homeowners, view property-level storm data, and create targeted roofing opportunities.
           </p>
         </div>
 
