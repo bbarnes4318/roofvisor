@@ -33,7 +33,12 @@ function ButtonLink({
       : "border border-[#DDE6F2] bg-white text-[#42526B] hover:text-[#061A2F] hover:border-[#145CFF] hover:bg-[#F5F8FC] hover:-translate-y-[1px]";
 
   return (
-    <a href={href} className={`${baseClasses} ${variantClasses} ${className}`}>
+    <a 
+      href={href} 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      className={`${baseClasses} ${variantClasses} ${className}`}
+    >
       {children}
     </a>
   );
