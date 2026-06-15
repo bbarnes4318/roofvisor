@@ -6,18 +6,18 @@ export const metadata: Metadata = {
     "Review the B2B Terms and Conditions for LeadsByStorm roofing appointment setting and territory reservation services.",
 };
 
-const LOGO_SRC = "/logo.png";
+const LOGO_SRC = "/logo-clean.png";
 const CONTACT_EMAIL = "support@leadsbystorm.com";
 
 function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-[#DDE6F2] bg-white/95 backdrop-blur-md">
-      <nav className="mx-auto flex max-w-[1200px] items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
+      <nav className="mx-auto flex max-w-[1200px] items-center justify-between px-4 py-3.5 sm:py-4.5 sm:px-6 lg:px-8">
         <a href="/" aria-label="LeadsByStorm home" className="flex items-center">
           <img
             src={LOGO_SRC}
             alt="LeadsByStorm Logo"
-            className="h-10 sm:h-11 w-auto object-contain"
+            className="h-12 sm:h-14 md:h-16 w-auto object-contain"
           />
         </a>
 
