@@ -342,7 +342,7 @@ function ProblemSection() {
             THE PROBLEM WITH ROOFING LEADS
           </p>
           <h2 className="text-3xl font-extrabold tracking-tight text-[#061A2F] sm:text-4xl">
-            Most Roofing Leads Are Shared, Cold, or Already Burned.
+            Most Roofing Leads Are Shared or Cold
           </h2>
           <p className="text-base leading-relaxed text-[#42526B] sm:text-lg">
             Roofing contractors do not need another spreadsheet of names. They need real conversations with homeowners in storm-hit areas who are willing to schedule an inspection. That is what LeadsByStorm is built to deliver.
