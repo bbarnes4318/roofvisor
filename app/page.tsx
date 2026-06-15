@@ -456,7 +456,7 @@ function GuaranteeSection() {
       <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
         <div className="space-y-6">
           <h2 className="text-3xl font-extrabold tracking-tight text-[#061A2F] sm:text-4xl leading-tight">
-            Guaranteed Inspection Appointments. Risk-Free No-Show Protection.
+            Guaranteed Inspection Appointments. No-Show Protection.
           </h2>
           <p className="text-base leading-relaxed text-[#42526B] sm:text-lg">
             You are not buying a cold lead list. You are buying scheduled inspection opportunities with homeowners who have already confirmed interest. If a homeowner no-shows, we replace the appointment.
