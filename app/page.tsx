@@ -452,7 +452,7 @@ function HowItWorksSection() {
 
 function GuaranteeSection() {
   return (
-    <SectionContainer className="bg-[#F5F8FC] text-[#061A2F] pt-10 pb-20">
+    <SectionContainer className="bg-[#F5F8FC] text-[#061A2F] pt-10 pb-10">
       <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
         <div className="space-y-6">
           <h2 className="text-3xl font-extrabold tracking-tight text-[#061A2F] sm:text-4xl leading-tight">
@@ -491,7 +491,7 @@ function GuaranteeSection() {
 
 function TerritoryCtaSection() {
   return (
-    <SectionContainer className="bg-[#F5F8FC] py-16 sm:py-20 border-b border-[#DDE6F2]">
+    <SectionContainer className="bg-[#F5F8FC] pt-10 pb-20">
       <div className="grid gap-12 lg:grid-cols-12 lg:items-center">
         
         {/* Left Column: Copy Content */}
@@ -499,18 +499,20 @@ function TerritoryCtaSection() {
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#145CFF]">
             TERRITORY AVAILABILITY
           </p>
-          <h2 className="text-3xl font-extrabold tracking-tight text-[#061A2F] sm:text-4xl">
-            Claim Your Storm Territory Before It Fills.
+          <h2 className="text-3xl font-extrabold tracking-tight text-[#061A2F] sm:text-4xl leading-tight">
+            Your Service Area May Still Be Open.
           </h2>
-          <p className="text-base leading-relaxed text-[#42526B] sm:text-lg">
-            We work with a limited number of roofing contractors in each active market to protect appointment quality and prevent oversaturation. Book a quick call to see if we have confirmed appointments available in your service area.
-          </p>
+          <div className="space-y-4 text-base leading-relaxed text-[#42526B] sm:text-lg">
+            <p>
+              We limit contractor access by market so each area stays focused, protected, and valuable. That means once appointment capacity is filled in a storm-affected territory, we stop adding new roofing contractors there.
+            </p>
+            <p>
+              Schedule a quick call to see if your service area is currently available.
+            </p>
+          </div>
 
-          <div className="flex flex-col gap-3 sm:flex-row pt-2">
-            <ButtonLink href="#calendar">Book a 10-Minute Territory Call</ButtonLink>
-            <ButtonLink href={`mailto:${CONTACT_EMAIL}`} variant="secondary">
-              Email Us Your Availability
-            </ButtonLink>
+          <div className="pt-2">
+            <ButtonLink href="#calendar">Check Territory Availability</ButtonLink>
           </div>
         </div>
 
@@ -676,8 +678,8 @@ export default function LeadsByStormLandingPage() {
       <ProblemSection />
       <HowItWorksSection />
       <GuaranteeSection />
-      <PurchaseOptions />
       <TerritoryCtaSection />
+      <PurchaseOptions />
       <CalendarSection />
       <FinalCtaSection />
       <Footer />
