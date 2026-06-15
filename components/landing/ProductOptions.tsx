@@ -58,7 +58,7 @@ export default function ProductOptions() {
                 <strong>Best for:</strong> Contractors with their own calling, texting, mail, or door-knocking team.
               </div>
               <a 
-                href="#calendar" 
+                href="mailto:support@leadsbystorm.com?subject=Order%20Storm%20Lead%20List" 
                 className="block w-full text-center rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 py-2.5 text-xs font-extrabold text-white uppercase tracking-wider transition-colors cursor-pointer"
               >
                 Order Storm Lead List
@@ -110,7 +110,7 @@ export default function ProductOptions() {
                 <strong>Best for:</strong> Contractors who want to hand-pick high-value homes from the live storm map.
               </div>
               <a 
-                href="#calendar" 
+                href="mailto:support@leadsbystorm.com?subject=Open%20Map%20and%20Unlock%20Leads" 
                 className="block w-full text-center rounded-xl bg-[#145CFF]/10 hover:bg-[#145CFF]/25 border border-[#145CFF]/30 py-2.5 text-xs font-extrabold text-[#60A5FA] uppercase tracking-wider transition-colors cursor-pointer"
               >
                 Open Map & Unlock Leads
@@ -164,7 +164,7 @@ export default function ProductOptions() {
                 <strong>Best for:</strong> Roofing contractors who want booked inspections instead of raw data.
               </div>
               <a 
-                href="#calendar" 
+                href="mailto:support@leadsbystorm.com?subject=Get%20Guaranteed%20Appointments" 
                 className="block w-full text-center rounded-xl bg-[#145CFF] hover:bg-[#2F7DFF] py-3 text-xs font-extrabold text-white uppercase tracking-wider transition-all shadow-md shadow-blue-500/25 cursor-pointer"
               >
                 Get Guaranteed Appointments
@@ -216,7 +216,7 @@ export default function ProductOptions() {
                 <strong>Best for:</strong> Roofing companies expanding into storm-hit markets or needing a full outsourced acquisition team.
               </div>
               <a 
-                href="#calendar" 
+                href="mailto:support@leadsbystorm.com?subject=Build%20My%20Storm%20Campaign" 
                 className="block w-full text-center rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 py-2.5 text-xs font-extrabold text-white uppercase tracking-wider transition-colors cursor-pointer"
               >
                 Build My Storm Campaign

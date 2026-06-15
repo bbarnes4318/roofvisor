@@ -32,7 +32,7 @@ export default function StormAcquisitionHero() {
 
             <div className="flex flex-col sm:flex-row gap-4 pt-2 shrink-0">
               <a 
-                href="#calendar" 
+                href="#products" 
                 className="inline-flex items-center justify-center rounded-xl bg-[#145CFF] text-white px-7 py-4 text-base font-extrabold shadow-lg shadow-blue-500/20 hover:bg-[#2F7DFF] hover:-translate-y-[1px] transition-all duration-200 transform active:scale-[0.98] select-none cursor-pointer"
               >
                 Open Live Storm Map

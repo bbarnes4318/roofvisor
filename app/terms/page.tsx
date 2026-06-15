@@ -22,10 +22,10 @@ function Header() {
         </a>
 
         <a 
-          href="/#calendar" 
+          href={`mailto:${CONTACT_EMAIL}?subject=LeadsByStorm%20Inquiry`} 
           className="inline-flex items-center justify-center rounded-xl px-5 py-2.5 text-xs font-extrabold sm:text-sm bg-[#145CFF] text-white hover:bg-[#2F7DFF] transition-all transform active:scale-[0.98]"
         >
-          Book a Call
+          Contact Us
         </a>
       </nav>
     </header>

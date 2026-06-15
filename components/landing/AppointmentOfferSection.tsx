@@ -46,7 +46,7 @@ export default function AppointmentOfferSection() {
 
             <div className="pt-4">
               <a 
-                href="#calendar" 
+                href="mailto:support@leadsbystorm.com?subject=Request%20Appointment%20Campaign"
                 className="inline-flex items-center justify-center rounded-xl bg-[#145CFF] text-white px-7 py-3.5 text-base font-extrabold shadow-lg shadow-blue-500/20 hover:bg-[#2F7DFF] hover:-translate-y-[1px] transition-all duration-200 transform active:scale-[0.98] cursor-pointer"
               >
                 Request Appointment Campaign
