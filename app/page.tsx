@@ -551,19 +551,24 @@ function FinalCtaSection() {
   return (
     <SectionContainer noPadding className="bg-[#081421] text-white py-16 relative border-b border-white/[0.05]">
       <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 text-left">
-        <div className="space-y-3 max-w-xl">
+        <div className="space-y-3 max-w-2xl">
           <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-            Ready for Confirmed Storm-Damage Appointments?
+            SEE THE STORM INTELLIGENCE PLATFORM IN ACTION
           </h2>
           <p className="text-sm text-slate-400 leading-relaxed">
-            Book a quick call and we will show you current appointment availability in your market.
+            Explore the demo and see how roofing contractors can go from storm radar to specific homeowner opportunities. Use the map, select your target area, and view the property, contact, and roof data available inside the platform.
           </p>
         </div>
 
         <div className="pt-2">
-          <ButtonLink href={`mailto:${CONTACT_EMAIL}?subject=Check%20Territory%20Availability`} className="bg-[#145CFF] text-white hover:bg-[#2F7DFF] border-0">
-            Check Territory Availability
-          </ButtonLink>
+          <a
+            href="https://sms.leadzer.io/storm-map"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center rounded-xl px-6 py-3.5 text-base font-extrabold transition-all duration-200 transform active:scale-[0.98] focus:outline-none focus:ring-4 focus:ring-blue-100 select-none cursor-pointer bg-[#145CFF] text-white shadow-lg shadow-blue-500/10 hover:bg-[#2F7DFF] hover:-translate-y-[1px] border-0"
+          >
+            Launch the Demo
+          </a>
         </div>
       </div>
     </SectionContainer>
