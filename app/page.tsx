@@ -471,7 +471,7 @@ function GuaranteeSection() {
         <div className="bg-white border border-[#DDE6F2] rounded-2xl p-6 sm:p-8 space-y-5 shadow-md">
           {[
             "Homeowner interest confirmed before delivery",
-            "Appointment booked to your calendar",
+            "Roof Inspection added to your calendar",
             "Exclusive contractor assignment",
             "No-show appointments replaced",
           ].map((bullet) => (
