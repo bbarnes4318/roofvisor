@@ -283,7 +283,7 @@ function HeroSection() {
           </p>
 
           <div className="pt-0.5">
-            <ButtonLink href={`mailto:${CONTACT_EMAIL}?subject=LeadsByStorm%20Discovery%20Call`}>
+            <ButtonLink href="https://calendly.com/leadsbystorm-support/30min">
               Check Appointment Availability
             </ButtonLink>
           </div>
@@ -506,8 +506,8 @@ function TerritoryCtaSection() {
           </div>
 
           <div className="pt-2">
-            <ButtonLink href={`mailto:${CONTACT_EMAIL}?subject=Check%20Territory%20Availability`}>
-              Check My Territory
+            <ButtonLink href="https://calendly.com/leadsbystorm-support/30min">
+              Check My Specific Market
             </ButtonLink>
           </div>
         </div>
@@ -557,7 +557,7 @@ function FinalCtaSection() {
 
         <div className="pt-2">
           <a
-            href="https://sms.leadzer.io/storm-map"
+            href="https://sms.leadzer.io/storm-map/storm-map-demo"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-xl px-6 py-3.5 text-base font-extrabold transition-all duration-200 transform active:scale-[0.98] focus:outline-none focus:ring-4 focus:ring-blue-100 select-none cursor-pointer bg-[#145CFF] text-white shadow-lg shadow-blue-500/10 hover:bg-[#2F7DFF] hover:-translate-y-[1px] border-0"

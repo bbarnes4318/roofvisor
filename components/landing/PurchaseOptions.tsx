@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function PurchaseOptions() {
-  const MAP_URL = "https://sms.leadzer.io/storm-map";
+  const MAP_URL = "https://sms.leadzer.io/storm-map/storm-map-demo";
 
   return (
     <section id="products" className="bg-[#081421] py-20 px-4 sm:px-6 lg:px-8 border-b border-white/[0.05] text-slate-200 overflow-hidden relative">
