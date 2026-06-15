@@ -4,7 +4,7 @@ export default function PurchaseOptions() {
   const MAP_URL = "https://sms.leadzer.io/storm-map";
 
   return (
-    <section id="products" className="bg-[#070b13] py-20 px-4 sm:px-6 lg:px-8 border-b border-white/5 text-slate-200 overflow-hidden relative">
+    <section id="products" className="bg-[#081421] pt-10 pb-20 px-4 sm:px-6 lg:px-8 border-b border-white/[0.05] text-slate-200 overflow-hidden relative">
       
       {/* Decorative background glow accents */}
       <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#145CFF]/5 rounded-full blur-3xl pointer-events-none" />
@@ -20,7 +20,7 @@ export default function PurchaseOptions() {
           <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-[40px] lg:leading-[1.15]">
             See the Storm. Find the Homes. Book the Inspections.
           </h2>
-          <p className="text-sm sm:text-base text-slate-400 leading-relaxed max-w-2xl">
+          <p className="text-sm sm:text-base text-slate-300 leading-relaxed max-w-2xl">
             Target storm-hit properties, identify roofing opportunities, and access homeowner data directly from the live map.
           </p>
         </div>
@@ -33,7 +33,7 @@ export default function PurchaseOptions() {
             
             {/* Image (Left) */}
             <div className="md:col-span-7 relative group">
-              <div className="bg-[#0b0f19]/90 border border-slate-700/40 rounded-[20px] p-3.5 shadow-2xl transition-all duration-500 md:[transform:rotate(-2.5deg)] md:group-hover:[transform:rotate(0deg)] md:group-hover:scale-[1.01]">
+              <div className="bg-[#0E1B2D] border border-white/[0.08] rounded-[20px] p-3.5 shadow-2xl transition-all duration-500 md:[transform:rotate(-2.5deg)] md:group-hover:[transform:rotate(0deg)] md:group-hover:scale-[1.01]">
                 <a 
                   href={MAP_URL}
                   target="_blank"
@@ -60,12 +60,12 @@ export default function PurchaseOptions() {
               <h3 className="text-2xl font-extrabold text-white leading-tight">
                 Live Storm Radar & Circular Target Dots
               </h3>
-              <p className="text-sm text-slate-400 leading-relaxed">
+              <p className="text-sm text-slate-350 leading-relaxed">
                 Track active and recent storm activity—including high-velocity wind, severe hail, and tornadoes. High-visibility circular storm dots indicate the exact affected residential zones, so you can immediately see where property damage is concentrated.
               </p>
-              <div className="bg-[#145CFF]/5 border border-[#145CFF]/15 p-4 rounded-2xl text-xs text-[#60A5FA] leading-normal font-medium space-y-2">
+              <div className="bg-[#10243A] border border-white/[0.08] p-4 rounded-2xl text-xs text-[#60A5FA] leading-normal font-medium space-y-2">
                 <p className="font-bold uppercase tracking-wider text-[10px] text-[#60A5FA]">Location Filter:</p>
-                <p className="text-slate-400">
+                <p className="text-slate-300">
                   Select your target **State** and **County**, then specify a custom **miles radius** around the county seat to narrow down your targeting.
                 </p>
               </div>
@@ -84,11 +84,11 @@ export default function PurchaseOptions() {
               <h3 className="text-2xl font-extrabold text-white leading-tight">
                 Dynamic County Radius Zoom-In
               </h3>
-              <p className="text-sm text-slate-400 leading-relaxed">
+              <p className="text-sm text-slate-350 leading-relaxed">
                 As soon as you select your target county and desired miles radius, the map dynamically zooms in. The viewport centers exactly on the chosen area, rendering the precise path and boundary overlays of the storm.
               </p>
-              <div className="bg-emerald-500/5 border border-emerald-500/15 p-4 rounded-2xl text-xs text-emerald-400 leading-normal font-medium">
-                <p className="text-slate-400">
+              <div className="bg-[#10243A] border border-white/[0.08] p-4 rounded-2xl text-xs text-emerald-400 leading-normal font-medium">
+                <p className="text-slate-300">
                   This radius-bounded zoom view makes it easy to isolate high-probability neighborhoods, saving time and keeping your sales outreach highly focused.
                 </p>
               </div>
@@ -96,7 +96,7 @@ export default function PurchaseOptions() {
 
             {/* Image (Right) - Order 1 on mobile, 2 on desktop */}
             <div className="md:col-span-7 relative group order-1 md:order-2">
-              <div className="bg-[#0b0f19]/90 border border-slate-700/40 rounded-[20px] p-3.5 shadow-2xl transition-all duration-500 md:[transform:rotate(2deg) translateY(-8px) translateX(10px)] md:group-hover:[transform:rotate(0deg) translate(0)] md:group-hover:scale-[1.01]">
+              <div className="bg-[#0E1B2D] border border-white/[0.08] rounded-[20px] p-3.5 shadow-2xl transition-all duration-500 md:[transform:rotate(2deg) translateY(-8px) translateX(10px)] md:group-hover:[transform:rotate(0deg) translate(0)] md:group-hover:scale-[1.01]">
                 <a 
                   href={MAP_URL}
                   target="_blank"
@@ -122,7 +122,7 @@ export default function PurchaseOptions() {
             
             {/* Image (Left) */}
             <div className="md:col-span-7 relative group">
-              <div className="bg-[#0b0f19]/90 border border-slate-700/40 rounded-[20px] p-3.5 shadow-2xl transition-all duration-500 md:[transform:rotate(-1.5deg)] md:group-hover:[transform:rotate(0deg)] md:group-hover:scale-[1.01]">
+              <div className="bg-[#0E1B2D] border border-white/[0.08] rounded-[20px] p-3.5 shadow-2xl transition-all duration-500 md:[transform:rotate(-1.5deg)] md:group-hover:[transform:rotate(0deg)] md:group-hover:scale-[1.01]">
                 <a 
                   href={MAP_URL}
                   target="_blank"
@@ -161,11 +161,11 @@ export default function PurchaseOptions() {
               <h3 className="text-2xl font-extrabold text-white leading-tight">
                 Extract Homeowner Addresses & Contact Info
               </h3>
-              <p className="text-sm text-slate-400 leading-relaxed">
+              <p className="text-sm text-slate-350 leading-relaxed">
                 Directly retrieve detailed property intelligence for any affected homes inside the storm area. Access exact homeowner street addresses, names, verified mobile numbers, and email contact records.
               </p>
-              <div className="bg-[#145CFF]/5 border border-[#145CFF]/15 p-4 rounded-2xl text-xs text-[#60A5FA] leading-normal font-medium">
-                <p className="text-slate-400">
+              <div className="bg-[#10243A] border border-white/[0.08] p-4 rounded-2xl text-xs text-[#60A5FA] leading-normal font-medium">
+                <p className="text-slate-300">
                   Select any target property on the map to review the storm event metrics, download contact lists, or instantly sync homeowner data directly to your CRM.
                 </p>
               </div>

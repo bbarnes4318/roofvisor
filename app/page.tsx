@@ -452,13 +452,13 @@ function HowItWorksSection() {
 
 function GuaranteeSection() {
   return (
-    <SectionContainer className="bg-[#061A2F] text-white py-20 border-b border-[#061A2F]">
+    <SectionContainer className="bg-[#081421] text-white pt-20 pb-10">
       <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
         <div className="space-y-6">
           <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl leading-tight">
             Guaranteed Inspection Appointments. Risk-Free No-Show Protection.
           </h2>
-          <p className="text-base leading-relaxed text-slate-300 sm:text-lg">
+          <p className="text-base leading-relaxed text-slate-400 sm:text-lg">
             You are not buying a cold lead list. You are buying scheduled inspection opportunities with homeowners who have already confirmed interest. If a homeowner no-shows, we replace the appointment.
           </p>
           <div className="pt-2">
@@ -468,7 +468,7 @@ function GuaranteeSection() {
           </div>
         </div>
 
-        <div className="bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-8 space-y-5">
+        <div className="bg-[#0E1B2D] border border-white/[0.08] rounded-2xl p-6 sm:p-8 space-y-5">
           {[
             "Homeowner interest confirmed before delivery",
             "Appointment booked to your calendar",
@@ -476,10 +476,10 @@ function GuaranteeSection() {
             "No-show appointments replaced",
           ].map((bullet) => (
             <div key={bullet} className="flex items-start gap-3">
-              <svg className="h-5 w-5 text-[#2F7DFF] shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
+              <svg className="h-5 w-5 text-emerald-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
               </svg>
-              <span className="text-sm sm:text-base font-bold text-slate-100">{bullet}</span>
+              <span className="text-sm sm:text-base font-bold text-slate-200">{bullet}</span>
             </div>
           ))}
         </div>
@@ -626,13 +626,13 @@ function CalendarSection() {
 
 function FinalCtaSection() {
   return (
-    <SectionContainer noPadding className="bg-[#061A2F] text-white py-16 relative border-b border-[#061A2F]">
+    <SectionContainer noPadding className="bg-[#081421] text-white py-16 relative border-b border-white/[0.05]">
       <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 text-left">
         <div className="space-y-3 max-w-xl">
           <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
             Ready for Confirmed Storm-Damage Appointments?
           </h2>
-          <p className="text-sm text-slate-300 leading-relaxed">
+          <p className="text-sm text-slate-400 leading-relaxed">
             Book a quick call and we will show you current appointment availability in your market.
           </p>
         </div>
@@ -652,15 +652,15 @@ function FinalCtaSection() {
 
 function Footer() {
   return (
-    <footer className="border-t border-[#DDE6F2] bg-slate-50 px-6 py-8 sm:px-8 lg:px-12 text-[#42526B]">
-      <div className="mx-auto flex max-w-[1200px] flex-col gap-4 text-xs sm:text-sm text-[#42526B] sm:flex-row sm:items-center sm:justify-between">
+    <footer className="border-t border-white/[0.08] bg-[#061A2F] px-6 py-8 sm:px-8 lg:px-12 text-slate-400">
+      <div className="mx-auto flex max-w-[1200px] flex-col gap-4 text-xs sm:text-sm text-slate-400 sm:flex-row sm:items-center sm:justify-between">
         <p>© 2026 LeadsByStorm. All rights reserved.</p>
         <div className="flex gap-4">
-          <a href="/terms" className="hover:text-[#145CFF] transition-colors font-bold">Terms &amp; Conditions</a>
-          <span className="text-slate-300">|</span>
-          <a href="/privacy" className="hover:text-[#145CFF] transition-colors font-bold">Privacy Policy</a>
-          <span className="text-slate-300">|</span>
-          <p>Targeted storm-damage roofing appointments.</p>
+          <a href="/terms" className="text-slate-300 hover:text-white transition-colors font-bold">Terms &amp; Conditions</a>
+          <span className="text-slate-700">|</span>
+          <a href="/privacy" className="text-slate-300 hover:text-white transition-colors font-bold">Privacy Policy</a>
+          <span className="text-slate-700">|</span>
+          <p className="text-slate-500">Targeted storm-damage roofing appointments.</p>
         </div>
       </div>
     </footer>
