@@ -104,7 +104,7 @@ export default function PurchaseOptions() {
                   className="block relative rounded-[14px] overflow-hidden bg-[#06090f] border border-white/5 cursor-pointer"
                 >
                   <img 
-                    src="/zoom.webp" 
+                    src="/zoom.png" 
                     alt="County Target Zoom" 
                     className="w-full h-[200px] sm:h-[300px] md:h-[320px] lg:h-[350px] object-cover filter brightness-[0.9] group-hover:brightness-100 transition duration-300"
                   />
