@@ -53,7 +53,7 @@ export default function PurchaseOptions() {
                 STEP 01 — STORM RADAR
               </div>
               <h3 className="text-2xl font-extrabold text-white leading-tight">
-                Live Storm Tracking With Damage Target Markers
+                Live Storm Tracking
               </h3>
               <p className="text-sm text-slate-350 leading-relaxed">
                 Track active and recent storm activity, including severe hail, high-velocity wind, tornado activity, and other major weather events. Clear circular target markers highlight the residential zones most likely impacted, giving you an immediate visual of where storm damage may be concentrated.
