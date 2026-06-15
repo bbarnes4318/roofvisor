@@ -14,12 +14,12 @@ export default function PurchaseOptions() {
         
         {/* SECTION HEADER */}
         <div className="max-w-3xl mb-20 space-y-4 text-left">
-          <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#60A5FA] block">
-            STORM INTELLIGENCE PLATFORM
-          </span>
           <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-[40px] lg:leading-[1.15]">
-            See the Storm. Find the Homes. Book the Inspections.
+            STORM INTELLIGENCE PLATFORM
           </h2>
+          <h3 className="text-xl font-bold tracking-tight text-[#60A5FA] sm:text-2xl">
+            See the Storm. Find the Homes. Book the Inspections.
+          </h3>
           <p className="text-sm sm:text-base text-slate-300 leading-relaxed max-w-2xl">
             Target storm-hit properties, identify roofing opportunities, and access homeowner data directly from the live map.
           </p>
