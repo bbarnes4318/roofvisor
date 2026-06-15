@@ -433,7 +433,7 @@ function HowItWorksSection() {
           },
           {
             num: "03",
-            title: "Book the Appointment",
+            title: "Schedule the Inspection",
             desc: "Once confirmed, the appointment is sent directly to your calendar with the homeowner’s details and scheduled inspection time.",
           },
         ].map((card) => (
