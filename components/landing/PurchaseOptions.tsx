@@ -32,8 +32,11 @@ export default function PurchaseOptions() {
             {/* Image (Left) */}
             <div className="md:col-span-7 relative group">
               <div className="bg-[#0E1B2D] border border-white/[0.08] rounded-[20px] p-3.5 shadow-2xl transition-all duration-500 md:group-hover:scale-[1.01]">
-                <div 
-                  className="block relative rounded-[14px] overflow-hidden bg-[#06090f] border border-white/5"
+                <a 
+                  href="https://maps.leadsbystorm.com/storm-map/demo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block relative rounded-[14px] overflow-hidden bg-[#06090f] border border-white/5 cursor-pointer hover:border-white/20 transition-colors"
                 >
                   <img 
                     src="/map.webp" 
@@ -43,7 +46,7 @@ export default function PurchaseOptions() {
                   <div className="absolute top-3 left-3 bg-[#145CFF] text-white px-2.5 py-1 rounded-md text-[9px] font-black uppercase tracking-wider shadow-md">
                     Live Radar
                   </div>
-                </div>
+                </a>
               </div>
             </div>
 
@@ -92,8 +95,11 @@ export default function PurchaseOptions() {
             {/* Image (Right) - Order 1 on mobile, 2 on desktop */}
             <div className="md:col-span-7 relative group order-1 md:order-2">
               <div className="bg-[#0E1B2D] border border-white/[0.08] rounded-[20px] p-3.5 shadow-2xl transition-all duration-500 md:[transform:rotate(2deg) translateY(-8px) translateX(10px)] md:group-hover:[transform:rotate(0deg) translate(0)] md:group-hover:scale-[1.01]">
-                <div 
-                  className="block relative rounded-[14px] overflow-hidden bg-[#06090f] border border-white/5"
+                <a 
+                  href="https://maps.leadsbystorm.com/storm-map/demo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block relative rounded-[14px] overflow-hidden bg-[#06090f] border border-white/5 cursor-pointer hover:border-white/20 transition-colors"
                 >
                   <img 
                     src="/zoom.webp" 
@@ -103,7 +109,7 @@ export default function PurchaseOptions() {
                   <div className="absolute top-3 left-3 bg-emerald-500 text-white px-2.5 py-1 rounded-md text-[9px] font-black uppercase tracking-wider shadow-md">
                     Radius Focus
                   </div>
-                </div>
+                </a>
               </div>
             </div>
 
@@ -115,8 +121,11 @@ export default function PurchaseOptions() {
             {/* Image (Left) */}
             <div className="md:col-span-7 relative group">
               <div className="bg-[#0E1B2D] border border-white/[0.08] rounded-[20px] p-3.5 shadow-2xl transition-all duration-500 md:group-hover:scale-[1.01]">
-                <div 
-                  className="block relative rounded-[14px] overflow-hidden bg-[#06090f] border border-white/5"
+                <a 
+                  href="https://maps.leadsbystorm.com/storm-map/demo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block relative rounded-[14px] overflow-hidden bg-[#06090f] border border-white/5 cursor-pointer hover:border-white/20 transition-colors"
                 >
                   <img 
                     src="/contact.webp" 
@@ -126,7 +135,7 @@ export default function PurchaseOptions() {
                   <div className="absolute top-3 left-3 bg-[#60A5FA] text-black px-2.5 py-1 rounded-md text-[9px] font-black uppercase tracking-wider shadow-md">
                     Homeowner Data
                   </div>
-                </div>
+                </a>
               </div>
             </div>
 

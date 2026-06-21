@@ -523,11 +523,16 @@ function TerritoryCtaSection() {
           <div className="absolute -inset-3 rounded-2xl bg-gradient-to-tr from-[#145CFF]/10 to-[#145CFF]/5 blur-xl pointer-events-none" />
           
           {/* Image Container */}
-          <div className="relative rounded-2xl border border-[#DDE6F2] bg-white p-2 shadow-xl overflow-hidden aspect-[4/3]">
+          <a
+            href="https://maps.leadsbystorm.com/storm-map/demo"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative block rounded-2xl border border-[#DDE6F2] bg-white p-2 shadow-xl overflow-hidden aspect-[4/3] cursor-pointer hover:border-[#145CFF]/30 transition-colors group"
+          >
             <img
               src="/storm_map.png"
               alt="Active Storm Damage Territory Map Dashboard"
-              className="w-full h-full object-cover rounded-xl"
+              className="w-full h-full object-cover rounded-xl transition duration-300 md:group-hover:scale-[1.01]"
             />
             {/* Absolute overlay elements for premium dashboard look */}
             <div className="absolute top-4 left-4 bg-[#061A2F]/90 backdrop-blur-sm border border-white/10 rounded-lg px-2.5 py-1 text-[8px] font-extrabold text-white uppercase tracking-wider flex items-center gap-1.5 shadow-md">
@@ -537,7 +542,7 @@ function TerritoryCtaSection() {
             <div className="absolute bottom-4 right-4 bg-white/95 backdrop-blur-sm border border-[#DDE6F2] rounded-lg px-2.5 py-1 text-[8px] font-extrabold text-[#42526B] shadow-md">
               Territory: <span className="text-[#145CFF]">Orlando East (Claimed)</span>
             </div>
-          </div>
+          </a>
         </div>
 
       </div>
@@ -561,11 +566,14 @@ function FinalCtaSection() {
         </div>
 
         <div className="pt-2">
-          <div
-            className="inline-flex items-center justify-center rounded-xl px-6 py-3.5 text-base font-extrabold select-none bg-[#145CFF] text-white shadow-lg shadow-blue-500/10 border-0"
+          <a
+            href="https://maps.leadsbystorm.com/storm-map/demo"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center rounded-xl px-6 py-3.5 text-base font-extrabold bg-[#145CFF] text-white shadow-lg shadow-blue-500/10 border-0 hover:bg-[#2F7DFF] hover:-translate-y-[1px] transition-all duration-200 cursor-pointer"
           >
             Launch the Demo
-          </div>
+          </a>
         </div>
       </div>
     </SectionContainer>
@@ -599,7 +607,7 @@ export default function LeadsByStormLandingPage() {
       <GuaranteeSection />
       <TerritoryCtaSection />
       <PurchaseOptions />
-      {/* <FinalCtaSection /> */}
+      <FinalCtaSection />
       <Footer />
     </main>
   );
