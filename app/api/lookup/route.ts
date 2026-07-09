@@ -64,7 +64,7 @@ export async function POST(request: Request) {
 
         try {
           const response = await fetch(
-            `https://api.telnyx.com/v2/number_lookup/${encodeURIComponent(formatted)}?carrier&caller-name`,
+            `https://api.telnyx.com/v2/number_lookup/${encodeURIComponent(formatted)}?type[]=carrier&type[]=caller-name`,
             {
               method: "GET",
               headers: {
