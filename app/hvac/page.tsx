@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import HvacRoiCalculator from "@/components/landing/HvacRoiCalculator";
 
 export const metadata: Metadata = {
   title: "LeadsByStorm HVAC | Guaranteed Homeowner Appointment Program",
@@ -436,6 +437,14 @@ function ComparisonSection() {
   );
 }
 
+function RoiCalculatorSection() {
+  return (
+    <SectionContainer className="bg-[#F5F8FC] border-b border-[#DDE6F2] py-20">
+      <HvacRoiCalculator />
+    </SectionContainer>
+  );
+}
+
 function OfferSection() {
   const opportunities = [
     "AC replacement estimates",
@@ -592,15 +601,24 @@ function GuaranteeSection() {
           </p>
         </div>
 
-        <div className="lg:col-span-5 bg-[#F5F8FC] border border-[#DDE6F2] rounded-2xl p-6 sm:p-8 space-y-5 shadow-md">
-          {bullets.map((bullet) => (
-            <div key={bullet} className="flex items-start gap-3">
-              <svg className="h-5 w-5 text-[#11A36A] shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3.5">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-              </svg>
-              <span className="text-sm sm:text-base font-bold text-[#42526B]">{bullet}</span>
-            </div>
-          ))}
+        <div className="lg:col-span-5 bg-[#F5F8FC] border border-[#DDE6F2] rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row items-center gap-6 shadow-md">
+          <div className="space-y-5 flex-1">
+            {bullets.map((bullet) => (
+              <div key={bullet} className="flex items-start gap-3">
+                <svg className="h-5 w-5 text-[#11A36A] shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3.5">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                <span className="text-sm sm:text-base font-bold text-[#42526B]">{bullet}</span>
+              </div>
+            ))}
+          </div>
+          <div className="w-28 h-28 sm:w-32 sm:h-32 shrink-0">
+            <img
+              src="/satisfaction_shield.png"
+              alt="Appointment Replacement Guarantee Shield"
+              className="w-full h-full object-contain"
+            />
+          </div>
         </div>
       </div>
     </SectionContainer>
@@ -697,6 +715,63 @@ function FitSection() {
             ))}
           </ul>
         </div>
+      </div>
+    </SectionContainer>
+  );
+}
+
+function TerritoryMapSection() {
+  return (
+    <SectionContainer className="bg-white border-b border-[#DDE6F2] py-20">
+      <div className="grid gap-12 lg:grid-cols-12 lg:gap-16 lg:items-center">
+        
+        {/* Left Column */}
+        <div className="space-y-6 lg:col-span-7 text-left">
+          <span className="inline-flex items-center gap-2 rounded-full border border-[#145CFF]/30 bg-[#145CFF]/10 px-3 py-1 text-xs font-extrabold uppercase tracking-wide text-[#145CFF]">
+            Local Market Limits
+          </span>
+          <h2 className="text-3xl font-extrabold tracking-tight text-[#061A2F] sm:text-4xl leading-tight">
+            We Limit HVAC Partners per Territory to Protect Quality.
+          </h2>
+          <div className="space-y-4 text-base leading-relaxed text-[#42526B] sm:text-lg">
+            <p>
+              Unlike standard lead generation networks that resell the same homeowner name to half a dozen contractors, we deliver exclusive appointments.
+            </p>
+            <p>
+              To protect the appointment volume and ensure each partner gets a consistent stream of jobs, we restrict access in each active network zone. Check if your territory is still open.
+            </p>
+          </div>
+
+          <div className="pt-2">
+            <ButtonLink href={CALENDLY_URL}>
+              Check My Specific Market Availability
+            </ButtonLink>
+          </div>
+        </div>
+
+        {/* Right Column: Visual Active Map Dashboard */}
+        <div className="lg:col-span-5 relative w-full max-w-md mx-auto">
+          {/* Subtle background glow */}
+          <div className="absolute -inset-3 rounded-2xl bg-gradient-to-tr from-[#145CFF]/10 to-[#145CFF]/5 blur-xl pointer-events-none" />
+          
+          {/* Image Container */}
+          <div className="relative block rounded-2xl border border-[#DDE6F2] bg-white p-2 shadow-xl overflow-hidden aspect-[4/3] group">
+            <img
+              src="/hvac_map.png"
+              alt="Active HVAC Appointment Territory Map Dashboard"
+              className="w-full h-full object-cover rounded-xl transition duration-300 md:group-hover:scale-[1.01]"
+            />
+            {/* Absolute overlay elements for premium dashboard look */}
+            <div className="absolute top-4 left-4 bg-[#061A2F]/90 backdrop-blur-sm border border-white/10 rounded-lg px-2.5 py-1 text-[8px] font-extrabold text-white uppercase tracking-wider flex items-center gap-1.5 shadow-md">
+              <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />
+              Active System Replacements
+            </div>
+            <div className="absolute bottom-4 right-4 bg-white/95 backdrop-blur-sm border border-[#DDE6F2] rounded-lg px-2.5 py-1 text-[8px] font-extrabold text-[#42526B] shadow-md">
+              Active Network: <span className="text-[#145CFF]">Dallas Metro East</span>
+            </div>
+          </div>
+        </div>
+
       </div>
     </SectionContainer>
   );
@@ -819,11 +894,13 @@ export default function HvacLandingPage() {
       <HeroSection />
       <ProblemSection />
       <ComparisonSection />
+      <RoiCalculatorSection />
       <OfferSection />
       <HowItWorksSection />
       <GuaranteeSection />
       <MeetingMetricSection />
       <FitSection />
+      <TerritoryMapSection />
       <FAQSection />
       <FinalCtaSection />
       <Footer />
