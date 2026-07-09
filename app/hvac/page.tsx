@@ -368,10 +368,12 @@ function ProblemSection() {
           "Fighting rising ad costs without a clear meeting guarantee",
           "Guessing which prospects are actually serious",
         ].map((point) => (
-          <div key={point} className="rounded-2xl border border-[#DDE6F2] bg-[#F5F8FC] p-6 shadow-sm flex items-start gap-3">
-            <svg className="h-5 w-5 text-red-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-            </svg>
+          <div key={point} className="rounded-2xl border border-slate-100 bg-white p-6 shadow-sm hover:shadow-md hover:border-red-100 hover:-translate-y-0.5 transition-all duration-300 flex items-start gap-4">
+            <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-rose-50 text-rose-500 border border-rose-100 shadow-sm">
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </div>
             <span className="text-sm font-bold text-[#42526B] leading-relaxed">{point}</span>
           </div>
         ))}
@@ -414,15 +416,17 @@ function ComparisonSection() {
 
         {/* Vendor Column */}
         <div className="rounded-2xl border border-[#DDE6F2] bg-white p-6 sm:p-8 shadow-sm space-y-4">
-          <h3 className="text-sm font-extrabold text-[#061A2F] uppercase tracking-wider border-b border-[#DDE6F2] pb-3">
+          <h3 className="text-sm font-extrabold text-[#061A2F] uppercase tracking-wider border-b border-[#DDE6F2] pb-4">
             Typical HVAC Lead Vendors
           </h3>
-          <ul className="space-y-3">
+          <ul className="divide-y divide-slate-100">
             {vendorRows.map((point) => (
-              <li key={point} className="flex items-start gap-3 text-sm font-bold text-[#42526B]">
-                <svg className="h-5 w-5 text-red-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
+              <li key={point} className="flex items-center gap-3.5 py-3.5 text-sm font-bold text-[#42526B] first:pt-0 last:pb-0">
+                <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-rose-50 text-rose-500 border border-rose-100">
+                  <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </div>
                 <span>{point}</span>
               </li>
             ))}
@@ -434,15 +438,17 @@ function ComparisonSection() {
           <span className="absolute right-4 top-4 rounded bg-[#145CFF] px-2 py-0.5 text-[8px] font-extrabold uppercase tracking-wide text-white">
             Appointments
           </span>
-          <h3 className="text-sm font-extrabold text-[#061A2F] uppercase tracking-wider border-b border-[#DDE6F2] pb-3">
+          <h3 className="text-sm font-extrabold text-[#061A2F] uppercase tracking-wider border-b border-[#DDE6F2] pb-4">
             LeadsByStorm HVAC Appointments
           </h3>
-          <ul className="space-y-3">
+          <ul className="divide-y divide-slate-100">
             {lbsRows.map((point) => (
-              <li key={point} className="flex items-start gap-3 text-sm font-bold text-[#061A2F]">
-                <svg className="h-5 w-5 text-[#11A36A] shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3.5">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                </svg>
+              <li key={point} className="flex items-center gap-3.5 py-3.5 text-sm font-bold text-[#061A2F] first:pt-0 last:pb-0">
+                <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-emerald-50 text-emerald-500 border border-emerald-100">
+                  <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
                 <span>{point}</span>
               </li>
             ))}
@@ -571,16 +577,21 @@ function HowItWorksSection() {
         </h2>
       </div>
 
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-        {steps.map((card) => (
-          <article key={card.num} className="bg-white rounded-2xl border border-[#DDE6F2] p-8 shadow-md hover:shadow-xl transition-all duration-300">
-            <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50 text-sm font-extrabold text-[#145CFF] border border-blue-100">
-              {card.num}
-            </div>
-            <h3 className="text-lg font-extrabold text-[#061A2F]">{card.title}</h3>
-            <p className="mt-3 text-sm leading-relaxed text-[#42526B]">{card.desc}</p>
-          </article>
-        ))}
+      <div className="relative">
+        {/* Connector Line for Desktop */}
+        <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-[#DDE6F2] -translate-y-12 hidden lg:block z-0" />
+        
+        <div className="relative grid gap-6 md:grid-cols-2 lg:grid-cols-4 z-10">
+          {steps.map((card) => (
+            <article key={card.num} className="bg-white rounded-2xl border border-[#DDE6F2] p-8 shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+              <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50 text-sm font-extrabold text-[#145CFF] border border-blue-100 shadow-sm">
+                {card.num}
+              </div>
+              <h3 className="text-lg font-extrabold text-[#061A2F]">{card.title}</h3>
+              <p className="mt-3 text-sm leading-relaxed text-[#42526B]">{card.desc}</p>
+            </article>
+          ))}
+        </div>
       </div>
     </SectionContainer>
   );
@@ -704,12 +715,14 @@ function FitSection() {
           <h3 className="text-sm font-extrabold text-[#061A2F] uppercase tracking-wider border-b border-[#DDE6F2] pb-3">
             Good Fit
           </h3>
-          <ul className="space-y-3">
+          <ul className="divide-y divide-slate-100">
             {goodFit.map((point) => (
-              <li key={point} className="flex items-start gap-3 text-sm font-bold text-[#061A2F]">
-                <svg className="h-5 w-5 text-[#11A36A] shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3.5">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                </svg>
+              <li key={point} className="flex items-center gap-3.5 py-3.5 text-sm font-bold text-[#061A2F] first:pt-0 last:pb-0">
+                <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-emerald-50 text-emerald-500 border border-emerald-100 shadow-sm">
+                  <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
                 <span>{point}</span>
               </li>
             ))}
@@ -721,12 +734,14 @@ function FitSection() {
           <h3 className="text-sm font-extrabold text-[#061A2F] uppercase tracking-wider border-b border-[#DDE6F2] pb-3">
             Not a Fit
           </h3>
-          <ul className="space-y-3">
+          <ul className="divide-y divide-slate-100">
             {notFit.map((point) => (
-              <li key={point} className="flex items-start gap-3 text-sm font-bold text-[#42526B]">
-                <svg className="h-5 w-5 text-red-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
+              <li key={point} className="flex items-center gap-3.5 py-3.5 text-sm font-bold text-[#42526B] first:pt-0 last:pb-0">
+                <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-rose-50 text-rose-500 border border-rose-100 shadow-sm">
+                  <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </div>
                 <span>{point}</span>
               </li>
             ))}
@@ -830,16 +845,20 @@ function FAQSection() {
         </h2>
       </div>
 
-      <div className="max-w-3xl divide-y divide-[#DDE6F2] rounded-2xl border border-[#DDE6F2] bg-[#F5F8FC] px-6 sm:px-8">
+      <div className="max-w-3xl divide-y divide-slate-100 rounded-3xl border border-[#DDE6F2] bg-white p-6 sm:p-8 shadow-sm">
         {faqs.map((faq) => (
-          <details key={faq.q} className="group py-5">
-            <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-base font-extrabold text-[#061A2F]">
-              {faq.q}
-              <svg className="h-5 w-5 shrink-0 text-[#145CFF] transition-transform duration-200 group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
-              </svg>
+          <details key={faq.q} className="group py-4 first:pt-0 last:pb-0 cursor-pointer">
+            <summary className="flex items-center justify-between gap-4 text-base font-extrabold text-[#061A2F] list-none select-none hover:text-[#145CFF] transition-colors">
+              <span>{faq.q}</span>
+              <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-blue-50 text-[#145CFF] transition-colors group-hover:bg-[#145CFF] group-hover:text-white">
+                <svg className="h-3.5 w-3.5 shrink-0 transition-transform duration-200 group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
+                </svg>
+              </div>
             </summary>
-            <p className="mt-3 text-sm leading-relaxed text-[#42526B]">{faq.a}</p>
+            <p className="mt-3 text-sm leading-relaxed text-[#42526B] pl-1 pr-6 border-l-2 border-blue-500/20 pt-1">
+              {faq.a}
+            </p>
           </details>
         ))}
       </div>
