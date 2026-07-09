@@ -66,13 +66,30 @@ function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-[#DDE6F2] bg-white/95 backdrop-blur-md">
       <nav className="mx-auto flex max-w-[1200px] items-center justify-between px-4 py-3.5 sm:py-4.5 sm:px-6 lg:px-8">
-        <a href="#" aria-label="LeadsByStorm home" className="flex items-center">
+        <a href="/" aria-label="LeadsByStorm home" className="flex items-center">
           <img
             src={LOGO_SRC}
             alt="LeadsByStorm Logo"
             className="h-12 sm:h-14 md:h-16 w-auto object-contain"
           />
         </a>
+
+        <div className="flex items-center gap-4 sm:gap-6 md:gap-8">
+          <a
+            href="/"
+            className="text-xs sm:text-sm font-extrabold transition-colors text-[#145CFF]"
+          >
+            <span className="inline sm:hidden">Roofing</span>
+            <span className="hidden sm:inline">Roofing Program</span>
+          </a>
+          <a
+            href="/hvac"
+            className="text-xs sm:text-sm font-extrabold transition-colors text-[#42526B] hover:text-[#061A2F]"
+          >
+            <span className="inline sm:hidden">HVAC</span>
+            <span className="hidden sm:inline">HVAC Program</span>
+          </a>
+        </div>
 
         <ButtonLink href={`mailto:${CONTACT_EMAIL}?subject=LeadsByStorm%20Inquiry`} className="px-5 py-2.5 text-xs font-extrabold sm:text-sm">
           Contact Us
