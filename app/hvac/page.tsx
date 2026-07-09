@@ -329,7 +329,7 @@ function HeroSection() {
 function ProblemSection() {
   return (
     <SectionContainer className="bg-white border-b border-[#DDE6F2] py-20">
-      <div className="max-w-3xl mx-auto text-center mb-14">
+      <div className="max-w-3xl mb-14 text-left">
         <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#145CFF] mb-3">
           THE PROBLEM WITH HVAC LEADS
         </p>
@@ -359,7 +359,7 @@ function ProblemSection() {
         ))}
       </div>
 
-      <p className="mt-10 text-center text-lg font-extrabold text-[#061A2F]">
+      <p className="mt-10 text-left text-lg font-extrabold text-[#061A2F]">
         Your team should not have to guess which leads are real.
       </p>
     </SectionContainer>
@@ -386,7 +386,7 @@ function ComparisonSection() {
 
   return (
     <SectionContainer className="bg-[#F5F8FC] border-b border-[#DDE6F2] py-20">
-      <div className="max-w-3xl mx-auto text-center mb-14">
+      <div className="max-w-3xl mb-14 text-left">
         <h2 className="text-3xl font-extrabold tracking-tight text-[#061A2F] sm:text-4xl">
           Lead Vendors Sell Contact Info. LeadsByStorm Delivers Calendar Events.
         </h2>
@@ -402,7 +402,7 @@ function ComparisonSection() {
           <ul className="space-y-3">
             {vendorRows.map((point) => (
               <li key={point} className="flex items-start gap-3 text-sm font-bold text-[#42526B]">
-                <svg className="h-4.5 w-4.5 text-red-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
+                <svg className="h-5 w-5 text-red-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                 </svg>
                 <span>{point}</span>
@@ -422,7 +422,7 @@ function ComparisonSection() {
           <ul className="space-y-3">
             {lbsRows.map((point) => (
               <li key={point} className="flex items-start gap-3 text-sm font-bold text-[#061A2F]">
-                <svg className="h-4.5 w-4.5 text-[#11A36A] shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3.5">
+                <svg className="h-5 w-5 text-[#11A36A] shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3.5">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
                 <span>{point}</span>
@@ -485,7 +485,7 @@ function OfferSection() {
           <div className="grid gap-y-2.5 gap-x-6 sm:grid-cols-2">
             {opportunities.map((item) => (
               <span key={item} className="flex items-start gap-2.5 text-sm font-bold text-[#42526B]">
-                <svg className="h-4.5 w-4.5 text-[#11A36A] shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3.5">
+                <svg className="h-5 w-5 text-[#11A36A] shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3.5">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
                 {item}
@@ -538,7 +538,7 @@ function HowItWorksSection() {
 
   return (
     <SectionContainer id="how-it-works" className="bg-[#F5F8FC] border-b border-[#DDE6F2] py-20">
-      <div className="text-center max-w-3xl mx-auto mb-16">
+      <div className="max-w-3xl mb-16 text-left">
         <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#145CFF] mb-3">HOW IT WORKS</p>
         <h2 className="text-3xl font-extrabold tracking-tight text-[#061A2F] sm:text-4xl">
           A Simple Appointment Pipeline for HVAC Companies
@@ -657,7 +657,7 @@ function FitSection() {
 
   return (
     <SectionContainer className="bg-[#F5F8FC] border-b border-[#DDE6F2] py-20">
-      <div className="text-center max-w-3xl mx-auto mb-14">
+      <div className="max-w-3xl mb-14 text-left">
         <h2 className="text-3xl font-extrabold tracking-tight text-[#061A2F] sm:text-4xl">
           Built for Residential HVAC Companies That Can Handle More Appointments.
         </h2>
@@ -672,7 +672,7 @@ function FitSection() {
           <ul className="space-y-3">
             {goodFit.map((point) => (
               <li key={point} className="flex items-start gap-3 text-sm font-bold text-[#061A2F]">
-                <svg className="h-4.5 w-4.5 text-[#11A36A] shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3.5">
+                <svg className="h-5 w-5 text-[#11A36A] shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3.5">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
                 <span>{point}</span>
@@ -689,7 +689,7 @@ function FitSection() {
           <ul className="space-y-3">
             {notFit.map((point) => (
               <li key={point} className="flex items-start gap-3 text-sm font-bold text-[#42526B]">
-                <svg className="h-4.5 w-4.5 text-red-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
+                <svg className="h-5 w-5 text-red-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                 </svg>
                 <span>{point}</span>
@@ -732,13 +732,13 @@ function FAQSection() {
 
   return (
     <SectionContainer className="bg-white border-b border-[#DDE6F2] py-20">
-      <div className="text-center max-w-3xl mx-auto mb-14">
+      <div className="max-w-3xl mb-14 text-left">
         <h2 className="text-3xl font-extrabold tracking-tight text-[#061A2F] sm:text-4xl">
           Questions HVAC Owners Usually Ask
         </h2>
       </div>
 
-      <div className="mx-auto max-w-3xl divide-y divide-[#DDE6F2] rounded-2xl border border-[#DDE6F2] bg-[#F5F8FC] px-6 sm:px-8">
+      <div className="max-w-3xl divide-y divide-[#DDE6F2] rounded-2xl border border-[#DDE6F2] bg-[#F5F8FC] px-6 sm:px-8">
         {faqs.map((faq) => (
           <details key={faq.q} className="group py-5">
             <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-base font-extrabold text-[#061A2F]">
@@ -757,22 +757,22 @@ function FAQSection() {
 
 function FinalCtaSection() {
   return (
-    <SectionContainer className="bg-[#081421] text-white py-20 relative border-b border-white/[0.05]">
-      <div className="mx-auto max-w-3xl text-center space-y-6">
-        <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl leading-tight">
-          See If HVAC Appointments Are Available in Your Market.
-        </h2>
-        <p className="text-base leading-relaxed text-slate-300 sm:text-lg">
-          Tell us where you operate and what type of appointments you want. We&apos;ll confirm whether your market is currently open.
-        </p>
-        <div className="flex justify-center pt-2">
+    <SectionContainer noPadding className="bg-[#081421] text-white py-16 relative border-b border-white/[0.05]">
+      <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 text-left">
+        <div className="space-y-3 max-w-2xl">
+          <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl leading-tight">
+            See If HVAC Appointments Are Available in Your Market.
+          </h2>
+          <p className="text-base leading-relaxed text-slate-300 sm:text-lg">
+            Tell us where you operate and what type of appointments you want. We&apos;ll confirm whether your market is currently open.
+          </p>
+        </div>
+
+        <div className="pt-2">
           <ButtonLink href={CALENDLY_URL}>
             Check Appointment Availability
           </ButtonLink>
         </div>
-        <p className="text-xs text-slate-400 pt-1">
-          No spam. No obligation. We&apos;ll only contact you about HVAC appointment availability in your service area.
-        </p>
       </div>
     </SectionContainer>
   );

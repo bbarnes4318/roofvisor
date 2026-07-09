@@ -297,25 +297,25 @@ function HeroSection() {
           <div className="border-t border-[#DDE6F2] pt-3 space-y-2.5">
             <div className="grid grid-cols-2 gap-y-2 gap-x-4 text-xs font-bold text-[#42526B] sm:grid-cols-4">
               <span className="flex items-center gap-2">
-                <svg className="h-4.5 w-4.5 text-[#11A36A]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3.5">
+                <svg className="h-5 w-5 text-[#11A36A] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3.5">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
                 Exclusive appointments
               </span>
               <span className="flex items-center gap-2">
-                <svg className="h-4.5 w-4.5 text-[#11A36A]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3.5">
+                <svg className="h-5 w-5 text-[#11A36A] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3.5">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
                 Confirmed homeowners
               </span>
               <span className="flex items-center gap-2">
-                <svg className="h-4.5 w-4.5 text-[#11A36A]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3.5">
+                <svg className="h-5 w-5 text-[#11A36A] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3.5">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
                 No-show replacement
               </span>
               <span className="flex items-center gap-2">
-                <svg className="h-4.5 w-4.5 text-[#11A36A]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3.5">
+                <svg className="h-5 w-5 text-[#11A36A] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3.5">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
                 Volume pricing available
