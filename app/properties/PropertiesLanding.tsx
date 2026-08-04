@@ -685,7 +685,7 @@ export default function PropertiesLanding() {
             <div className="flex items-center gap-6 text-xs font-bold text-slate-300">
               <a href="/terms" className="hover:text-white transition">Program Terms</a>
               <a href="/privacy" className="hover:text-white transition">Privacy Policy</a>
-              <a href="mailto:support@leadsbystorm.com" className="hover:text-white transition">Contact</a>
+              <button type="button" onClick={() => scrollToId("claim-market")} className="hover:text-white transition">Contact</button>
             </div>
           </div>
           <p className="mt-8 border-t border-slate-800 pt-6 text-[10px] text-slate-500 leading-relaxed text-left">
