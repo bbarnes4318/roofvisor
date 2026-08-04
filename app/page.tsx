@@ -70,7 +70,7 @@ function Header() {
           <img
             src={LOGO_SRC}
             alt="LeadsByStorm Logo"
-            className="h-12 sm:h-14 md:h-16 w-auto object-contain"
+            className="h-16 sm:h-20 md:h-24 w-auto object-contain"
           />
         </a>
 

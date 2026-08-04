@@ -292,7 +292,7 @@ export default function PropertiesLanding() {
             <img
               src="/logo (2).png"
               alt="VelocityRE.pro Logo"
-              className="h-10 sm:h-12 md:h-14 w-auto object-contain"
+              className="h-14 sm:h-16 md:h-20 w-auto object-contain"
             />
           </a>
 
@@ -676,7 +676,7 @@ export default function PropertiesLanding() {
               <img
                 src="/logo (2).png"
                 alt="VelocityRE.pro Logo"
-                className="h-10 sm:h-12 w-auto object-contain mb-1"
+                className="h-14 sm:h-16 w-auto object-contain mb-1"
               />
               <p className="mt-1 text-xs text-slate-400">
                 Off-market listing engine &amp; predictive seller opportunity platform.
