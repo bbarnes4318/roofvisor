@@ -133,7 +133,7 @@ export default function TermsPage() {
                 2. Description of Services
               </h2>
               <p>
-                VelocityRE.pro provides off-market property scrubbing, seller opportunity intelligence, contact data enrichment, AI conversational scripts, DNC email rescue templates, interactive map access, and appointment scheduling services for licensed real estate professionals.
+                VelocityRE.pro provides off-market property analysis, seller opportunity intelligence, contact data enrichment, AI conversational scripts, DNC email rescue templates, interactive map access, and appointment scheduling services for licensed real estate professionals.
               </p>
               <p>
                 Our services facilitate data intelligence and prospecting opportunities. We do not act as a real estate brokerage, nor do we directly negotiate property sales contracts between homeowners and buyers.

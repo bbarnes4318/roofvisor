@@ -123,7 +123,7 @@ export default function PrivacyPage() {
                 1. Information We Collect
               </h2>
               <p>
-                We collect information to identify off-market seller opportunities, scrub data, and deliver market intelligence. The types of personal information we collect include:
+                We collect information to identify off-market seller opportunities, analyze data, and deliver market intelligence. The types of personal information we collect include:
               </p>
               <ul className="list-disc pl-5 space-y-2">
                 <li>
@@ -148,7 +148,7 @@ export default function PrivacyPage() {
               </p>
               <ul className="list-disc pl-5 space-y-2">
                 <li>
-                  To scrub public property records and audit 250+ data points for seller signals.
+                  To analyze public property records and audit 250+ data points for seller signals.
                 </li>
                 <li>
                   To deliver exclusive seller opportunities, custom phone scripts, and DNC email templates directly to participating Agents.

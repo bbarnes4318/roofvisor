@@ -101,15 +101,10 @@ function InteractiveMapVisual() {
       
       {/* Visual Window Header */}
       <div className="flex flex-wrap items-center justify-between gap-3 border-b border-slate-200 pb-4 mb-5">
-        <div className="flex items-center gap-3">
-          <div className="flex items-center gap-1.5">
-            <span className="h-3 w-3 rounded-full bg-red-400" />
-            <span className="h-3 w-3 rounded-full bg-amber-400" />
-            <span className="h-3 w-3 rounded-full bg-emerald-400" />
-          </div>
-          <span className="text-[#059669] text-xs font-black uppercase tracking-[0.16em]">
-            VelocityRE Mobile &amp; Laptop Map Engine
-          </span>
+        <div className="flex items-center gap-1.5">
+          <span className="h-3 w-3 rounded-full bg-red-400" />
+          <span className="h-3 w-3 rounded-full bg-amber-400" />
+          <span className="h-3 w-3 rounded-full bg-emerald-400" />
         </div>
 
         {/* View Toggle */}
@@ -192,7 +187,7 @@ function InteractiveMapVisual() {
             </button>
           ))}
 
-          {/* Bottom Tags Bar matching image */}
+          {/* Bottom Tags Bar */}
           <div className="absolute bottom-3 left-3 right-3 flex flex-wrap gap-1.5 justify-center z-10">
             {["Corporate Owned", "Vacant", "Pre-Foreclosure", "Tired Landlord"].map((tag) => (
               <span key={tag} className="rounded-lg border border-slate-300 bg-white/90 px-2 py-0.5 text-[8px] font-black uppercase text-slate-600 shadow-sm">
@@ -254,10 +249,6 @@ function InteractiveMapVisual() {
             </div>
 
           </div>
-
-          <div className="mt-4 pt-3 border-t border-slate-200 text-center text-[10px] font-bold text-slate-500">
-            Click any pin to inspect property facts &amp; tailor-made scripts
-          </div>
         </div>
 
       </div>
@@ -294,16 +285,16 @@ export default function PropertiesLanding() {
   return (
     <main className="min-h-screen bg-white text-[#0F172A] font-sans">
       
-      {/* 1. HEADER (Matches image) */}
+      {/* 1. HEADER */}
       <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur-md">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-5 sm:px-6 lg:px-8">
           <a href="/" className="text-left cursor-pointer">
-            <span className="block text-xl font-black tracking-tight text-slate-900 sm:text-2xl">
+            <span className="block text-2xl font-black tracking-tight text-slate-900 sm:text-3xl">
               VelocityRE<span className="text-[#059669]">.pro</span>
             </span>
           </a>
 
-          <nav className="hidden md:flex items-center gap-8 text-xs font-bold text-slate-600">
+          <nav className="flex items-center gap-8 text-xs sm:text-sm font-bold text-slate-600">
             <button type="button" onClick={() => scrollToId("how-it-works")} className="hover:text-slate-900 transition">
               How It Works
             </button>
@@ -311,18 +302,10 @@ export default function PropertiesLanding() {
               Pilot Package
             </button>
           </nav>
-
-          <button
-            type="button"
-            onClick={() => scrollToId("claim-market")}
-            className="rounded-xl bg-[#059669] hover:bg-[#047857] px-5 py-3 text-xs sm:text-sm font-black text-white shadow-md transition"
-          >
-            Apply for the Pilot Program
-          </button>
         </div>
       </header>
 
-      {/* 2. HERO SECTION (Light Theme matching image) */}
+      {/* 2. HERO SECTION */}
       <section className="relative bg-[#FAFAFA] border-b border-slate-200 px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
         <div className="mx-auto max-w-4xl text-left">
           
@@ -334,14 +317,19 @@ export default function PropertiesLanding() {
             Turn Failed Listings Into Listing Appointments.
           </h1>
 
-          <p className="mt-6 max-w-3xl text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">
-            VelocityRE does the groundwork. We scrub failed listings, identify the owners worth pursuing, rescue DNC-restricted opportunities through email, and deliver a compliant, market-specific package directly to you.
-          </p>
+          <div className="mt-6 max-w-3xl space-y-4 text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">
+            <p>
+              Velocity does the groundwork by analyzing failed property listings using over 250 data points, identifying the property owners worth pursuing, and providing AI-Powered proven conversational and email scripting.
+            </p>
+            <p className="font-semibold text-slate-800">
+              The end result: A compliant market specific powerful system to increase your listing conversion.
+            </p>
+          </div>
 
           {/* 3 Metric Stat Boxes */}
           <div className="mt-10 grid grid-cols-3 gap-3 max-w-xl sm:gap-4">
             {[
-              ["10–15", "SCRUBBED PROPERTIES"],
+              ["10–15", "ANALYZED PROPERTIES"],
               ["1–2", "FACE-TO-FACE APPOINTMENTS"],
               ["5–10", "PREMIUM EMAIL LEADS"],
             ].map(([stat, label]) => (
@@ -367,19 +355,18 @@ export default function PropertiesLanding() {
         </div>
       </section>
 
-
-      {/* 4. THE SOLUTION & INTERACTIVE MAP SECTION (Below Hero as requested) */}
+      {/* 3. THE ULTIMATE ADVANTAGE (4-Step Process & Map Visual) */}
       <Section id="how-it-works" className="bg-[#FAFAFA] border-b border-slate-200">
         <div className="max-w-4xl text-left mb-12">
           <span className="text-[10px] font-black uppercase tracking-[0.2em] text-[#059669] block mb-2">
             THE SOLUTION
           </span>
           <h2 className="text-3xl font-black tracking-tight text-slate-900 sm:text-5xl">
-            Enter VelocityRE. The Ultimate Unfair Advantage.
+            Velocity RE: The Ultimate Advantage
           </h2>
           
           <div className="mt-6 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm text-sm sm:text-base font-medium text-slate-700 leading-relaxed max-w-3xl">
-            VelocityRE&apos;s backend engine takes fall-off/listing data and runs it through a 4-part process to hand you &quot;action-plan-ready&quot; opportunities right on your phone or laptop.
+            Velocity RE&apos;s backend engine runs through a 4-part process to hand you property listing opportunities right on your phone and laptop.
           </div>
         </div>
 
@@ -388,23 +375,23 @@ export default function PropertiesLanding() {
           {[
             [
               "01",
-              "Step 1: The Velocity Scrub",
-              "We constantly check data feeds for fresh properties that recently expired, ensuring you never chase old lead food.",
+              "Step 1: VelocityRE Property Analysis",
+              "Our system monitors over 250 data points in local market properties identifying those that meet criteria to engage for a new listing.",
             ],
             [
               "02",
-              "Step 2: The DNC Waterfall & Email Rescue",
-              "Over 60% of 1-to-1 phone numbers fall on the DNC list. When a number is legally restricted from being called, we don't waste the lead—we capture their email address instead so you can still reach them.",
+              "Step 2: DNC Waterfall System",
+              "Over 60% of phone numbers fall on the DNC list. When a number is legally restricted from being called, we don't waste potential property listings—instead, we capture their email address as an alternative channel to convert.",
             ],
             [
               "03",
               "Step 3: Intelligent Disposition",
-              "We analyze public records to tell you context on why they need to sell: Corporate Owned, Vacant, Pre-Foreclosure, or Tired Landlords.",
+              "We analyze properties using a combination of public records and deep research through extensive property databases to create an intelligent disposition for each property.",
             ],
             [
               "04",
-              "Step 4: The Mobile App & Laptop Map",
-              "View a map on your phone or laptop with color-coded pins. Click a pin, and instantly get the property details along with a custom tailor-made phone script or official email template designed specifically for that property's disposition.",
+              "Step 4: VelocityRE Mobile & Laptop App",
+              "We developed our UI for both mobile and laptop. Click a pin, and instantly get the property and contact details along with phone and email scripting all designed specifically for that property's disposition.",
             ],
           ].map(([step, title, desc]) => (
             <div key={step} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm flex items-start gap-4">
@@ -419,12 +406,8 @@ export default function PropertiesLanding() {
           ))}
         </div>
 
-        {/* Map Feature Header & Bullets (As requested) */}
+        {/* Map Feature Header & Bullets */}
         <div className="max-w-4xl mx-auto text-center mb-10">
-          <div className="inline-flex items-center gap-2 rounded-full border border-[#059669]/30 bg-[#059669]/10 px-4 py-1.5 text-xs font-black uppercase text-[#059669] mb-3">
-            <span>📱 Map can be used on mobile app or laptop</span>
-          </div>
-
           <h3 className="text-3xl font-black text-slate-900 tracking-tight">
             Increase Property Listing Conversion Dramatically
           </h3>
@@ -449,9 +432,9 @@ export default function PropertiesLanding() {
         <InteractiveMapVisual />
       </Section>
 
-      {/* 5. THE PILOT PROGRAM PACKAGE SECTION (Matches image) */}
+      {/* 4. THE PILOT PROGRAM PACKAGE SECTION */}
       <Section id="pilot-package" className="bg-white border-b border-slate-200">
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-6">
           <div className="max-w-3xl text-left">
             <span className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 block mb-2">
               THE PILOT PROGRAM PACKAGE
@@ -465,14 +448,15 @@ export default function PropertiesLanding() {
           <div className="shrink-0 rounded-2xl border border-slate-300 bg-slate-100 p-4 text-center">
             <strong className="block text-2xl font-black text-slate-900">$279–$479</strong>
             <span className="text-[9px] font-black uppercase tracking-wider text-slate-600 block mt-0.5">
-              PER MONTH – BASED ON MARKET
+              for Pilot Program – BASED ON MARKET
             </span>
           </div>
         </div>
 
-        <div className="space-y-4 max-w-3xl text-sm leading-relaxed text-slate-600 mb-10 text-left">
+        {/* Increased spacing and smaller font sub-copy */}
+        <div className="mt-8 mb-10 space-y-3 max-w-3xl text-xs sm:text-sm leading-relaxed text-slate-500 text-left">
           <p>
-            Every VelocityRE pilot is built around the actual opportunity available in your target market. Monthly pilot pricing ranges from $279 to $479, based on the market and the custom package we can support there.
+            Every VelocityRE pilot is built around the actual opportunity available in your target market. Pilot pricing ranges from $279 to $479, based on the market and the custom package we can support there.
           </p>
           <p>
             Because we deliver a concentrated supply of highly prequalified properties—not shared lists—we can invite only a limited number of pilot agents in each market. If your market is available, we&apos;ll confirm your exact package and price before you enroll.
@@ -483,22 +467,22 @@ export default function PropertiesLanding() {
           Your Pilot Package Includes:
         </h3>
 
-        {/* 3 Package Component Cards */}
+        {/* 3 Package Component Cards (Border removed from center card) */}
         <div className="grid gap-6 md:grid-cols-3 mb-10">
           
           <div className="rounded-2xl border border-slate-200 bg-[#FAFAFA] p-6 text-left shadow-sm">
             <strong className="block text-3xl font-black text-slate-900">10 to 15</strong>
-            <h4 className="mt-3 text-sm font-black text-slate-900">Highly-Targeted, Scrubbed Properties:</h4>
+            <h4 className="mt-3 text-sm font-black text-slate-900">Highly targeted analyzed listing properties:</h4>
             <p className="mt-2 text-xs leading-relaxed text-slate-600">
-              Ready-to-prospect off-market properties tailored directly to your zip code.
+              Ready-to-prospect off-market properties tailored directly to your zip codes.
             </p>
           </div>
 
-          <div className="rounded-2xl border-2 border-[#059669] bg-emerald-50/40 p-6 text-left shadow-sm">
+          <div className="rounded-2xl border border-slate-200 bg-[#FAFAFA] p-6 text-left shadow-sm">
             <strong className="block text-3xl font-black text-slate-900">1 to 2</strong>
             <h4 className="mt-3 text-sm font-black text-slate-900">Guaranteed Face-to-Face Appointments:</h4>
             <p className="mt-2 text-xs leading-relaxed text-slate-600">
-              Our internal team will work the system to book 1 to 2 new listing appointments for you. You just show up and close.
+              Our internal team will schedule 1 to 2 prequalified listing appointments.
             </p>
           </div>
 
@@ -506,31 +490,29 @@ export default function PropertiesLanding() {
             <strong className="block text-3xl font-black text-slate-900">5 to 10</strong>
             <h4 className="mt-3 text-sm font-black text-slate-900">Premium Email Leads:</h4>
             <p className="mt-2 text-xs leading-relaxed text-slate-600">
-              High-value opportunities where the phone number matches the DNC list, complete with the exact email templates you need to engage them.
+              High value opportunities on the DNC list are not wasted. Instead, we provide the exact email address and scripting to engage them through the email channel versus a call.
             </p>
           </div>
 
         </div>
-
-        {/* Customization banner */}
-        <div className="rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-xs font-bold text-slate-700 text-left">
-          After the pilot proves its value, you can customize your ongoing package—whether you want to work the data yourself, or upgrade to have us continue booking your appointments for you.
-        </div>
       </Section>
 
-      {/* 6. CLAIM MARKET LEAD CAPTURE FORM (Dark Navy Section matching image) */}
+      {/* 5. CLAIM MARKET LEAD CAPTURE FORM (Dark Navy Section) */}
       <Section id="claim-market" className="bg-white">
         <div className="overflow-hidden rounded-3xl bg-[#0B1928] text-white p-8 sm:p-12 lg:p-16 shadow-2xl">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             
             {/* Left Copy */}
-            <div className="text-left space-y-5">
+            <div className="text-left space-y-4">
               <span className="text-[10px] font-black uppercase tracking-[0.2em] text-[#059669]">
                 EVERY STEP
               </span>
               <h2 className="text-3xl font-black tracking-tight sm:text-5xl leading-tight">
-                Claim Your Market Before Your Competitors Do.
+                Claim Your Market Before Competitors.
               </h2>
+              <p className="text-base font-bold text-emerald-400">
+                Exclusive property listing inventory limits the number of agents we invite
+              </p>
               <p className="text-sm sm:text-base leading-relaxed text-slate-300">
                 The supply of highly prequalified properties is different in every market, so each pilot is customized and availability is limited. Enter your information to check your market, receive your exact package, and confirm your exact monthly pilot price within the $279–$479 range.
               </p>
@@ -648,7 +630,7 @@ export default function PropertiesLanding() {
         </div>
       </Section>
 
-      {/* 7. FAQ SECTION (Preserved as requested) */}
+      {/* 6. FAQ SECTION */}
       <Section className="bg-[#FAFAFA] border-t border-slate-200">
         <div className="mx-auto max-w-3xl">
           <div className="text-center mb-12">
@@ -664,7 +646,7 @@ export default function PropertiesLanding() {
             {[
               [
                 "What is included in the VelocityRE Pilot Package?",
-                "Each pilot package includes 10-15 scrubbed properties, 1-2 guaranteed face-to-face appointments booked for you, and 5-10 premium email leads for DNC-restricted properties.",
+                "Each pilot package includes 10-15 analyzed listing properties, 1-2 guaranteed face-to-face appointments booked for you, and 5-10 premium email leads for DNC-restricted properties.",
               ],
               [
                 "Can the opportunity map be used on mobile app or laptop?",
@@ -672,15 +654,15 @@ export default function PropertiesLanding() {
               ],
               [
                 "What script is provided for DNC-restricted properties?",
-                "For Do-Not-Call (DNC) restricted properties, we provide the exact email script tailored specifically for that property's disposition to convert the homeowner into a listing.",
+                "For Do-Not-Call (DNC) restricted properties, we provide the exact email address and scripting tailored specifically for that property's disposition.",
               ],
               [
-                "How much does the monthly pilot package cost?",
-                "Monthly pilot pricing ranges from $279 to $479 based on your specific target market and the available property volume.",
+                "How much does the pilot package cost?",
+                "Pilot pricing ranges from $279 to $479 based on your specific target market and the available property volume.",
               ],
               [
                 "Are these opportunities shared with other agents?",
-                "No. We deliver a concentrated supply of highly prequalified properties exclusively to pilot agents in each approved market territory.",
+                "No. Exclusive property listing inventory limits the number of agents we invite.",
               ],
             ].map(([question, answer]) => (
               <details key={question} className="group py-5 text-left">
@@ -695,7 +677,7 @@ export default function PropertiesLanding() {
         </div>
       </Section>
 
-      {/* 8. FOOTER */}
+      {/* 7. FOOTER */}
       <footer className="border-t border-slate-200 bg-slate-900 text-slate-400 px-4 py-10 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
