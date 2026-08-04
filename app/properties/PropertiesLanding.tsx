@@ -12,9 +12,9 @@ function ArrowIcon({ className = "h-4 w-4 shrink-0 transition-transform group-ho
   );
 }
 
-function CheckIcon({ className = "h-5 w-5 shrink-0 text-[#059669]" }: { className?: string }) {
+function CheckIcon({ className = "" }: { className?: string }) {
   return (
-    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
+    <svg className={`h-4 w-4 shrink-0 text-[#059669] ${className}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
       <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
     </svg>
   );
@@ -367,20 +367,6 @@ export default function PropertiesLanding() {
         </div>
       </section>
 
-      {/* 3. THE PROBLEM SECTION (Light Theme matching image) */}
-      <Section className="bg-white border-b border-slate-200">
-        <div className="max-w-3xl text-left">
-          <span className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 block mb-2">
-            THE PROBLEM
-          </span>
-          <h2 className="text-3xl font-black tracking-tight text-slate-900 sm:text-5xl">
-            The Old Way of Prospecting is Broken.
-          </h2>
-          <p className="mt-6 text-base sm:text-lg leading-8 text-slate-600">
-            You are a real estate professional, not a data researcher. Most agents waste hours every week buying shared, aged leads, cold calling numbers on the DNC list, or accidentally reaching out to homeowners who already sold their home. You don&apos;t need raw spreadsheets. You need actionable intelligence and willing sellers delivered directly to you.
-          </p>
-        </div>
-      </Section>
 
       {/* 4. THE SOLUTION & INTERACTIVE MAP SECTION (Below Hero as requested) */}
       <Section id="how-it-works" className="bg-[#FAFAFA] border-b border-slate-200">
