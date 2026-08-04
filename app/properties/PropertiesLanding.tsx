@@ -292,7 +292,7 @@ export default function PropertiesLanding() {
             <img
               src="/logo (2).png"
               alt="VelocityRE.pro Logo"
-              className="h-14 sm:h-16 md:h-20 w-auto object-contain"
+              className="h-20 sm:h-24 md:h-32 w-auto object-contain"
             />
           </a>
 
@@ -324,7 +324,7 @@ export default function PropertiesLanding() {
               Velocity does the groundwork by analyzing failed property listings using over 250 data points, identifying the property owners worth pursuing, and providing AI-Powered proven conversational and email scripting.
             </p>
             <p className="font-semibold text-slate-800">
-              The end result: A compliant market specific powerful system to increase your listing conversion.
+              The result? A powerful, market-tailored system that keeps you compliant—and increases your listing conversions.
             </p>
           </div>
 
@@ -676,7 +676,7 @@ export default function PropertiesLanding() {
               <img
                 src="/logo (2).png"
                 alt="VelocityRE.pro Logo"
-                className="h-14 sm:h-16 w-auto object-contain mb-1"
+                className="h-16 sm:h-20 w-auto object-contain mb-1"
               />
               <p className="mt-1 text-xs text-slate-400">
                 Off-market listing engine &amp; predictive seller opportunity platform.
