@@ -12,10 +12,12 @@ function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur-md">
       <nav className="mx-auto flex max-w-[1200px] items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        <a href="/" aria-label="VelocityRE.pro home" className="text-left cursor-pointer">
-          <span className="block text-xl font-black tracking-tight text-slate-900 sm:text-2xl">
-            VelocityRE<span className="text-[#059669]">.pro</span>
-          </span>
+        <a href="/" aria-label="VelocityRE.pro home" className="text-[#0F172A] flex items-center">
+          <img
+            src="/logo (2).png"
+            alt="VelocityRE.pro Logo"
+            className="h-10 sm:h-12 w-auto object-contain"
+          />
         </a>
 
         <a 

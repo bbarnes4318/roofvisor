@@ -288,10 +288,12 @@ export default function PropertiesLanding() {
       {/* 1. HEADER */}
       <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-5 sm:px-6 lg:px-8">
-          <a href="/" className="text-left cursor-pointer">
-            <span className="block text-2xl font-black tracking-tight text-slate-900 sm:text-3xl">
-              VelocityRE<span className="text-[#059669]">.pro</span>
-            </span>
+          <a href="/" className="text-left cursor-pointer flex items-center">
+            <img
+              src="/logo (2).png"
+              alt="VelocityRE.pro Logo"
+              className="h-10 sm:h-12 md:h-14 w-auto object-contain"
+            />
           </a>
 
           <nav className="flex items-center gap-8 text-xs sm:text-sm font-bold text-slate-600">
@@ -326,21 +328,7 @@ export default function PropertiesLanding() {
             </p>
           </div>
 
-          {/* 3 Metric Stat Boxes */}
-          <div className="mt-10 grid grid-cols-3 gap-3 max-w-xl sm:gap-4">
-            {[
-              ["10–15", "ANALYZED PROPERTIES"],
-              ["1–2", "FACE-TO-FACE APPOINTMENTS"],
-              ["5–10", "PREMIUM EMAIL LEADS"],
-            ].map(([stat, label]) => (
-              <div key={label} className="rounded-xl border border-slate-200 bg-white p-3.5 sm:p-4 shadow-sm">
-                <strong className="block text-xl font-black text-slate-900 sm:text-2xl">{stat}</strong>
-                <span className="mt-1 block text-[8px] font-black uppercase tracking-wider text-slate-500 sm:text-[9px]">
-                  {label}
-                </span>
-              </div>
-            ))}
-          </div>
+
 
           <div className="mt-8">
             <button
@@ -440,8 +428,11 @@ export default function PropertiesLanding() {
               THE PILOT PROGRAM PACKAGE
             </span>
             <h2 className="text-3xl font-black tracking-tight text-slate-900 sm:text-5xl">
-              The VelocityRE Pilot Package: Minimal Risk. Guaranteed Results.
+              The VelocityRE Pilot Package:
             </h2>
+            <p className="mt-6 text-xl font-bold text-slate-700 sm:text-3xl">
+              Minimal Risk. Guaranteed Results.
+            </p>
           </div>
 
           {/* Pricing Pill */}
@@ -511,7 +502,7 @@ export default function PropertiesLanding() {
                 Claim Your Market Before Competitors.
               </h2>
               <p className="text-base font-bold text-emerald-400">
-                Exclusive property listing inventory limits the number of agents we invite
+                Exclusive property listing inventory limits the number of agents we invite.
               </p>
               <p className="text-sm sm:text-base leading-relaxed text-slate-300">
                 The supply of highly prequalified properties is different in every market, so each pilot is customized and availability is limited. Enter your information to check your market, receive your exact package, and confirm your exact monthly pilot price within the $279–$479 range.
@@ -682,9 +673,11 @@ export default function PropertiesLanding() {
         <div className="mx-auto max-w-6xl">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
             <div className="text-left">
-              <span className="text-xl font-black text-white">
-                VelocityRE<span className="text-[#059669]">.pro</span>
-              </span>
+              <img
+                src="/logo (2).png"
+                alt="VelocityRE.pro Logo"
+                className="h-10 sm:h-12 w-auto object-contain mb-1"
+              />
               <p className="mt-1 text-xs text-slate-400">
                 Off-market listing engine &amp; predictive seller opportunity platform.
               </p>

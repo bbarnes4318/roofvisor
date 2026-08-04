@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     "We identify homeowners in recent hail and wind zones, confirm their interest, and book inspection appointments directly on your calendar.",
 };
 
-const LOGO_SRC = "/logo-clean.png";
+const LOGO_SRC = "/logo (2).png";
 const CONTACT_EMAIL = "support@leadsbystorm.com";
 
 function ButtonLink({

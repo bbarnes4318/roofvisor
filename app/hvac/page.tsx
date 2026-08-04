@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     "Scheduled in-person HVAC repair and replacement appointments with homeowners. Pay for completed meetings, with no-show replacement according to program terms.",
 };
 
-const LOGO_SRC = "/logo-clean.png";
+const LOGO_SRC = "/logo (2).png";
 const CALENDLY_URL = "https://calendly.com/leadsbystorm-support/30min";
 
 function ButtonLink({
