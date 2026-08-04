@@ -51,7 +51,7 @@ function InteractiveMapVisual() {
       notes: "Strong equity position. Owner is looking at alternative options to get 2035 Pauline Street sold.",
       dnc: false,
       scriptType: "AI Conversational Phone Script",
-      script: '"Hi, I saw 2035 Pauline Street recently came off market. Based on recent Fort Wayne sales, I have a specific market strategy to get this sold..."',
+      script: "Custom conversational script generated automatically for this property disposition.",
     },
     B: {
       address: "1412 Crestview Ave",
@@ -64,7 +64,7 @@ function InteractiveMapVisual() {
       notes: "Property was listed 120 days. Number on DNC list - exact email rescue script ready.",
       dnc: true,
       scriptType: "Exact DNC Email Rescue Template",
-      script: 'Subject: Off-market strategy for 1412 Crestview Ave\n\nHi, I noticed your property is no longer active on MLS. I have an updated valuation report...',
+      script: "Exact DNC email rescue template generated automatically for this property disposition.",
     },
     C: {
       address: "890 Maplewood Dr",
@@ -77,7 +77,7 @@ function InteractiveMapVisual() {
       notes: "Notice of default filed 14 days ago. High motivation to close before auction.",
       dnc: false,
       scriptType: "AI Conversational Phone Script",
-      script: '"Hello, I specialize in helping homeowners in Fort Wayne resolve off-market property situations quickly and discreetly..."',
+      script: "Custom conversational script generated automatically for this property disposition.",
     },
     D: {
       address: "3410 Oakridge Blvd",
@@ -90,7 +90,7 @@ function InteractiveMapVisual() {
       notes: "Home vacant for 3+ months. Out-of-state owner.",
       dnc: false,
       scriptType: "AI Conversational Phone Script",
-      script: '"Hi, I am calling regarding 3410 Oakridge Blvd. Are you open to a direct cash offer or listing proposal for the vacant property?"',
+      script: "Custom conversational script generated automatically for this property disposition.",
     },
   };
 
