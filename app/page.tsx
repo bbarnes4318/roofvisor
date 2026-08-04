@@ -65,7 +65,7 @@ function SectionContainer({
 function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-[#DDE6F2] bg-white/95 backdrop-blur-md">
-      <nav className="mx-auto flex max-w-[1200px] items-center justify-between px-4 py-3.5 sm:py-4.5 sm:px-6 lg:px-8">
+      <nav className="mx-auto flex max-w-[1200px] items-center justify-between px-4 py-2 sm:py-3 sm:px-6 lg:px-8">
         <a href="/" aria-label="LeadsByStorm home" className="flex items-center">
           <img
             src={LOGO_SRC}
